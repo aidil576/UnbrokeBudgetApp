@@ -21,4 +21,9 @@
     <string name="login">Login</string>
     <string name="noacc">Dont have account?</string>
     <string name="createacc">Create Now!</string>
+    <string name="register">Register</string>
+    <string name="registerdesc">Create a new account</string>
+    <string name="username">Username</string>
+    <string name="mobilenum">Mobile Number</string>
+    <string name="hasacc">Already have account?</string>
 </resources>
