@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".point_redemption">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="87dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="816dp">
+
+                <ImageView
+                    android:id="@+id/top_background"
+                    android:layout_width="413dp"
+                    android:layout_height="279dp"
+                    android:layout_marginTop="-30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/top_background" />
+
+                <ImageView
+                    android:id="@+id/IVbackicon"
+                    android:layout_width="34dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.042"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
+
+                <TextView
+                    android:id="@+id/TVbalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="68dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="YOUR BALANCE"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/TVpoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="0 points"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/TVbalance"
+                    app:layout_constraintStart_toStartOf="@+id/TVbalance"
+                    app:layout_constraintTop_toBottomOf="@+id/TVbalance" />
+
+                <ImageView
+                    android:id="@+id/IVgift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="136dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.953"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icons8_gift_64" />
+
+                <ImageView
+                    android:id="@+id/IVholder1"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="264dp"
+                    app:layout_constraintEnd_toStartOf="@+id/IVholder2"
+                    app:layout_constraintHorizontal_bias="0.196"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/rectangle_holder" />
+
+                <ImageView
+                    android:id="@+id/IVholder2"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_marginEnd="40dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/IVholder1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/IVholder1"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/rectangle_holder" />
+
+                <ImageView
+                    android:id="@+id/IVholder3"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintEnd_toEndOf="@+id/IVholder1"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/IVholder1"
+                    app:layout_constraintTop_toBottomOf="@+id/IVholder1"
+                    app:srcCompat="@drawable/rectangle_holder" />
+
+                <ImageView
+                    android:id="@+id/IVholder4"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintEnd_toEndOf="@+id/IVholder2"
+                    app:layout_constraintStart_toStartOf="@+id/IVholder2"
+                    app:layout_constraintTop_toBottomOf="@+id/IVholder2"
+                    app:srcCompat="@drawable/rectangle_holder" />
+
+                <ImageView
+                    android:id="@+id/IVholder5"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintEnd_toEndOf="@+id/IVholder3"
+                    app:layout_constraintStart_toStartOf="@+id/IVholder3"
+                    app:layout_constraintTop_toBottomOf="@+id/IVholder3"
+                    app:srcCompat="@drawable/rectangle_holder" />
+
+                <ImageView
+                    android:id="@+id/IVholder6"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintEnd_toEndOf="@+id/IVholder4"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/IVholder4"
+                    app:layout_constraintTop_toBottomOf="@+id/IVholder4"
+                    app:srcCompat="@drawable/rectangle_holder" />
+
+                <ImageView
+                    android:id="@+id/IVcoupon4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    app:layout_constraintEnd_toEndOf="@+id/IVholder4"
+                    app:layout_constraintStart_toStartOf="@+id/IVholder4"
+                    app:layout_constraintTop_toTopOf="@+id/IVholder4"
+                    app:srcCompat="@drawable/icons8_coupon_60" />
+
+                <ImageView
+                    android:id="@+id/IVcoupon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    app:layout_constraintEnd_toEndOf="@+id/IVholder2"
+                    app:layout_constraintStart_toStartOf="@+id/IVholder2"
+                    app:layout_constraintTop_toTopOf="@+id/IVholder2"
+                    app:srcCompat="@drawable/icons8_coupon_60__1_" />
+
+                <ImageView
+                    android:id="@+id/IVcoupon3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    app:layout_constraintEnd_toEndOf="@+id/IVholder3"
+                    app:layout_constraintStart_toStartOf="@+id/IVholder3"
+                    app:layout_constraintTop_toTopOf="@+id/IVholder3"
+                    app:srcCompat="@drawable/icons8_coupon_64" />
+
+                <ImageView
+                    android:id="@+id/IVcoupon1"
+                    android:layout_width="77dp"
+                    android:layout_height="57dp"
+                    android:layout_marginTop="25dp"
+                    app:layout_constraintEnd_toEndOf="@+id/IVholder1"
+                    app:layout_constraintStart_toStartOf="@+id/IVholder1"
+                    app:layout_constraintTop_toTopOf="@+id/IVholder1"
+                    app:srcCompat="@drawable/icons8_loyalty_card_96" />
+
+                <ImageView
+                    android:id="@+id/IVcoupon5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    app:layout_constraintEnd_toEndOf="@+id/IVholder5"
+                    app:layout_constraintStart_toStartOf="@+id/IVholder5"
+                    app:layout_constraintTop_toTopOf="@+id/IVholder5"
+                    app:srcCompat="@drawable/icons8_coupon_64__1_" />
+
+                <ImageView
+                    android:id="@+id/IVcoupon6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    app:layout_constraintEnd_toEndOf="@+id/IVholder6"
+                    app:layout_constraintStart_toStartOf="@+id/IVholder6"
+                    app:layout_constraintTop_toTopOf="@+id/IVholder6"
+                    app:srcCompat="@drawable/icons8_coupon_64__2_" />
+
+                <ImageView
+                    android:id="@+id/IVpoints1"
+                    android:layout_width="128dp"
+                    android:layout_height="44dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/IVholder1"
+                    app:layout_constraintEnd_toEndOf="@+id/IVcoupon1"
+                    app:layout_constraintStart_toStartOf="@+id/IVcoupon1"
+                    app:srcCompat="@drawable/points_holder" />
+
+                <ImageView
+                    android:id="@+id/IVpoints2"
+                    android:layout_width="128dp"
+                    android:layout_height="44dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/IVholder2"
+                    app:layout_constraintEnd_toEndOf="@+id/IVcoupon2"
+                    app:layout_constraintStart_toStartOf="@+id/IVcoupon2"
+                    app:srcCompat="@drawable/points_holder" />
+
+                <ImageView
+                    android:id="@+id/IVpoints3"
+                    android:layout_width="128dp"
+                    android:layout_height="44dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/IVholder3"
+                    app:layout_constraintEnd_toEndOf="@+id/IVcoupon3"
+                    app:layout_constraintStart_toStartOf="@+id/IVcoupon3"
+                    app:srcCompat="@drawable/points_holder" />
+
+                <ImageView
+                    android:id="@+id/IVpoints4"
+                    android:layout_width="128dp"
+                    android:layout_height="44dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/IVholder4"
+                    app:layout_constraintEnd_toEndOf="@+id/IVcoupon4"
+                    app:layout_constraintStart_toStartOf="@+id/IVcoupon4"
+                    app:srcCompat="@drawable/points_holder" />
+
+                <ImageView
+                    android:id="@+id/IVpoints5"
+                    android:layout_width="128dp"
+                    android:layout_height="44dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/IVholder5"
+                    app:layout_constraintEnd_toEndOf="@+id/IVcoupon5"
+                    app:layout_constraintStart_toStartOf="@+id/IVcoupon5"
+                    app:srcCompat="@drawable/points_holder" />
+
+                <ImageView
+                    android:id="@+id/IVpoints6"
+                    android:layout_width="128dp"
+                    android:layout_height="44dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/IVholder6"
+                    app:layout_constraintEnd_toEndOf="@+id/IVcoupon6"
+                    app:layout_constraintStart_toStartOf="@+id/IVcoupon6"
+                    app:srcCompat="@drawable/points_holder" />
+
+                <TextView
+                    android:id="@+id/TVpts1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="15000 pts"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/IVpoints1"
+                    app:layout_constraintStart_toStartOf="@+id/IVpoints1"
+                    app:layout_constraintTop_toTopOf="@+id/IVpoints1" />
+
+                <TextView
+                    android:id="@+id/TVpts2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="42000 pts"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/IVpoints2"
+                    app:layout_constraintStart_toStartOf="@+id/IVpoints2"
+                    app:layout_constraintTop_toTopOf="@+id/IVpoints2" />
+
+                <TextView
+                    android:id="@+id/TVpts3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="50000 pts"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/IVpoints3"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/IVpoints3"
+                    app:layout_constraintTop_toTopOf="@+id/IVpoints3" />
+
+                <TextView
+                    android:id="@+id/TVpts4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="35000 pts"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/IVpoints4"
+                    app:layout_constraintStart_toStartOf="@+id/IVpoints4"
+                    app:layout_constraintTop_toTopOf="@+id/IVpoints4" />
+
+                <TextView
+                    android:id="@+id/TVpts5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="45000 pts"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/IVpoints5"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/IVpoints5"
+                    app:layout_constraintTop_toTopOf="@+id/IVpoints5" />
+
+                <TextView
+                    android:id="@+id/TVpts6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="56000 pts"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/IVpoints6"
+                    app:layout_constraintStart_toStartOf="@+id/IVpoints6"
+                    app:layout_constraintTop_toTopOf="@+id/IVpoints6" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
