@@ -2,11 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/CLlevel1"
+    android:id="@+id/CLlevel2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1F505B"
-    tools:context=".milestone_achievment_2">
+    tools:context=".milestone_achievment_2_2">
 
     <ImageView
         android:id="@+id/IVrectangle_holder_trophy"
@@ -50,7 +50,7 @@
         android:layout_width="241dp"
         android:layout_height="47dp"
         android:layout_marginTop="50dp"
-        android:text="You have unlocked level 1 and earn 100 points"
+        android:text="You have unlocked level 2 and earn 500 points"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="15sp"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/TVCongrats" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
