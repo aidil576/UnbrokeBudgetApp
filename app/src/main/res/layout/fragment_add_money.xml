@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addmoney_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a434e"
+    tools:context=".fragment_add_money" >
+
+    <View
+        android:id="@+id/box_addmoney"
+        android:layout_width="355dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_box_lighter_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/amount_add_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="@+id/box_addmoney"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/box_addmoney"
+        app:layout_constraintTop_toBottomOf="@+id/amount_add_text" />
+
+    <TextView
+        android:id="@+id/amount_add_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Enter amount you wish to add"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/box_addmoney"
+        app:layout_constraintStart_toStartOf="@+id/box_addmoney"
+        app:layout_constraintTop_toBottomOf="@+id/total_money_value" />
+
+    <TextView
+        android:id="@+id/total_money_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Your total money now:"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/box_addmoney"
+        app:layout_constraintHorizontal_bias="0.287"
+        app:layout_constraintStart_toStartOf="@+id/box_addmoney"
+        app:layout_constraintTop_toTopOf="@+id/box_addmoney" />
+
+    <TextView
+        android:id="@+id/total_money_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="RM5000.00"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="@+id/box_addmoney"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="@+id/box_addmoney"
+        app:layout_constraintTop_toBottomOf="@+id/total_money_text" />
+
+    <Button
+        android:id="@+id/confirm_button_addmoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/rounded_box_blue"
+        android:text="Confirm"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/box_addmoney"
+        app:layout_constraintTop_toBottomOf="@+id/box_addmoney" />
+
+    <Button
+        android:id="@+id/cancel_button_addmoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_box_red"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@+id/box_addmoney"
+        app:layout_constraintTop_toBottomOf="@+id/box_addmoney" />
+</androidx.constraintlayout.widget.ConstraintLayout>
