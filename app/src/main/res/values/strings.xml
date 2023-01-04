@@ -16,8 +16,10 @@
     <string name="welcome">Welcome</string>
     <string name="welcomedesc">Login to unBroke</string>
     <string name="email">Email</string>
+    <string name="emailadd">Email address</string>
     <string name="password">Password</string>
     <string name="forgotpass">Forgot Password?</string>
+    <string name="forgotPass">Forgot Password</string>
     <string name="login">Login</string>
     <string name="noacc">Dont have account?</string>
     <string name="createacc">Create Now!</string>
@@ -26,4 +28,8 @@
     <string name="username">Username</string>
     <string name="mobilenum">Mobile Number</string>
     <string name="hasacc">Already have account?</string>
+    <string name="enteremail">Enter your email</string>
+    <string name="othermethod">Choose another method</string>
+    <string name="help">Need help?</string>
+    <string name="otp">Send OTP</string>
 </resources>

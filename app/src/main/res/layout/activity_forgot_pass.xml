@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A434E"
+    tools:context=".ForgotPassActivity">
+
+
+    <TextView
+        android:id="@+id/TVFrogotPass"
+        android:layout_width="225dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="256dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/forgotPass"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ETEnterEmail"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:background="@xml/corner_rect"
+        android:ems="10"
+        android:hint="@string/emailadd"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVEnterEmail" />
+
+    <TextView
+        android:id="@+id/TVOtherMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/othermethod"
+        android:textColor="#ACB3BF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ETEnterEmail" />
+
+    <Button
+        android:id="@+id/BtnSendOtp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:background="@xml/corner_rect"
+        android:backgroundTint="#29B6F6"
+        android:text="@string/otp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVOtherMethod" />
+
+    <TextView
+        android:id="@+id/TVEnterEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/enteremail"
+        android:textColor="#E5E5E5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVFrogotPass" />
+
+    <TextView
+        android:id="@+id/TVHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/help"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/TVOtherMethod"
+        app:layout_constraintTop_toBottomOf="@+id/ETEnterEmail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
