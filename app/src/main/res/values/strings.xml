@@ -10,5 +10,20 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="saving_tip">Saving Tip</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcomedesc">Login to unBroke</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgotpass">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="noacc">Dont have account?</string>
+    <string name="createacc">Create Now!</string>
+    <string name="register">Register</string>
+    <string name="registerdesc">Create a new account</string>
+    <string name="username">Username</string>
+    <string name="mobilenum">Mobile Number</string>
+    <string name="hasacc">Already have account?</string>
 </resources>

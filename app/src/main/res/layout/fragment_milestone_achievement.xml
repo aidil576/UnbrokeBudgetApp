@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F505B"
+    tools:context=".milestone_achievement">
+
+    <TextView
+        android:id="@+id/TVtotal"
+        android:layout_width="85dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Total"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TVpointsbalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/TVtotal"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TVtotal"
+        app:layout_constraintTop_toBottomOf="@+id/TVtotal" />
+
+    <TextView
+        android:id="@+id/TVtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="points"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/TVpointsbalance"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TVpointsbalance"
+        app:layout_constraintTop_toBottomOf="@+id/TVpointsbalance" />
+
+    <ImageView
+        android:id="@+id/IVrtgl1"
+        android:layout_width="400dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="230dp"
+        android:src="@drawable/rectangle_silver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/IVrtgl2"
+        android:layout_width="400dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/rectangle_silver"
+        app:layout_constraintEnd_toEndOf="@+id/IVrtgl1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/IVrtgl1"
+        app:layout_constraintTop_toBottomOf="@+id/IVrtgl1" />
+
+    <ImageView
+        android:id="@+id/IVrtgl3"
+        android:layout_width="400dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/rectangle_silver"
+        app:layout_constraintEnd_toEndOf="@+id/IVrtgl2"
+        app:layout_constraintStart_toStartOf="@+id/IVrtgl2"
+        app:layout_constraintTop_toBottomOf="@+id/IVrtgl2" />
+
+    <ImageView
+        android:id="@+id/IVmedal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icons8_1st_place_medal_96"
+        app:layout_constraintBottom_toBottomOf="@+id/IVrtgl1"
+        app:layout_constraintEnd_toEndOf="@+id/IVrtgl1"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="@+id/IVrtgl1"
+        app:layout_constraintTop_toTopOf="@+id/IVrtgl1"
+        app:layout_constraintVertical_bias="0.475" />
+
+    <ImageView
+        android:id="@+id/IVmedal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icons8_1st_place_medal_96"
+        app:layout_constraintBottom_toBottomOf="@+id/IVrtgl2"
+        app:layout_constraintEnd_toEndOf="@+id/IVrtgl2"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="@+id/IVrtgl2"
+        app:layout_constraintTop_toTopOf="@+id/IVrtgl2"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <ImageView
+        android:id="@+id/IVmedal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icons8_1st_place_medal_96"
+        app:layout_constraintBottom_toBottomOf="@+id/IVrtgl3"
+        app:layout_constraintEnd_toEndOf="@+id/IVrtgl3"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="@+id/IVrtgl3"
+        app:layout_constraintTop_toTopOf="@+id/IVrtgl3"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <TextView
+        android:id="@+id/TVlevel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Level 1"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toEndOf="@+id/IVmedal1"
+        app:layout_constraintTop_toTopOf="@+id/IVrtgl1" />
+
+    <TextView
+        android:id="@+id/TVlevel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Level 3"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/IVrtgl3"
+        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintStart_toEndOf="@+id/IVmedal3"
+        app:layout_constraintTop_toTopOf="@+id/IVrtgl3" />
+
+    <TextView
+        android:id="@+id/TVlevel3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Level 2"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toEndOf="@+id/IVmedal2"
+        app:layout_constraintTop_toTopOf="@+id/IVrtgl2" />
+
+    <TextView
+        android:id="@+id/TVdesclv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Unlocked on Sept'16"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/IVrtgl1"
+        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintStart_toEndOf="@+id/IVmedal1"
+        app:layout_constraintTop_toBottomOf="@+id/TVlevel1" />
+
+    <TextView
+        android:id="@+id/TVdesclv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Save RM5000 to unlock"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/IVrtgl2"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/IVmedal2"
+        app:layout_constraintTop_toBottomOf="@+id/TVlevel3" />
+
+    <TextView
+        android:id="@+id/TVdesclv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Save RM10000 to unlock"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/IVrtgl3"
+        app:layout_constraintHorizontal_bias="0.324"
+        app:layout_constraintStart_toEndOf="@+id/IVmedal3"
+        app:layout_constraintTop_toBottomOf="@+id/TVlevel2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
