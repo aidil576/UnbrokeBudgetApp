@@ -1,5 +1,6 @@
 package com.example.unbrokebudgetapplication;
 
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,10 +15,10 @@ import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link fragment_money_record#newInstance} factory method to
+ * Use the {@link fragment_add_money#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class fragment_money_record extends Fragment {
+public class fragment_add_money extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,7 +29,7 @@ public class fragment_money_record extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public fragment_money_record() {
+    public fragment_add_money() {
         // Required empty public constructor
     }
 
@@ -38,11 +39,11 @@ public class fragment_money_record extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment fragment_money_record.
+     * @return A new instance of fragment fragment_add_money.
      */
     // TODO: Rename and change types and number of parameters
-    public static fragment_money_record newInstance(String param1, String param2) {
-        fragment_money_record fragment = new fragment_money_record();
+    public static fragment_add_money newInstance(String param1, String param2) {
+        fragment_add_money fragment = new fragment_add_money();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -63,30 +64,36 @@ public class fragment_money_record extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_money_record, container, false);
+        return inflater.inflate(R.layout.fragment_add_money, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Button addmoney = view.findViewById(R.id.add_money_button);
-        View.OnClickListener add_money_button = new View.OnClickListener(){
+        Button cancel = view.findViewById(R.id.cancel_button_addmoney);
+        View.OnClickListener cancel_button_addmoney = new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Navigation.findNavController(view).navigate(R.id.to_add_money);
+                Navigation.findNavController(view).navigate(R.id.addmoney_moneyrecord);
             }
         };
-        addmoney.setOnClickListener(add_money_button);
+        cancel.setOnClickListener(cancel_button_addmoney);
 
-        Button budget1 = view.findViewById(R.id.budget_rule_1_button);
-        View.OnClickListener budget_rule_1_button = new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Navigation.findNavController(view).navigate(R.id.to1stbudget);
-            }
-        };
-        budget1.setOnClickListener(budget_rule_1_button);
+
+            Button confirm = view.findViewById(R.id.confirm_button_addmoney);
+            View.OnClickListener confirm_button_addmoney = new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(R.id.amount_add_value != 0) {
+                        Navigation.findNavController(view).navigate(R.id.addmoney_moneyrecord);
+                    }
+                    else
+                        Navigation.findNavController(view).navigate(R.id.to_add_money);
+
+                }
+            };
+            confirm.setOnClickListener(confirm_button_addmoney);
+
     }
-
 }
