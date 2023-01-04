@@ -2,9 +2,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.unbrokebudgetapplication.MainActivity">
+<!--    <item-->
+<!--        android:id="@+id/action_settings"-->
+<!--        android:orderInCategory="100"-->
+<!--        android:title="@string/action_settings"-->
+<!--        app:showAsAction="never" />-->
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:title="Redeem"
+        android:icon="@drawable/ic_baseline_redeem_24"
+        android:id="@+id/redeem"/>
+    <item
+        android:title="SavingTip"
+        android:icon="@drawable/ic_baseline_bulb_24"
+        android:id="@+id/savingTip"
+         />
+    <item
+        android:title="MoneyRecord"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        android:id="@+id/moneyRecord"/>
+    <item
+        android:title="DailyExpenses"
+        android:icon="@drawable/ic_baseline_wallet_24"
+        android:id="@+id/dailyExpenses"/>
+    <item android:title="Home"
+        android:icon = "@drawable/ic_baseline_person_24"
+        android:id="@+id/home" />
 </menu>
