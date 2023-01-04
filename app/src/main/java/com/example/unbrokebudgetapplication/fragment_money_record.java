@@ -87,6 +87,24 @@ public class fragment_money_record extends Fragment {
             }
         };
         budget1.setOnClickListener(budget_rule_1_button);
+
+        Button budget2 = view.findViewById(R.id.budget_rule_2_button);
+        View.OnClickListener budget_rule_2_button = new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Navigation.findNavController(view).navigate(R.id.to2ndbudget);
+            }
+        };
+        budget2.setOnClickListener(budget_rule_2_button);
+
+        Button budget3 = view.findViewById(R.id.budget_rule_3_button);
+        View.OnClickListener budget_rule_3_button = new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Navigation.findNavController(view).navigate(R.id.to3rdbudget);
+            }
+        };
+        budget3.setOnClickListener(budget_rule_3_button);
     }
 
 }

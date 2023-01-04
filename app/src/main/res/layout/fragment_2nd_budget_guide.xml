@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/budget2_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e5e5e5"
+    tools:context=".fragment_2nd_budget_guide">
+
+<View
+    android:id="@+id/top_budget"
+    android:layout_width="411dp"
+    android:layout_height="111dp"
+    android:background="@drawable/top_background"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/budget_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="sans-serif-black"
+        android:text="The 60% Financial Rule"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_budget" />
+
+<ImageView
+    android:id="@+id/budget_info_icon"
+    android:layout_width="55dp"
+    android:layout_height="47dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="27dp"
+    android:src="@drawable/info"
+    app:layout_constraintStart_toEndOf="@+id/budget_name"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/budget_need_icon"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_box_white"
+        android:src="@drawable/money"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/budget2_desc" />
+
+    <TextView
+        android:id="@+id/budget_need_perc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Needs : 60%"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/budget_need_icon"
+        app:layout_constraintTop_toTopOf="@+id/budget_need_icon" />
+
+<ImageView
+    android:id="@+id/budget_wants"
+    android:layout_width="98dp"
+    android:layout_height="98dp"
+    android:layout_marginStart="30dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/rounded_box_white"
+    android:src="@drawable/sales"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/budget_need_icon" />
+
+    <TextView
+        android:id="@+id/budget_wants_perc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Wants : 40%"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/budget_wants"
+        app:layout_constraintTop_toBottomOf="@+id/budget_need_icon" />
+
+<TextView
+    android:id="@+id/budget_need_desc"
+    android:layout_width="236dp"
+    android:layout_height="75dp"
+    android:layout_marginStart="10dp"
+    android:fontFamily="sans-serif-light"
+    android:text="Allocated towards essential expenses such as housing, food, utilities, transportation, and healthcare."
+    android:textColor="#000000"
+    app:layout_constraintStart_toEndOf="@+id/budget_need_icon"
+    app:layout_constraintTop_toBottomOf="@+id/budget_need_perc" />
+
+<TextView
+    android:id="@+id/budget_want_desc"
+    android:layout_width="236dp"
+    android:layout_height="75dp"
+    android:layout_marginStart="10dp"
+    android:fontFamily="sans-serif-light"
+    android:text="Allocated towards non-essential expenses or wants such as entertainment, dining out, and hobbies and including savings."
+    android:textColor="#000000"
+    app:layout_constraintStart_toEndOf="@+id/budget_wants"
+    app:layout_constraintTop_toBottomOf="@+id/budget_wants_perc" />
+
+    <TextView
+        android:id="@+id/budget2_desc"
+        android:layout_width="366dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-light"
+        android:text="The 60% Solution Rule explains that you need to allocate 60% of your income to your needs and the remaining 40% of your income to your wants and savings/debt repayment"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_budget" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
