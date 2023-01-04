@@ -42,6 +42,9 @@
         <action
             android:id="@+id/to3rdbudget"
             app:destination="@id/budget3" />
+        <action
+            android:id="@+id/toincome"
+            app:destination="@id/change_income" />
     </fragment>
     <fragment
         android:id="@+id/budget1"
@@ -77,6 +80,15 @@
         tools:layout="@layout/fragment_3rd_budget_guide" >
         <action
             android:id="@+id/budget3_moneyrecord"
+            app:destination="@id/fragment_money_record" />
+    </fragment>
+    <fragment
+        android:id="@+id/change_income"
+        android:name="com.example.unbrokebudgetapplication.fragment_change_income"
+        android:label="fragment_change_income"
+        tools:layout="@layout/fragment_change_income" >
+        <action
+            android:id="@+id/income_moneyrecord"
             app:destination="@id/fragment_money_record" />
     </fragment>
 </navigation>

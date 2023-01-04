@@ -30,11 +30,11 @@
             android:id="@+id/top_box_background"
             android:layout_width="409dp"
             android:layout_height="502dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/rounded_top_box"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/moneysetting_button" />
+            app:layout_constraintTop_toBottomOf="@+id/item_box_income" />
 
     <TextView
         android:id="@+id/app_name_top"
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Average Monthly Expenses"
+            android:text="Monthly Expenses Planner"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -147,29 +147,29 @@
         app:layout_constraintEnd_toEndOf="@+id/item_box_balance"
         app:srcCompat="@drawable/wallet" />
 
-    <TextView
-        android:id="@+id/income_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:fontFamily="sans-serif-light"
-        android:text="Income"
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/income_value"
-        app:layout_constraintStart_toStartOf="@+id/item_box_income" />
+        <TextView
+            android:id="@+id/income_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Income"
+            android:textColor="#ffffff"
+            app:layout_constraintStart_toStartOf="@+id/item_box_income"
+            app:layout_constraintTop_toTopOf="@+id/item_box_income" />
 
-    <TextView
-        android:id="@+id/income_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="sans-serif-black"
-        android:text="RM2190"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/item_box_income"
-        app:layout_constraintStart_toStartOf="@+id/item_box_income" />
+        <TextView
+            android:id="@+id/income_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="RM2190"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/item_box_income"
+            app:layout_constraintTop_toBottomOf="@+id/income_text" />
 
     <ImageView
         android:id="@+id/expenses_icon"
@@ -209,7 +209,7 @@
             android:id="@+id/budget_type_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
             android:text="Budget Guide"
             android:textColor="#000000"
@@ -465,21 +465,23 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/moneysetting_button"
-            android:layout_width="321dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_box_grey"
-            android:drawableRight="@drawable/setting_white"
-            android:paddingLeft="35dp"
-            android:paddingEnd="15dp"
-            android:text="Edit"
-            android:textAllCaps="false"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(Click to edit)"
             android:textColor="#ffffff"
-            android:textStyle="bold"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/income_value"
+            app:layout_constraintTop_toBottomOf="@+id/income_value" />
+
+        <Button
+            android:id="@+id/income_button"
+            android:layout_width="154dp"
+            android:layout_height="81dp"
+            android:background="@drawable/transparent_bg"
             app:layout_constraintStart_toStartOf="@+id/item_box_income"
-            app:layout_constraintTop_toBottomOf="@+id/item_box_income" />
+            app:layout_constraintTop_toTopOf="@+id/item_box_income" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

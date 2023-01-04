@@ -19,6 +19,8 @@ import android.widget.Button;
  */
 public class fragment_money_record extends Fragment {
 
+
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -105,6 +107,15 @@ public class fragment_money_record extends Fragment {
             }
         };
         budget3.setOnClickListener(budget_rule_3_button);
+
+        Button income = view.findViewById(R.id.income_button);
+        View.OnClickListener income_button = new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Navigation.findNavController(view).navigate(R.id.toincome);
+            }
+        };
+        income.setOnClickListener(income_button);
     }
 
 }
