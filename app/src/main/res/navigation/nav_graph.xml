@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/fragment_money_record">
 
     <fragment
         android:id="@+id/FirstFragment"
@@ -25,4 +25,18 @@
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/fragment_money_record"
+        android:name="com.example.unbrokebudgetapplication.fragment_money_record"
+        android:label="fragment_money_record"
+        tools:layout="@layout/fragment_money_record" >
+        <action
+            android:id="@+id/to1stbudget"
+            app:destination="@id/fragment_1st_budget_guide" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_1st_budget_guide"
+        android:name="com.example.unbrokebudgetapplication.Fragment_1st_budget_guide"
+        android:label="fragment_1st_budget_guide"
+        tools:layout="@layout/fragment_1st_budget_guide" />
 </navigation>

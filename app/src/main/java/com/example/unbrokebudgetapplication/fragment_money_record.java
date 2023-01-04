@@ -2,11 +2,15 @@ package com.example.unbrokebudgetapplication;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +64,19 @@ public class fragment_money_record extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_money_record, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        Button budget1 = view.findViewById(R.id.budget_rule_1_button);
+        View.OnClickListener budget_rule_1_button = new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Navigation.findNavController(view).navigate(R.id.to1stbudget);
+            }
+        };
+        budget1.setOnClickListener(budget_rule_1_button);
     }
 }
