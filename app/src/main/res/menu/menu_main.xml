@@ -24,7 +24,7 @@
         android:title="DailyExpenses"
         android:icon="@drawable/ic_baseline_wallet_24"
         android:id="@+id/dailyExpenses"/>
-    <item android:title="Home"
+    <item android:title="Profile"
         android:icon = "@drawable/ic_baseline_person_24"
-        android:id="@+id/home" />
+        android:id="@+id/profile" />
 </menu>
