@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UnBrokeBudgetApplication"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/corner_rect" />
+
         <activity
             android:name=".RegisterActivity"
             android:exported="false">
@@ -20,9 +24,6 @@
                 android:value="" />
         </activity>
 
-        <meta-data
-            android:name="com.google.android.actions"
-            android:resource="@xml/corner_rect" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
@@ -42,6 +43,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
