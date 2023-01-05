@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new fragment_money_record();
                         break;
                     case R.id.dailyExpenses:
-                        fragment = new video_page() ;
+                        fragment = new Fragment_Daily_Expenses() ;
                         break;
                     case R.id.profile:
                         fragment = new LoginFragment();
