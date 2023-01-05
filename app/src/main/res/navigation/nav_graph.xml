@@ -91,4 +91,69 @@
             android:id="@+id/income_moneyrecord"
             app:destination="@id/fragment_money_record" />
     </fragment>
+    <fragment
+        android:id="@+id/milestone_achievement"
+        android:name="com.example.unbrokebudgetapplication.milestone_achievement"
+        android:label="fragment_milestone_achievement"
+        tools:layout="@layout/fragment_milestone_achievement" >
+        <action
+            android:id="@+id/NextToAchievment_Lv1"
+            app:destination="@id/milestone_achievment_2" />
+        <action
+            android:id="@+id/NextToAchievment_Lv3"
+            app:destination="@id/milestone_achievment_2_3" />
+        <action
+            android:id="@+id/NextToAchievment_Lv2"
+            app:destination="@id/milestone_achievment_2_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/milestone_achievment_2"
+        android:name="com.example.unbrokebudgetapplication.milestone_achievment_2"
+        android:label="fragment_milestone_achievment_2"
+        tools:layout="@layout/fragment_milestone_achievment_2" >
+        <action
+            android:id="@+id/BackToMilestone_Lv1"
+            app:destination="@id/milestone_achievement" />
+    </fragment>
+    <fragment
+        android:id="@+id/milestone_achievment_2_3"
+        android:name="com.example.unbrokebudgetapplication.milestone_achievment_2_3"
+        android:label="fragment_milestone_achievment_2_3"
+        tools:layout="@layout/fragment_milestone_achievment_2_3" >
+        <action
+            android:id="@+id/BackToMilestone_Lv3"
+            app:destination="@id/milestone_achievement" />
+    </fragment>
+    <fragment
+        android:id="@+id/milestone_achievment_2_2"
+        android:name="com.example.unbrokebudgetapplication.milestone_achievment_2_2"
+        android:label="fragment_milestone_achievment_2_2"
+        tools:layout="@layout/fragment_milestone_achievment_2_2" >
+        <action
+            android:id="@+id/BackToMilestone_Lv2"
+            app:destination="@id/milestone_achievement" />
+    </fragment>
+    <fragment
+        android:id="@+id/point_redemption"
+        android:name="com.example.unbrokebudgetapplication.point_redemption"
+        android:label="fragment_point_redemption"
+        tools:layout="@layout/fragment_point_redemption" >
+        <action
+            android:id="@+id/NextToVideo"
+            app:destination="@id/video_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/lucky_wheel"
+        android:name="com.example.unbrokebudgetapplication.lucky_wheel"
+        android:label="fragment_lucky_wheel"
+        tools:layout="@layout/fragment_lucky_wheel" />
+    <fragment
+        android:id="@+id/video_page"
+        android:name="com.example.unbrokebudgetapplication.video_page"
+        android:label="fragment_video_page"
+        tools:layout="@layout/fragment_video_page" >
+        <action
+            android:id="@+id/BackToPointRedemption"
+            app:destination="@id/point_redemption" />
+    </fragment>
 </navigation>
