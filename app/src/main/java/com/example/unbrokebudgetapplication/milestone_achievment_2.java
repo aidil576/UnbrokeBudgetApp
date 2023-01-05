@@ -3,10 +3,13 @@ package com.example.unbrokebudgetapplication;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +63,16 @@ public class milestone_achievment_2 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_milestone_achievment_2, container, false);
+    }
+
+    public void onViewCreated(View view, Bundle savedInstanceState){
+        Button BtnClaim1 = view.findViewById(R.id.button1);
+        View.OnClickListener OCLbtn1 = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(view).navigate(R.id.BackToMilestone_Lv1);
+            }
+        };
+        BtnClaim1.setOnClickListener(OCLbtn1);
     }
 }

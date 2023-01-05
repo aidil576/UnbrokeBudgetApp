@@ -2,14 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/CL"
+    android:id="@+id/CLVideoPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1F505B"
     tools:context=".video_page">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/IVPlaFrame"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:src="@drawable/rectangle_holder"
@@ -21,17 +21,17 @@
         app:layout_constraintVertical_bias="0.711" />
 
     <ImageView
-        android:id="@+id/IVplay"
+        android:id="@+id/IVPlaybutton"
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:src="@drawable/ic_baseline_play_arrow_24"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        app:layout_constraintBottom_toBottomOf="@+id/IVPlaFrame"
+        app:layout_constraintEnd_toEndOf="@+id/IVPlaFrame"
+        app:layout_constraintStart_toStartOf="@+id/IVPlaFrame"
+        app:layout_constraintTop_toTopOf="@+id/IVPlaFrame" />
 
     <ImageView
-        android:id="@+id/transactionItem4"
+        android:id="@+id/IVHolderPointsTV"
         android:layout_width="278dp"
         android:layout_height="137dp"
         android:layout_marginTop="35dp"
@@ -42,20 +42,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/TVGetMPoints"
         android:layout_width="178dp"
         android:layout_height="87dp"
         android:text="Get More Points"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/transactionItem4"
-        app:layout_constraintEnd_toEndOf="@+id/transactionItem4"
-        app:layout_constraintStart_toStartOf="@+id/transactionItem4"
-        app:layout_constraintTop_toTopOf="@+id/transactionItem4" />
+        app:layout_constraintBottom_toBottomOf="@+id/IVHolderPointsTV"
+        app:layout_constraintEnd_toEndOf="@+id/IVHolderPointsTV"
+        app:layout_constraintStart_toStartOf="@+id/IVHolderPointsTV"
+        app:layout_constraintTop_toTopOf="@+id/IVHolderPointsTV" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/TVPointsDesc"
         android:layout_width="247dp"
         android:layout_height="72dp"
         android:layout_marginTop="40dp"
@@ -63,13 +63,13 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/transactionItem4"
+        app:layout_constraintEnd_toEndOf="@+id/IVHolderPointsTV"
         app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="@+id/transactionItem4"
-        app:layout_constraintTop_toBottomOf="@+id/transactionItem4" />
+        app:layout_constraintStart_toStartOf="@+id/IVHolderPointsTV"
+        app:layout_constraintTop_toBottomOf="@+id/IVHolderPointsTV" />
 
     <ImageView
-        android:id="@+id/transactionItem2"
+        android:id="@+id/IVAirBaloon"
         android:layout_width="98dp"
         android:layout_height="110dp"
         android:layout_marginStart="16dp"
@@ -80,7 +80,7 @@
         app:layout_constraintVertical_bias="0.041" />
 
     <ImageView
-        android:id="@+id/transactionItem9"
+        android:id="@+id/IVClose"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginEnd="4dp"
