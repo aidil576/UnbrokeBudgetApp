@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         navigationView = findViewById(R.id.bottom_nav);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new FirstFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new fragment_money_record()).commit();
         //navigationView.setSelectedItemId(R.id.dailyExpenses);
 
         navigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -57,11 +57,13 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new savingTips();
                         break;
                     case R.id.dailyExpenses:
-                        fragment = new fragment_money_record();
+                        fragment = new video_page() ;
                         break;
-//                    case.R.id.redeem;
-//                    fragment = new fragment_point_redemption();
-//                    break;
+                    case R.id.redeem:
+                    fragment = new point_redemption();
+                    break;
+                    case R.id.moneyRecord:
+                        fragment = new fragment_money_record();
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, fragment).commit();
                 return true;
