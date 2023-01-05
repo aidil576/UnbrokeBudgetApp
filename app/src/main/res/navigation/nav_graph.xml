@@ -105,6 +105,9 @@
         <action
             android:id="@+id/NextToAchievment_Lv2"
             app:destination="@id/milestone_achievment_2_2" />
+        <action
+            android:id="@+id/BackToETfmile"
+            app:destination="@id/entertainment_page" />
     </fragment>
     <fragment
         android:id="@+id/milestone_achievment_2"
@@ -141,12 +144,19 @@
         <action
             android:id="@+id/NextToVideo"
             app:destination="@id/video_page" />
+        <action
+            android:id="@+id/BackToETfpoint"
+            app:destination="@id/entertainment_page" />
     </fragment>
     <fragment
         android:id="@+id/lucky_wheel"
         android:name="com.example.unbrokebudgetapplication.lucky_wheel"
         android:label="fragment_lucky_wheel"
-        tools:layout="@layout/fragment_lucky_wheel" />
+        tools:layout="@layout/fragment_lucky_wheel" >
+        <action
+            android:id="@+id/BackToETfLucky"
+            app:destination="@id/entertainment_page" />
+    </fragment>
     <fragment
         android:id="@+id/video_page"
         android:name="com.example.unbrokebudgetapplication.video_page"
@@ -155,5 +165,20 @@
         <action
             android:id="@+id/BackToPointRedemption"
             app:destination="@id/point_redemption" />
+    </fragment>
+    <fragment
+        android:id="@+id/entertainment_page"
+        android:name="com.example.unbrokebudgetapplication.entertainment_page"
+        android:label="fragment_entertainment_page"
+        tools:layout="@layout/fragment_entertainment_page" >
+        <action
+            android:id="@+id/NextToMilestone"
+            app:destination="@id/milestone_achievement" />
+        <action
+            android:id="@+id/NextToPointRedemption"
+            app:destination="@id/point_redemption" />
+        <action
+            android:id="@+id/NextToLuckyWheel"
+            app:destination="@id/lucky_wheel" />
     </fragment>
 </navigation>

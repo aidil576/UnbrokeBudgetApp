@@ -2,7 +2,6 @@ package com.example.unbrokebudgetapplication;
 
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -11,14 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link milestone_achievement#newInstance} factory method to
+ * Use the {@link entertainment_page#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class milestone_achievement extends Fragment {
+public class entertainment_page extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +27,7 @@ public class milestone_achievement extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public milestone_achievement() {
+    public entertainment_page() {
         // Required empty public constructor
     }
 
@@ -39,11 +37,11 @@ public class milestone_achievement extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment milestone_achievement.
+     * @return A new instance of fragment entertainment_page.
      */
     // TODO: Rename and change types and number of parameters
-    public static milestone_achievement newInstance(String param1, String param2) {
-        milestone_achievement fragment = new milestone_achievement();
+    public static entertainment_page newInstance(String param1, String param2) {
+        entertainment_page fragment = new entertainment_page();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,40 +62,35 @@ public class milestone_achievement extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_milestone_achievement, container, false);
+        return inflater.inflate(R.layout.fragment_entertainment_page, container, false);
     }
 
-    public void onViewCreated(View view, Bundle savedInstanceState){
-        ImageButton Btnlv1 = view.findViewById(R.id.IBrtgl1);
-        View.OnClickListener OCL1 = new View.OnClickListener() {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        ImageButton BtnPR = view.findViewById(R.id.IB_pointredemption);
+        View.OnClickListener OCLbtnPR = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.NextToAchievment_Lv1);
+                Navigation.findNavController(view).navigate(R.id.NextToPointRedemption);
             }
         };
-        Btnlv1.setOnClickListener(OCL1);
+        BtnPR.setOnClickListener(OCLbtnPR);
 
-        ImageButton Btnlv2 = view.findViewById(R.id.IBrtgl2);
-        View.OnClickListener OCL2 = new View.OnClickListener() {
+        ImageButton BtnMA = view.findViewById(R.id.IB_milestoneachievment);
+        View.OnClickListener OCLbtnMA = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.NextToAchievment_Lv2);
+                Navigation.findNavController(view).navigate(R.id.NextToMilestone);
             }
         };
-        Btnlv2.setOnClickListener(OCL2);
+        BtnMA.setOnClickListener(OCLbtnMA);
 
-        ImageButton Btnlv3 = view.findViewById(R.id.IBrtgl3);
-        View.OnClickListener OCL3 = new View.OnClickListener() {
+        ImageButton BtnLD = view.findViewById(R.id.IB_luckywheel);
+        View.OnClickListener OCLbtnLD = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.NextToAchievment_Lv3);
+                Navigation.findNavController(view).navigate(R.id.NextToLuckyWheel);
             }
         };
-        Btnlv3.setOnClickListener(OCL3);
-
-
-
+        BtnLD.setOnClickListener(OCLbtnLD);
     }
-
-
 }
