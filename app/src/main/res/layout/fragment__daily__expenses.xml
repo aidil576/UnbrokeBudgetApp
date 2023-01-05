@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5"
+
+    tools:context=".Fragment_Daily_Expenses">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="360dp"
+        android:layout_height="240dp"
+        android:src="@drawable/rounded_box_darkblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <TextView
+        android:id="@+id/Transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transaction"
+        android:textColor="#000000"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.345" />
+
+    <Button
+        android:id="@+id/viewAllButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E5E5E5"
+        android:text="view all"
+        android:textColor="#5A5A5A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.347" />
+
+    <TextView
+        android:id="@+id/TotalBalanceTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_daily_balance"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintVertical_bias="0.347" />
+
+    <TextView
+        android:id="@+id/totalBalanceAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RM 28.70"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintVertical_bias="0.54" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="389dp"
+        android:layout_height="337dp"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Transaction">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/transactionItem1"
+                android:layout_width="360dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/round_corner"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem2"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem2"
+                app:layout_constraintTop_toBottomOf="@+id/transactionItem2" />
+
+            <ImageView
+                android:id="@+id/transactionItem2"
+                android:layout_width="360dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/round_corner"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem3"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem3"
+                app:layout_constraintTop_toBottomOf="@+id/transactionItem3" />
+
+            <ImageView
+                android:id="@+id/transactionItem3"
+                android:layout_width="360dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/round_corner"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem4"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem4"
+                app:layout_constraintTop_toBottomOf="@+id/transactionItem4" />
+
+            <ImageView
+                android:id="@+id/transactionItem4"
+                android:layout_width="360dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/round_corner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.515"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/transactionItem5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/foodicon"
+                app:layout_constraintBottom_toBottomOf="@+id/transactionItem4"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem4"
+                app:layout_constraintHorizontal_bias="0.046"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem4"
+                app:layout_constraintTop_toTopOf="@+id/transactionItem4"
+                app:layout_constraintVertical_bias="0.51" />
+
+            <ImageView
+                android:id="@+id/transactionItem6"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/grocery"
+                app:layout_constraintBottom_toBottomOf="@+id/transactionItem3"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem3"
+                app:layout_constraintHorizontal_bias="0.059"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem3"
+                app:layout_constraintTop_toTopOf="@+id/transactionItem3"
+                app:layout_constraintVertical_bias="0.51" />
+
+            <ImageView
+                android:id="@+id/transactionItem7"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/entertainment"
+                app:layout_constraintBottom_toBottomOf="@+id/transactionItem2"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem2"
+                app:layout_constraintHorizontal_bias="0.046"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem2"
+                app:layout_constraintTop_toTopOf="@+id/transactionItem2"
+                app:layout_constraintVertical_bias="0.56" />
+
+            <ImageView
+                android:id="@+id/transactionItem8"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/transporter"
+                app:layout_constraintBottom_toBottomOf="@+id/transactionItem1"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem1"
+                app:layout_constraintHorizontal_bias="0.043"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem1"
+                app:layout_constraintTop_toTopOf="@+id/transactionItem1" />
+
+            <ImageView
+                android:id="@+id/transactionItem9"
+                android:layout_width="360dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/round_corner"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem1"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem1"
+                app:layout_constraintTop_toBottomOf="@+id/transactionItem1" />
+
+            <ImageView
+                android:id="@+id/transactionItem10"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/bill"
+                app:layout_constraintBottom_toBottomOf="@+id/transactionItem9"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem9"
+                app:layout_constraintHorizontal_bias="0.061"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem9"
+                app:layout_constraintTop_toTopOf="@+id/transactionItem9" />
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/transactionItem4"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem4"
+                app:layout_constraintHorizontal_bias="0.326"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem4"
+                app:layout_constraintTop_toTopOf="@+id/transactionItem4"
+                app:layout_constraintVertical_bias="0.52" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grocery"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/transactionItem3"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem3"
+                app:layout_constraintHorizontal_bias="0.353"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem3"
+                app:layout_constraintTop_toTopOf="@+id/transactionItem3"
+                app:layout_constraintVertical_bias="0.541" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entertainment"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/transactionItem2"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem2"
+                app:layout_constraintHorizontal_bias="0.438"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem2"
+                app:layout_constraintTop_toTopOf="@+id/transactionItem2" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transportation"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/transactionItem1"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem1"
+                app:layout_constraintHorizontal_bias="0.449"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem1"
+                app:layout_constraintTop_toTopOf="@+id/transactionItem1" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RM 1.50"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/transactionItem1"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem1"
+                app:layout_constraintHorizontal_bias="0.898"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem1"
+                app:layout_constraintTop_toTopOf="@+id/transactionItem1" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RM 5.50"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/transactionItem4"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem4"
+                app:layout_constraintHorizontal_bias="0.919"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem4"
+                app:layout_constraintTop_toTopOf="@+id/transactionItem4"
+                app:layout_constraintVertical_bias="0.541" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RM 4.00"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/transactionItem3"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem3"
+                app:layout_constraintHorizontal_bias="0.919"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem3"
+                app:layout_constraintTop_toTopOf="@+id/transactionItem3"
+                app:layout_constraintVertical_bias="0.541" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RM 10.00"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/transactionItem2"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem2"
+                app:layout_constraintHorizontal_bias="0.927"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem2"
+                app:layout_constraintTop_toTopOf="@+id/transactionItem2" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bill"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/transactionItem9"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem9"
+                app:layout_constraintHorizontal_bias="0.309"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem9"
+                app:layout_constraintTop_toTopOf="@+id/transactionItem9"
+                app:layout_constraintVertical_bias="0.479" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RM 20.00"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/transactionItem9"
+                app:layout_constraintEnd_toEndOf="@+id/transactionItem9"
+                app:layout_constraintHorizontal_bias="0.934"
+                app:layout_constraintStart_toStartOf="@+id/transactionItem9"
+                app:layout_constraintTop_toTopOf="@+id/transactionItem9"
+                app:layout_constraintVertical_bias="0.479" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/arrowUp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/arrowup"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintVertical_bias="0.942" />
+
+    <ImageView
+        android:id="@+id/arrowDown"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:rotationX="180"
+        android:src="@drawable/arrowup"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintVertical_bias="0.942" />
+
+    <TextView
+        android:id="@+id/dailyAllo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Allocation"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintVertical_bias="0.809" />
+
+    <TextView
+        android:id="@+id/dailyAlloAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RM 50.00"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintVertical_bias="0.895" />
+
+    <TextView
+        android:id="@+id/expenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expenses"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintVertical_bias="0.809" />
+
+    <TextView
+        android:id="@+id/expensesAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RM 21.30"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintVertical_bias="0.891" />
+
+    <TextView
+        android:id="@+id/plannerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unbroke Planner"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintVertical_bias="0.067" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -165,7 +165,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:fontFamily="sans-serif-black"
-            android:text="RM2190"
+            android:text="test"
             android:textColor="#ffffff"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/item_box_income"

@@ -24,6 +24,7 @@ import com.google.android.material.navigation.NavigationBarView;
 //import android.view.Menu;
 
 public class MainActivity extends AppCompatActivity {
+    DBHelper myDB;
 
     //private AppBarConfiguration appBarConfiguration;
     //private ActivityMainBinding binding;
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        myDB = new DBHelper(this);
+
         //hide action bar
         //getSupportActionBar().hide();
 
@@ -42,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         navigationView = findViewById(R.id.bottom_nav);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new FirstFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new fragment_money_record()).commit();
         //navigationView.setSelectedItemId(R.id.dailyExpenses);
 
         navigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -50,18 +53,22 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item){
                 Fragment fragment = null;
                 switch (item.getItemId()){
-                    case R.id.profile:
-                        fragment = new LoginFragment();
+                    case R.id.redeem:
+                        fragment = new point_redemption();
                         break;
+
                     case R.id.savingTip:
                         fragment = new savingTips();
                         break;
-                    case R.id.dailyExpenses:
+                    case R.id.moneyRecord:
                         fragment = new fragment_money_record();
                         break;
-//                    case.R.id.redeem;
-//                    fragment = new fragment_point_redemption();
-//                    break;
+                    case R.id.dailyExpenses:
+                        fragment = new video_page() ;
+                        break;
+                    case R.id.profile:
+                        fragment = new LoginFragment();
+                        break;
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, fragment).commit();
                 return true;

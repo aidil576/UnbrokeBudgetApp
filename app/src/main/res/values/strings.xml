@@ -32,4 +32,6 @@
     <string name="othermethod">Choose another method</string>
     <string name="help">Need help?</string>
     <string name="otp">Send OTP</string>
+    <string name="textview">TextView</string>
+    <string name="total_daily_balance">Total Daily Balance</string>
 </resources>
