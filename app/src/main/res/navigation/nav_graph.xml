@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/fragment_money_record">
 
     <fragment
         android:id="@+id/FirstFragment"
@@ -24,5 +24,71 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_money_record"
+        android:name="com.example.unbrokebudgetapplication.fragment_money_record"
+        android:label="fragment_money_record"
+        tools:layout="@layout/fragment_money_record" >
+        <action
+            android:id="@+id/to1stbudget"
+            app:destination="@id/budget1" />
+        <action
+            android:id="@+id/to_add_money"
+            app:destination="@id/fragment_add_money" />
+        <action
+            android:id="@+id/to2ndbudget"
+            app:destination="@id/budget2" />
+        <action
+            android:id="@+id/to3rdbudget"
+            app:destination="@id/budget3" />
+        <action
+            android:id="@+id/toincome"
+            app:destination="@id/change_income" />
+    </fragment>
+    <fragment
+        android:id="@+id/budget1"
+        android:name="com.example.unbrokebudgetapplication.Fragment_1st_budget_guide"
+        android:label="fragment_1st_budget_guide"
+        tools:layout="@layout/fragment_1st_budget_guide" >
+        <action
+            android:id="@+id/firstbudget_moneyrecord"
+            app:destination="@id/fragment_money_record" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_add_money"
+        android:name="com.example.unbrokebudgetapplication.fragment_add_money"
+        android:label="fragment_add_money"
+        tools:layout="@layout/fragment_add_money" >
+        <action
+            android:id="@+id/addmoney_moneyrecord"
+            app:destination="@id/fragment_money_record" />
+    </fragment>
+    <fragment
+        android:id="@+id/budget2"
+        android:name="com.example.unbrokebudgetapplication.fragment_2nd_budget_guide"
+        android:label="fragment_2nd_budget_guide"
+        tools:layout="@layout/fragment_2nd_budget_guide" >
+        <action
+            android:id="@+id/secondbudget_moneyrecord"
+            app:destination="@id/fragment_money_record" />
+    </fragment>
+    <fragment
+        android:id="@+id/budget3"
+        android:name="com.example.unbrokebudgetapplication.fragment_3rd_budget_guide"
+        android:label="fragment_3rd_budget_guide"
+        tools:layout="@layout/fragment_3rd_budget_guide" >
+        <action
+            android:id="@+id/budget3_moneyrecord"
+            app:destination="@id/fragment_money_record" />
+    </fragment>
+    <fragment
+        android:id="@+id/change_income"
+        android:name="com.example.unbrokebudgetapplication.fragment_change_income"
+        android:label="fragment_change_income"
+        tools:layout="@layout/fragment_change_income" >
+        <action
+            android:id="@+id/income_moneyrecord"
+            app:destination="@id/fragment_money_record" />
     </fragment>
 </navigation>

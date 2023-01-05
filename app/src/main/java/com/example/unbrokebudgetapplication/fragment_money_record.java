@@ -2,11 +2,15 @@ package com.example.unbrokebudgetapplication;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +18,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class fragment_money_record extends Fragment {
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,4 +67,55 @@ public class fragment_money_record extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_money_record, container, false);
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        Button addmoney = view.findViewById(R.id.add_money_button);
+        View.OnClickListener add_money_button = new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Navigation.findNavController(view).navigate(R.id.to_add_money);
+            }
+        };
+        addmoney.setOnClickListener(add_money_button);
+
+        Button budget1 = view.findViewById(R.id.budget_rule_1_button);
+        View.OnClickListener budget_rule_1_button = new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Navigation.findNavController(view).navigate(R.id.to1stbudget);
+            }
+        };
+        budget1.setOnClickListener(budget_rule_1_button);
+
+        Button budget2 = view.findViewById(R.id.budget_rule_2_button);
+        View.OnClickListener budget_rule_2_button = new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Navigation.findNavController(view).navigate(R.id.to2ndbudget);
+            }
+        };
+        budget2.setOnClickListener(budget_rule_2_button);
+
+        Button budget3 = view.findViewById(R.id.budget_rule_3_button);
+        View.OnClickListener budget_rule_3_button = new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Navigation.findNavController(view).navigate(R.id.to3rdbudget);
+            }
+        };
+        budget3.setOnClickListener(budget_rule_3_button);
+
+        Button income = view.findViewById(R.id.income_button);
+        View.OnClickListener income_button = new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Navigation.findNavController(view).navigate(R.id.toincome);
+            }
+        };
+        income.setOnClickListener(income_button);
+    }
+
 }

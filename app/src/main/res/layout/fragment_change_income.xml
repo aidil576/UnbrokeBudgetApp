@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/changeincomeconstraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a434e"
+    tools:context=".fragment_change_income" >
+
+    <View
+        android:id="@+id/bg_changeincome"
+        android:layout_width="355dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_box_lighter_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/initial_income_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Your income now:"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/bg_changeincome"
+        app:layout_constraintTop_toTopOf="@+id/bg_changeincome" />
+
+    <TextView
+        android:id="@+id/initial_income_value"
+        android:layout_width="304dp"
+        android:layout_height="59dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="ddd"
+        android:textColor="#ffffff"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="@+id/initial_income_text"
+        app:layout_constraintTop_toBottomOf="@+id/initial_income_text" />
+
+    <TextView
+        android:id="@+id/input_income_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Enter your new income"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/initial_income_value"
+        app:layout_constraintTop_toBottomOf="@+id/initial_income_value" />
+
+    <EditText
+        android:id="@+id/edit_income"
+        android:layout_width="309dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/bg_changeincome"
+        app:layout_constraintStart_toStartOf="@+id/bg_changeincome"
+        app:layout_constraintTop_toBottomOf="@+id/input_income_text" />
+
+    <Button
+        android:id="@+id/income_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_box_red"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@+id/bg_changeincome"
+        app:layout_constraintTop_toBottomOf="@+id/bg_changeincome" />
+
+    <Button
+        android:id="@+id/income_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/rounded_box_blue"
+        android:text="Confirm"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/bg_changeincome"
+        app:layout_constraintTop_toBottomOf="@+id/bg_changeincome" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
