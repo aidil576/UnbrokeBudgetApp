@@ -50,20 +50,22 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item){
                 Fragment fragment = null;
                 switch (item.getItemId()){
-                    case R.id.profile:
-                        fragment = new LoginFragment();
+                    case R.id.redeem:
+                        fragment = new point_redemption();
                         break;
+
                     case R.id.savingTip:
                         fragment = new savingTips();
+                        break;
+                    case R.id.moneyRecord:
+                        fragment = new fragment_money_record();
                         break;
                     case R.id.dailyExpenses:
                         fragment = new video_page() ;
                         break;
-                    case R.id.redeem:
-                    fragment = new point_redemption();
-                    break;
-                    case R.id.moneyRecord:
-                        fragment = new fragment_money_record();
+                    case R.id.profile:
+                        fragment = new LoginFragment();
+                        break;
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, fragment).commit();
                 return true;
