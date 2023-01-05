@@ -8,6 +8,11 @@
 <!--        android:title="@string/action_settings"-->
 <!--        app:showAsAction="never" />-->
     <item
+        android:id="@+id/moneyRecord"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        android:title="MoneyRecord"
+        app:labelVisibilityMode="labeled" />
+    <item
         android:title="Redeem"
         app:labelVisibilityMode="labeled"
         android:icon="@drawable/ic_baseline_redeem_24"
@@ -18,11 +23,6 @@
         android:icon="@drawable/ic_baseline_bulb_24"
         android:id="@+id/savingTip"
          />
-    <item
-        android:title="MoneyRecord"
-        app:labelVisibilityMode="labeled"
-        android:icon="@drawable/ic_baseline_attach_money_24"
-        android:id="@+id/moneyRecord"/>
     <item
         android:title="DailyExpenses"
         app:labelVisibilityMode="labeled"

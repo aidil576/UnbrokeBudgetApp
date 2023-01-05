@@ -21,6 +21,8 @@
             android:gravity="left"
             android:text="@string/saving_tip"
             android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -95,7 +97,18 @@
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
+
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/infoInvest"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Emergency savings should be placed in an account that is easily accessible, so you do not incur early-withdrawal penalties as you would with an account such as a certificate of deposit (CD) or Individual Retirement Account (IRA)."
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
+
                 </TableRow>
 
                 <TableRow
@@ -144,6 +157,15 @@
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/infoEmergency"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Emergency savings should be placed in an account that is easily accessible, so you do not incur early-withdrawal penalties as you would with an account such as a certificate of deposit (CD) or Individual Retirement Account (IRA)."
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
                 </TableRow>
 
                 <TableRow
@@ -192,6 +214,15 @@
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/infoDonation"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="TextView"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
                 </TableRow>
 
             </TableLayout>
