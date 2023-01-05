@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 /**
@@ -66,13 +67,13 @@ public class point_redemption extends Fragment {
     }
 
     public void onViewCreated(View view, Bundle savedInstanceState){
-        ImageView BtnIVGift = view.findViewById(R.id.IVgift);
+        ImageButton BtnIBGift = view.findViewById(R.id.IBGift);
         View.OnClickListener OCLIVGift = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Navigation.findNavController(view).navigate(R.id.NextToVideo);
             }
         };
-        BtnIVGift.setOnClickListener(OCLIVGift);
+        BtnIBGift.setOnClickListener(OCLIVGift);
     }
 }
