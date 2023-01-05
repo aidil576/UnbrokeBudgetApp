@@ -1,10 +1,15 @@
 package com.example.unbrokebudgetapplication;
 
 
+import static java.sql.Time.valueOf;
+
+import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -12,6 +17,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import java.sql.Date;
+import java.sql.Time;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,7 +31,8 @@ import android.widget.Button;
  * create an instance of this fragment.
  */
 public class fragment_add_money extends Fragment {
-
+    private Context context;
+    DBHelper myDB = new DBHelper(context);
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -80,20 +93,36 @@ public class fragment_add_money extends Fragment {
         };
         cancel.setOnClickListener(cancel_button_addmoney);
 
+        EditText amounttoadd = (EditText) view.findViewById(R.id.amount_add_value);
 
-            Button confirm = view.findViewById(R.id.confirm_button_addmoney);
-            View.OnClickListener confirm_button_addmoney = new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(R.id.amount_add_value != 0) {
-                        Navigation.findNavController(view).navigate(R.id.addmoney_moneyrecord);
+
+        Button confirm = view.findViewById(R.id.confirm_button_addmoney);
+        View.OnClickListener confirm_button_addmoney = new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            @Override
+            public void onClick(View v) {
+                if(R.id.amount_add_value != 0) {
+                    LocalDateTime now = LocalDateTime.now();
+                    Date date = Date.valueOf(String.valueOf(now.toLocalDate()));
+                    Time time = Time.valueOf(now.toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
+                    double amount = Double.parseDouble(amounttoadd.getText().toString());
+
+                    boolean isInserted = myDB.addMoney(getContext(), "top-up", amount, date, time);
+                    if(isInserted =true)
+                    {
+                        System.out.println("added");
                     }
                     else
-                        Navigation.findNavController(view).navigate(R.id.to_add_money);
+                        System.out.println("not added");
+                    Navigation.findNavController(view).navigate(R.id.addmoney_moneyrecord);
 
                 }
-            };
-            confirm.setOnClickListener(confirm_button_addmoney);
+                else
+                    Navigation.findNavController(view).navigate(R.id.to_add_money);
+
+            }
+        };
+        confirm.setOnClickListener(confirm_button_addmoney);
 
     }
 }

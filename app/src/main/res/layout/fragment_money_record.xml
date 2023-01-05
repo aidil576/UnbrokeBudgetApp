@@ -30,11 +30,11 @@
             android:id="@+id/top_box_background"
             android:layout_width="409dp"
             android:layout_height="502dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/rounded_top_box"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_box_income" />
+            app:layout_constraintTop_toBottomOf="@+id/record_purchase_button" />
 
     <TextView
         android:id="@+id/app_name_top"
@@ -167,7 +167,7 @@
             android:fontFamily="sans-serif-black"
             android:text="test"
             android:textColor="#ffffff"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:layout_constraintStart_toStartOf="@+id/item_box_income"
             app:layout_constraintTop_toBottomOf="@+id/income_text" />
 
@@ -481,7 +481,23 @@
             android:layout_height="81dp"
             android:background="@drawable/transparent_bg"
             app:layout_constraintStart_toStartOf="@+id/item_box_income"
-            app:layout_constraintTop_toTopOf="@+id/item_box_income" />
+            app:layout_constraintTop_toTopOf="@+id/item_box_income"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/record_purchase_button"
+            android:layout_width="320dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_box_green"
+            android:text="Click here to record a purhase"
+            android:drawableEnd="@drawable/dollar"
+            android:paddingEnd="20dp"
+            android:paddingStart="34dp"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/item_box_expenses"
+            app:layout_constraintStart_toStartOf="@+id/item_box_income"
+            app:layout_constraintTop_toBottomOf="@+id/item_box_income" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

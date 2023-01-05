@@ -45,6 +45,9 @@
         <action
             android:id="@+id/toincome"
             app:destination="@id/change_income" />
+        <action
+            android:id="@+id/torecordpurchase"
+            app:destination="@id/fragment_record_purchase" />
     </fragment>
     <fragment
         android:id="@+id/budget1"
@@ -180,5 +183,14 @@
         <action
             android:id="@+id/NextToLuckyWheel"
             app:destination="@id/lucky_wheel" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_record_purchase"
+        android:name="com.example.unbrokebudgetapplication.Fragment_record_purchase"
+        android:label="fragment_record_purchase"
+        tools:layout="@layout/fragment_record_purchase" >
+        <action
+            android:id="@+id/recordpurchase_moneyrecord"
+            app:destination="@id/fragment_money_record" />
     </fragment>
 </navigation>

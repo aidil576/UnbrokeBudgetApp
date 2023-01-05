@@ -8,11 +8,71 @@
     android:background="#1a434e"
     tools:context=".fragment_change_income" >
 
+
     <View
         android:id="@+id/bg_changeincome"
         android:layout_width="355dp"
         android:layout_height="250dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="-15dp"
+        android:background="@drawable/rounded_box_lighter_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/or_circle" />
+
+    <TextView
+        android:id="@+id/input_income_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Change your income"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/bg_changeincome"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/bg_changeincome"
+        app:layout_constraintTop_toTopOf="@+id/bg_changeincome" />
+
+    <EditText
+        android:id="@+id/edit_income"
+        android:layout_width="309dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/bg_changeincome"
+        app:layout_constraintStart_toStartOf="@+id/bg_changeincome"
+        app:layout_constraintTop_toBottomOf="@+id/input_income_text" />
+
+    <Button
+        android:id="@+id/income_cancel"
+        android:layout_width="131dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_box_red"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@+id/bg_changeincome"
+        app:layout_constraintTop_toBottomOf="@+id/edit_income" />
+
+    <Button
+        android:id="@+id/income_confirm"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/rounded_box_blue"
+        android:text="Confirm Change"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/bg_changeincome"
+        app:layout_constraintTop_toBottomOf="@+id/edit_income" />
+
+    <View
+        android:id="@+id/top_bg_income"
+        android:layout_width="355dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/rounded_box_lighter_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,14 +82,14 @@
         android:id="@+id/initial_income_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-medium"
         android:text="Your income now:"
         android:textColor="#ffffff"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/bg_changeincome"
-        app:layout_constraintTop_toTopOf="@+id/bg_changeincome" />
+        app:layout_constraintStart_toStartOf="@+id/top_bg_income"
+        app:layout_constraintTop_toTopOf="@+id/top_bg_income" />
 
     <TextView
         android:id="@+id/initial_income_value"
@@ -43,49 +103,50 @@
         app:layout_constraintTop_toBottomOf="@+id/initial_income_text" />
 
     <TextView
-        android:id="@+id/input_income_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:text="Enter your new income"
+        android:id="@+id/confrim_salary_text"
+        android:layout_width="298dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:text="Click here if you have received your salary this month:"
         android:textColor="#ffffff"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/initial_income_value"
         app:layout_constraintTop_toBottomOf="@+id/initial_income_value" />
 
-    <EditText
-        android:id="@+id/edit_income"
-        android:layout_width="309dp"
-        android:layout_height="57dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="@+id/bg_changeincome"
-        app:layout_constraintStart_toStartOf="@+id/bg_changeincome"
-        app:layout_constraintTop_toBottomOf="@+id/input_income_text" />
-
     <Button
-        android:id="@+id/income_cancel"
+        android:id="@+id/confirm_salary"
+        android:layout_width="312dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_box_green"
+        android:text="Confirm Salary"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/top_bg_income"
+        app:layout_constraintStart_toStartOf="@+id/top_bg_income"
+        app:layout_constraintTop_toBottomOf="@+id/confrim_salary_text" />
+
+    <View
+        android:id="@+id/or_circle"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="-15dp"
+        android:background="@drawable/circle_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bg_income" />
+
+    <TextView
+        android:id="@+id/or_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/rounded_box_red"
-        android:text="Cancel"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="@+id/bg_changeincome"
-        app:layout_constraintTop_toBottomOf="@+id/bg_changeincome" />
-
-    <Button
-        android:id="@+id/income_confirm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/rounded_box_blue"
-        android:text="Confirm"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@+id/bg_changeincome"
-        app:layout_constraintTop_toBottomOf="@+id/bg_changeincome" />
+        android:fontFamily="sans-serif-black"
+        android:text="OR"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/or_circle"
+        app:layout_constraintEnd_toEndOf="@+id/or_circle"
+        app:layout_constraintStart_toStartOf="@+id/or_circle"
+        app:layout_constraintTop_toTopOf="@+id/or_circle" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

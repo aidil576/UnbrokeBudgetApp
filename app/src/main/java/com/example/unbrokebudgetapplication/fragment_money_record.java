@@ -1,5 +1,6 @@
 package com.example.unbrokebudgetapplication;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -21,7 +22,8 @@ import java.io.*;
  * create an instance of this fragment.
  */
 public class fragment_money_record extends Fragment {
-
+    private Context context;
+    DBHelper myDB;
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -71,7 +73,7 @@ public class fragment_money_record extends Fragment {
             } catch (IOException e) {
                 e.printStackTrace();
             }*/
-            Double number = 0.0;
+            //Double number = 0.0;
             /*try {
                 BufferedReader reader = new BufferedReader(new FileReader(income));
                 String line = reader.readLine();
@@ -93,32 +95,18 @@ public class fragment_money_record extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_money_record, container, false);
 
-        // Declare a File object and initialize it with the path to the file
-        File file = new File("income.txt");
-
-        // Read the contents of the file
-        int number = 0;
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(file));
-            String line = reader.readLine();
-            number = Integer.parseInt(line);
-            reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        // Get the TextView
-        TextView incomeValue = (TextView) view.findViewById(R.id.income_value);
-
-        // Set the text of the TextView
-        incomeValue.setText("RM"+String.valueOf(number));//here
-
         return view;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        context = getContext();
+        myDB = new DBHelper(context);
+
+        Double income_latest = Double.valueOf(myDB.ShowLast());
+        TextView income_show = view.findViewById(R.id.income_value);
+        income_show.setText("RM" + Double.toString(income_latest));
 
         Button addmoney = view.findViewById(R.id.add_money_button);
         View.OnClickListener add_money_button = new View.OnClickListener(){
@@ -164,6 +152,15 @@ public class fragment_money_record extends Fragment {
             }
         };
         income.setOnClickListener(income_button);
+
+        Button record = view.findViewById(R.id.record_purchase_button);
+        View.OnClickListener record_purchase_button = new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Navigation.findNavController(view).navigate(R.id.torecordpurchase);
+            }
+        };
+        record.setOnClickListener(record_purchase_button);
     }
 
 }
