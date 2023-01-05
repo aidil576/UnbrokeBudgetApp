@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/transactionItem4"
         android:layout_width="278dp"
         android:layout_height="137dp"
         android:layout_marginTop="35dp"
@@ -49,10 +49,10 @@
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintBottom_toBottomOf="@+id/transactionItem4"
+        app:layout_constraintEnd_toEndOf="@+id/transactionItem4"
+        app:layout_constraintStart_toStartOf="@+id/transactionItem4"
+        app:layout_constraintTop_toTopOf="@+id/transactionItem4" />
 
     <TextView
         android:id="@+id/textView2"
@@ -63,13 +63,13 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/transactionItem4"
         app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="@+id/transactionItem4"
+        app:layout_constraintTop_toBottomOf="@+id/transactionItem4" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/transactionItem2"
         android:layout_width="98dp"
         android:layout_height="110dp"
         android:layout_marginStart="16dp"
@@ -80,7 +80,7 @@
         app:layout_constraintVertical_bias="0.041" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/transactionItem9"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginEnd="4dp"
