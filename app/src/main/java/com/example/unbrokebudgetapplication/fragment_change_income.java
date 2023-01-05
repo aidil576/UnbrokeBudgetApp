@@ -13,6 +13,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,6 +25,7 @@ import android.widget.EditText;
  * create an instance of this fragment.
  */
 public class fragment_change_income extends Fragment {
+    private static final String FILE_NAME = "income.txt";
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -87,13 +93,19 @@ public class fragment_change_income extends Fragment {
         View.OnClickListener income_confirm = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                File file = new File("income.txt");
+
+
                 EditText edit_income = view.findViewById(R.id.edit_income);
                 String income = edit_income.getText().toString();
 
-                fragment_money_record fragment = new fragment_money_record();
-                Bundle args = new Bundle();
-                args.putString("income", income);
-                fragment.setArguments(args);//this one
+                try {
+                    BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+                    writer.write(income); // write the contents of the EditText field to the file
+                    writer.close();
+                } catch (IOException e) {
+                    e.printStackTrace();//here
+                }
 
                 Navigation.findNavController(view).navigate(R.id.income_moneyrecord);
             }

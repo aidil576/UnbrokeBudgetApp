@@ -24,6 +24,7 @@ import com.google.android.material.navigation.NavigationBarView;
 //import android.view.Menu;
 
 public class MainActivity extends AppCompatActivity {
+    DBHelper myDB;
 
     //private AppBarConfiguration appBarConfiguration;
     //private ActivityMainBinding binding;
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        myDB = new DBHelper(this);
+
         //hide action bar
         //getSupportActionBar().hide();
 

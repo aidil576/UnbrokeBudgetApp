@@ -11,6 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+
+import java.io.*;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,14 +61,59 @@ public class fragment_money_record extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+            /*File income = new File(getContext().getFilesDir(), "income.txt");
+
+            // Create the file if it does not exist
+            try {
+                if (!income.exists()) {
+                    income.createNewFile();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }*/
+            Double number = 0.0;
+            /*try {
+                BufferedReader reader = new BufferedReader(new FileReader(income));
+                String line = reader.readLine();
+                number = Integer.parseInt(line);
+                reader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }*/
+
+
+
         }
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_money_record, container, false);
+        View view = inflater.inflate(R.layout.fragment_money_record, container, false);
+
+        // Declare a File object and initialize it with the path to the file
+        File file = new File("income.txt");
+
+        // Read the contents of the file
+        int number = 0;
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            String line = reader.readLine();
+            number = Integer.parseInt(line);
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Get the TextView
+        TextView incomeValue = (TextView) view.findViewById(R.id.income_value);
+
+        // Set the text of the TextView
+        incomeValue.setText("RM"+String.valueOf(number));//here
+
+        return view;
     }
 
     @Override
