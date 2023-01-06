@@ -2,14 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout3"
+    android:id="@+id/purchase_constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1a434e"
     tools:context=".Fragment_record_purchase">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/backboxwhite"
         android:layout_width="366dp"
         android:layout_height="684dp"
         android:layout_marginTop="20dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/type_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -28,6 +28,90 @@
         android:text="What did you spend on?"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view" />
+        app:layout_constraintStart_toStartOf="@+id/backboxwhite"
+        app:layout_constraintTop_toTopOf="@+id/backboxwhite" />
+
+    <RadioGroup
+        android:id="@+id/type_RG"
+        android:layout_width="307dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/type_question"
+        app:layout_constraintTop_toBottomOf="@+id/type_question">
+
+        <RadioButton
+            android:id="@+id/select_bills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bills" />
+
+        <RadioButton
+            android:id="@+id/select_groceries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Groceries" />
+
+        <RadioButton
+            android:id="@+id/select_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food" />
+
+        <RadioButton
+            android:id="@+id/select_transportation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transportation" />
+
+        <RadioButton
+            android:id="@+id/select_entertainment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entertainment" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/cost_ET"
+        android:layout_width="308dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/type_RG"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/type_RG"
+        app:layout_constraintTop_toBottomOf="@+id/cost_TV" />
+
+    <TextView
+        android:id="@+id/cost_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Cost:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/type_RG"
+        app:layout_constraintTop_toBottomOf="@+id/type_RG" />
+
+    <Button
+        android:id="@+id/spend_confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_box_green"
+        android:text="Confirm"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/cost_ET"
+        app:layout_constraintTop_toBottomOf="@+id/cost_ET" />
+
+    <Button
+        android:id="@+id/spend_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_box_red"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@+id/cost_ET"
+        app:layout_constraintTop_toBottomOf="@+id/cost_ET" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

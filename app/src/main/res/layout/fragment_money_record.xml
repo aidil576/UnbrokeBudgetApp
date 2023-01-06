@@ -127,15 +127,15 @@
         app:layout_constraintBottom_toTopOf="@+id/balance_value"
         app:layout_constraintStart_toStartOf="@+id/item_box_balance" />
 
-    <ImageView
-        android:id="@+id/income_icon"
-        android:layout_width="54dp"
-        android:layout_height="53dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/item_box_income"
-        app:layout_constraintEnd_toEndOf="@+id/item_box_income"
-        app:srcCompat="@drawable/salary" />
+        <ImageView
+            android:id="@+id/income_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/item_box_income"
+            app:layout_constraintEnd_toEndOf="@+id/item_box_income"
+            app:srcCompat="@drawable/salary" />
 
     <ImageView
         android:id="@+id/balance_icon"
@@ -167,43 +167,43 @@
             android:fontFamily="sans-serif-black"
             android:text="test"
             android:textColor="#ffffff"
-            android:textSize="17sp"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/item_box_income"
             app:layout_constraintTop_toBottomOf="@+id/income_text" />
 
-    <ImageView
-        android:id="@+id/expenses_icon"
-        android:layout_width="54dp"
-        android:layout_height="53dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/item_box_expenses"
-        app:layout_constraintEnd_toEndOf="@+id/item_box_expenses"
-        app:srcCompat="@drawable/budget" />
+        <ImageView
+            android:id="@+id/expenses_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/item_box_expenses"
+            app:layout_constraintEnd_toEndOf="@+id/item_box_expenses"
+            app:srcCompat="@drawable/budget" />
 
-    <TextView
-        android:id="@+id/expenses_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:fontFamily="sans-serif-light"
-        android:text="Expenses"
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/expenses_value"
-        app:layout_constraintStart_toStartOf="@+id/item_box_expenses" />
+        <TextView
+            android:id="@+id/expenses_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Expenses"
+            android:textColor="#ffffff"
+            app:layout_constraintStart_toStartOf="@+id/item_box_expenses"
+            app:layout_constraintTop_toTopOf="@+id/item_box_expenses" />
 
-    <TextView
-        android:id="@+id/expenses_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="sans-serif-black"
-        android:text="RM1240"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/item_box_expenses"
-        app:layout_constraintStart_toStartOf="@+id/item_box_expenses" />
+        <TextView
+            android:id="@+id/expenses_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="RM1240"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/item_box_expenses"
+            app:layout_constraintTop_toBottomOf="@+id/expenses_text" />
 
         <TextView
             android:id="@+id/budget_type_text"
@@ -237,9 +237,10 @@
                 android:id="@+id/food_box_view"
                 android:layout_width="120dp"
                 android:layout_height="132dp"
+                android:layout_marginStart="10dp"
                 android:background="@drawable/rounded_box_white"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bills_box_view"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -280,11 +281,11 @@
                 android:id="@+id/bills_box_view"
                 android:layout_width="120dp"
                 android:layout_height="132dp"
-                android:layout_marginStart="10dp"
                 android:background="@drawable/rounded_box_white"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/food_box_view"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.666" />
 
             <ImageView
                 android:id="@+id/bills_icon"
@@ -327,7 +328,7 @@
                 android:layout_marginStart="10dp"
                 android:background="@drawable/rounded_box_white"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/bills_box_view"
+                app:layout_constraintStart_toEndOf="@+id/transportation_box_view"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -363,6 +364,94 @@
                 app:layout_constraintEnd_toEndOf="@+id/entertainment_box_view"
                 app:layout_constraintStart_toStartOf="@+id/entertainment_box_view"
                 app:layout_constraintTop_toBottomOf="@+id/entertainment_text" />
+
+            <View
+                android:id="@+id/groceries_box_view"
+                android:layout_width="120dp"
+                android:layout_height="132dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rounded_box_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/food_box_view"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/groceries_icon"
+                android:layout_width="61dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/groceries_box_view"
+                app:layout_constraintStart_toStartOf="@+id/groceries_box_view"
+                app:layout_constraintTop_toTopOf="@+id/groceries_box_view"
+                app:srcCompat="@drawable/grocery" />
+
+            <TextView
+                android:id="@+id/groceries_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="Groceries"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/groceries_box_view"
+                app:layout_constraintStart_toStartOf="@+id/groceries_box_view"
+                app:layout_constraintTop_toBottomOf="@+id/groceries_icon" />
+
+            <TextView
+                android:id="@+id/groceries_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="RM120"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="@+id/groceries_box_view"
+                app:layout_constraintStart_toStartOf="@+id/groceries_box_view"
+                app:layout_constraintTop_toBottomOf="@+id/groceries_text" />
+
+            <View
+                android:id="@+id/transportation_box_view"
+                android:layout_width="120dp"
+                android:layout_height="132dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rounded_box_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/groceries_box_view"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/transportation_icon"
+                android:layout_width="61dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/transportation_box_view"
+                app:layout_constraintStart_toStartOf="@+id/transportation_box_view"
+                app:layout_constraintTop_toTopOf="@+id/transportation_box_view"
+                app:srcCompat="@drawable/car" />
+
+            <TextView
+                android:id="@+id/transportation_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="Transportation"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/transportation_box_view"
+                app:layout_constraintStart_toStartOf="@+id/transportation_box_view"
+                app:layout_constraintTop_toBottomOf="@+id/transportation_icon" />
+
+            <TextView
+                android:id="@+id/transportation_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="RM120"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="@+id/transportation_box_view"
+                app:layout_constraintStart_toStartOf="@+id/transportation_box_view"
+                app:layout_constraintTop_toBottomOf="@+id/transportation_text" />
 
             <Button
                 android:id="@+id/more_expenses_button"
@@ -469,7 +558,8 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="(Click to edit)"
+            android:layout_marginTop="5dp"
+            android:text="(Click to update monthly)"
             android:textColor="#ffffff"
             android:textSize="10sp"
             app:layout_constraintStart_toStartOf="@+id/income_value"

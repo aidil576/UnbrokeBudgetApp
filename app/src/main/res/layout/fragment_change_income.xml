@@ -83,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="sans-serif-medium"
         android:text="Your income now:"
         android:textColor="#ffffff"
@@ -104,10 +104,10 @@
 
     <TextView
         android:id="@+id/confrim_salary_text"
-        android:layout_width="298dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="20dp"
-        android:text="Click here if you have received your salary this month:"
+        android:layout_width="299dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="10dp"
+        android:text="Click here if you have received your salary this month :"
         android:textColor="#ffffff"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/initial_income_value"
@@ -117,7 +117,7 @@
         android:id="@+id/confirm_salary"
         android:layout_width="312dp"
         android:layout_height="45dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/rounded_box_green"
         android:text="Confirm Salary"
         android:textAllCaps="false"
@@ -147,6 +147,18 @@
         app:layout_constraintEnd_toEndOf="@+id/or_circle"
         app:layout_constraintStart_toStartOf="@+id/or_circle"
         app:layout_constraintTop_toTopOf="@+id/or_circle" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="(Make sure only confirming once a month)"
+        android:textColor="#F84A4A"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/confirm_salary"
+        app:layout_constraintStart_toStartOf="@+id/confirm_salary"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_salary" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

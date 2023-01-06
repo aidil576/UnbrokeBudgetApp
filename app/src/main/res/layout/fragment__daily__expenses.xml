@@ -24,15 +24,12 @@
         android:id="@+id/Transaction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:text="Transaction"
         android:textColor="#000000"
         android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.345" />
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toBottomOf="@+id/background" />
 
     <Button
         android:id="@+id/viewAllButton"
@@ -41,12 +38,8 @@
         android:backgroundTint="#E5E5E5"
         android:text="view all"
         android:textColor="#5A5A5A"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.944"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.347" />
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintTop_toBottomOf="@+id/background" />
 
     <TextView
         android:id="@+id/TotalBalanceTV"
@@ -147,7 +140,7 @@
                 android:id="@+id/transactionItem6"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
-                android:src="@drawable/grocery"
+                android:src="@drawable/grocery2"
                 app:layout_constraintBottom_toBottomOf="@+id/transactionItem3"
                 app:layout_constraintEnd_toEndOf="@+id/transactionItem3"
                 app:layout_constraintHorizontal_bias="0.059"

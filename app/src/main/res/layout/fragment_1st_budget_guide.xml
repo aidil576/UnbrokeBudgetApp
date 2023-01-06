@@ -156,4 +156,26 @@
         app:layout_constraintStart_toEndOf="@+id/budget_saving_icon"
         app:layout_constraintTop_toBottomOf="@+id/budget_saving_perc" />
 
+    <Button
+        android:id="@+id/use_button_budget1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_box_green"
+        android:text="Use this"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/budget_saving_desc"
+        app:layout_constraintTop_toBottomOf="@+id/budget_saving_desc" />
+
+    <Button
+        android:id="@+id/back_button_1stBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_box_grey"
+        android:text="Back"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@+id/budget_saving_icon"
+        app:layout_constraintTop_toBottomOf="@+id/budget_saving_desc" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.io.*;
+import java.text.DecimalFormat;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -104,6 +105,8 @@ public class fragment_money_record extends Fragment {
         context = getContext();
         myDB = new DBHelper(context);
 
+
+        DecimalFormat df = new DecimalFormat("#.##");
 //        Double income_latest = Double.valueOf(myDB.ShowLast());
 //        TextView income_show = view.findViewById(R.id.income_value);
 //        income_show.setText("RM" + Double.toString(income_latest));
@@ -118,7 +121,70 @@ public class fragment_money_record extends Fragment {
             income_latest = Double.valueOf(str);
         }
         TextView income_show = view.findViewById(R.id.income_value);
-        income_show.setText("RM" + Double.toString(income_latest));
+        income_show.setText("RM" + df.format(income_latest));
+
+        Double total_available = myDB.calc_Sum();
+        TextView balance = view.findViewById(R.id.balance_value);
+        balance.setText("RM"+df.format(total_available));
+
+        Double expenses_total = (myDB.calcNegative())*(-1);
+
+        TextView expenses = view.findViewById(R.id.expenses_value);
+        expenses.setText("RM"+df.format(expenses_total));
+
+        String data;
+        double total_income = 0;
+        double need;
+        double want = 0;
+        double savings;
+        double bills = 0;
+        double groceries = 0;
+        double food = 0;
+        double transportation = 0;
+        String bdgt = myDB.getBudget();
+        //budget:
+        if(!bdgt.isEmpty()) {
+            if (bdgt.equals("532RULE")) {
+                total_income = Double.parseDouble(myDB.ShowLast());
+                need = (0.5) * total_income;
+                want = (0.3) * total_income;
+                savings = (0.2) * total_income;
+
+                bills = (0.4) * need;
+                groceries = (0.3) * need;
+                food = (0.2) * need;
+                transportation = (0.1) * need;
+            }
+            else if(bdgt.equals("60%RULE"))
+            {
+                total_income = Double.parseDouble(myDB.ShowLast());
+                need = (0.6) * total_income;
+                want = (0.4) * total_income;
+                savings = (0.0) * total_income;
+
+                bills = (0.4) * need;
+                groceries = (0.3) * need;
+                food = (0.2) * need;
+                transportation = (0.1) * need;
+            }
+        }
+
+        TextView Bills = view.findViewById(R.id.bills_value);
+        Bills.setText("RM"+Double.toString(bills));
+
+        TextView Groceries = view.findViewById(R.id.groceries_value);
+        Groceries.setText("RM"+Double.toString(groceries));
+
+        TextView Food = view.findViewById(R.id.food_value);
+        Food.setText("RM"+Double.toString(food));
+
+        TextView Transportation = view.findViewById(R.id.transportation_value);
+        Transportation.setText("RM"+Double.toString(transportation));
+
+        TextView Entertainment = view.findViewById(R.id.entertainment_value);
+        Entertainment.setText("RM"+Double.toString(want));
+
+
 
         Button addmoney = view.findViewById(R.id.add_money_button);
         View.OnClickListener add_money_button = new View.OnClickListener(){

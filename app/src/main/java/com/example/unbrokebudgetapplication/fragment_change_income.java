@@ -1,5 +1,7 @@
 package com.example.unbrokebudgetapplication;
 
+import static java.lang.Double.valueOf;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
@@ -93,9 +95,20 @@ public class fragment_change_income extends Fragment {
         context = getContext();
         myDB = new DBHelper(context);
 
-        Double income_latest = Double.valueOf(myDB.ShowLast());
+        String str = myDB.ShowLast();
+        Double income_latest;
+
+        if (str.isEmpty()) {
+            // Set income_latest to a default value or display an error message
+            income_latest = 0.0;
+        } else {
+            income_latest = Double.valueOf(str);
+        }
+
         TextView income_show = view.findViewById(R.id.initial_income_value);
         income_show.setText("RM" + Double.toString(income_latest));
+
+
 
         Button update = view.findViewById(R.id.confirm_salary);
         View.OnClickListener confirm_salary = new View.OnClickListener(){
@@ -107,6 +120,7 @@ public class fragment_change_income extends Fragment {
                 Date date = Date.valueOf(String.valueOf(now.toLocalDate()));
                 Time time = Time.valueOf(now.toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
                 double amount = Double.parseDouble(income_latest.toString());
+
 
                 boolean isInserted = myDB.addMoney(getContext(), "Salary", amount, date, time);
                 if(isInserted =true)
