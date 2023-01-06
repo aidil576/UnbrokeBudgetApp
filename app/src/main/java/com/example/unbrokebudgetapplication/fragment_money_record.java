@@ -141,10 +141,10 @@ public class fragment_money_record extends Fragment {
         double groceries = 0;
         double food = 0;
         double transportation = 0;
-        String bdgt = myDB.getBudget();
+        String budget = myDB.getBudget();
         //budget:
-        if(!bdgt.isEmpty()) {
-            if (bdgt.equals("532RULE")) {
+        if(!budget.isEmpty()) {
+            if (budget.equals("532RULE")) {
                 total_income = Double.parseDouble(myDB.ShowLast());
                 need = (0.5) * total_income;
                 want = (0.3) * total_income;
@@ -155,7 +155,7 @@ public class fragment_money_record extends Fragment {
                 food = (0.2) * need;
                 transportation = (0.1) * need;
             }
-            else if(bdgt.equals("60%RULE"))
+            else if(budget.equals("60%RULE"))
             {
                 total_income = Double.parseDouble(myDB.ShowLast());
                 need = (0.6) * total_income;
