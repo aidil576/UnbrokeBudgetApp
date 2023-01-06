@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new fragment_money_record()).commit();
         //navigationView.setSelectedItemId(R.id.dailyExpenses);
 
-        navigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+        navigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item){
                 Fragment fragment = null;

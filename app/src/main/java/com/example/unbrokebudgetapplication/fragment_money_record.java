@@ -104,7 +104,19 @@ public class fragment_money_record extends Fragment {
         context = getContext();
         myDB = new DBHelper(context);
 
-        Double income_latest = Double.valueOf(myDB.ShowLast());
+//        Double income_latest = Double.valueOf(myDB.ShowLast());
+//        TextView income_show = view.findViewById(R.id.income_value);
+//        income_show.setText("RM" + Double.toString(income_latest));
+
+        String str = myDB.ShowLast();
+        Double income_latest;
+
+        if (str.isEmpty()) {
+            // Set income_latest to a default value or display an error message
+            income_latest = 0.0;
+        } else {
+            income_latest = Double.valueOf(str);
+        }
         TextView income_show = view.findViewById(R.id.income_value);
         income_show.setText("RM" + Double.toString(income_latest));
 
