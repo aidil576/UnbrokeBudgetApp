@@ -1,19 +1,15 @@
 package com.example.unbrokebudgetapplication;
 
-import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.text.TextUtils;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -25,7 +21,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class LoginFragment extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private EditText ETmail,ETPassword;
     private Button BtnLogin;
@@ -37,7 +33,7 @@ public class LoginFragment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_login);
+        setContentView(R.layout.activity_login);
 
         ETmail = findViewById(R.id.ETmail);
         ETPassword = findViewById(R.id.ETPassword);
@@ -51,7 +47,7 @@ public class LoginFragment extends AppCompatActivity {
         BtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginFragment.this,fragment_money_record.class);
+                Intent intent = new Intent(LoginActivity.this,fragment_money_record.class);
                 startActivity(intent);
             }
         });
@@ -77,12 +73,12 @@ public class LoginFragment extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
-                                Intent intent = new Intent(LoginFragment.this,MainScreen.class);
+                                Intent intent = new Intent(LoginActivity.this,MainScreen.class);
                                 startActivity(intent);
                                 finish();
                                 progressDialog.dismiss();
                             }else{
-                                Toast.makeText(LoginFragment.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                                 progressDialog.dismiss();
                             }
                         }
@@ -99,15 +95,18 @@ public class LoginFragment extends AppCompatActivity {
         TVCreateAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginFragment.this, RegisterActivity.class);
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
 
+
         TVForgotPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.ForgotPass);
+            Intent intent = new Intent(LoginActivity.this, EmptyActivity.class);
+            startActivity(intent);
+//                Navigation.findNavController(view).navigate(R.id.ForgotPass);
             }
         });
 
@@ -115,7 +114,7 @@ public class LoginFragment extends AppCompatActivity {
 //                Intent intent = new Intent(LoginFragment.this, ForgotPassActivity.class);
 //                startActivity(intent);
 
-    public LoginFragment() {
+    public LoginActivity() {
         // Required empty public constructor
     }
 

@@ -2,7 +2,6 @@ package com.example.unbrokebudgetapplication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.Navigation;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -47,13 +46,13 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //                Navigation.findNavController(view).navigate(R.id.action_FirstFragment_to_SecondFragment);
-                Intent intent = new Intent(RegisterActivity.this, LoginFragment.class);
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
 
         Btnregister.setOnClickListener((view) ->{
-            Intent intent = new Intent(RegisterActivity.this, LoginFragment.class);
+            Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
             startActivity(intent);
         } );
 
@@ -82,7 +81,7 @@ public class RegisterActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
-                                Intent intent = new Intent(RegisterActivity.this,LoginFragment.class);
+                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                 startActivity(intent);
                                 finish();
                                 progressDialog.dismiss();
