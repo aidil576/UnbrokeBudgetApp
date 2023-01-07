@@ -39,7 +39,7 @@ public class MainScreen extends AppCompatActivity {
                         selectedFragment = new savingTips();
                         break;
                     case R.id.redeem:
-                        selectedFragment = new point_redemption();
+                        selectedFragment = new entertainment_page();
                         break;
                     case R.id.profile:
                         selectedFragment = new lucky_wheel();
