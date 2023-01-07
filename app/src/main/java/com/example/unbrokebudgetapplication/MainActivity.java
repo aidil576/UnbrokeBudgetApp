@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment = null;
                 switch (item.getItemId()){
                     case R.id.redeem:
-                        fragment = new point_redemption();
+                        fragment = new entertainment_page();
                         break;
 
                     case R.id.savingTip:

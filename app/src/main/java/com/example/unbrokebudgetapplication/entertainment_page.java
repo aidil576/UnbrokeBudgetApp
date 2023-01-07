@@ -2,6 +2,8 @@ package com.example.unbrokebudgetapplication;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -11,14 +13,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link entertainment_page#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class entertainment_page extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
+   // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -63,10 +60,13 @@ public class entertainment_page extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_entertainment_page, container, false);
+
     }
 
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        ImageButton BtnPR = view.findViewById(R.id.IB_pointredemption);
+    public void onViewCreated(@NonNull View view,@Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        Button BtnPR = view.findViewById(R.id.BtnPointsRedemption);
         View.OnClickListener OCLbtnPR = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,7 +75,7 @@ public class entertainment_page extends Fragment {
         };
         BtnPR.setOnClickListener(OCLbtnPR);
 
-        ImageButton BtnMA = view.findViewById(R.id.IB_milestoneachievment);
+        Button BtnMA = view.findViewById(R.id.BtnMilestoneAchievement);
         View.OnClickListener OCLbtnMA = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,7 +84,7 @@ public class entertainment_page extends Fragment {
         };
         BtnMA.setOnClickListener(OCLbtnMA);
 
-        ImageButton BtnLD = view.findViewById(R.id.IB_luckywheel);
+        Button BtnLD = view.findViewById(R.id.BtnLuckyDraw);
         View.OnClickListener OCLbtnLD = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
