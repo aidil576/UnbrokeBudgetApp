@@ -8,6 +8,16 @@
     android:background="#1A434E"
     tools:context=".entertainment_page">
 
+    <Button
+        android:id="@+id/BtnMilestoneAchievement"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:text="MIlestone Achievement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -21,69 +31,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/IB_pointredemption"
-        android:layout_width="181dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="100dp"
-        android:src="@drawable/rectangle_round_corner"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="SpeakableTextPresentCheck"/>
-
-    <ImageButton
-        android:id="@+id/IB_milestoneachievment"
-        android:layout_width="181dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="70dp"
-        android:src="@drawable/rectangle_round_corner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck"
-        app:layout_constraintTop_toBottomOf="@+id/IB_pointredemption" />
-
-    <ImageButton
-        android:id="@+id/IB_luckywheel"
-        android:layout_width="181dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="70dp"
-        android:src="@drawable/rectangle_round_corner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck"
-        app:layout_constraintTop_toBottomOf="@+id/IB_milestoneachievment" />
-
-    <TextView
-        android:id="@+id/TVPR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Point Redemption"
-        app:layout_constraintBottom_toBottomOf="@+id/IB_pointredemption"
-        app:layout_constraintEnd_toEndOf="@+id/IB_pointredemption"
-        app:layout_constraintStart_toStartOf="@+id/IB_pointredemption"
-        app:layout_constraintTop_toTopOf="@+id/IB_pointredemption" />
-
-    <TextView
-        android:id="@+id/TVMA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Milestone Achievement"
-        app:layout_constraintBottom_toBottomOf="@+id/IB_milestoneachievment"
-        app:layout_constraintEnd_toEndOf="@+id/IB_milestoneachievment"
-        app:layout_constraintStart_toStartOf="@+id/IB_milestoneachievment"
-        app:layout_constraintTop_toTopOf="@+id/IB_milestoneachievment" />
-
-    <TextView
-        android:id="@+id/TVLD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/BtnLuckyDraw"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
         android:text="Lucky Draw"
-        app:layout_constraintBottom_toBottomOf="@+id/IB_luckywheel"
-        app:layout_constraintEnd_toEndOf="@+id/IB_luckywheel"
-        app:layout_constraintStart_toStartOf="@+id/IB_luckywheel"
-        app:layout_constraintTop_toTopOf="@+id/IB_luckywheel" />
+        app:layout_constraintEnd_toEndOf="@+id/BtnPointsRedemption"
+        app:layout_constraintStart_toStartOf="@+id/BtnPointsRedemption"
+        app:layout_constraintTop_toBottomOf="@+id/BtnPointsRedemption" />
+
+    <Button
+        android:id="@+id/BtnPointsRedemption"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        android:text="Points Redemption"
+        app:layout_constraintEnd_toEndOf="@+id/BtnMilestoneAchievement"
+        app:layout_constraintStart_toStartOf="@+id/BtnMilestoneAchievement"
+        app:layout_constraintTop_toBottomOf="@+id/BtnMilestoneAchievement" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

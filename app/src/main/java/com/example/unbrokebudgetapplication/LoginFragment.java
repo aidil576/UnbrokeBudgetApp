@@ -49,7 +49,7 @@ public class LoginFragment extends AppCompatActivity {
         BtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginFragment.this,FirstFragment.class);
+                Intent intent = new Intent(LoginFragment.this,fragment_money_record.class);
                 startActivity(intent);
             }
         });
