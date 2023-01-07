@@ -1,7 +1,14 @@
 package com.example.unbrokebudgetapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,110 +17,79 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-
-
-//unused import
-//import android.view.View;
-//import androidx.navigation.NavController;
-//import androidx.navigation.Navigation;
-//import androidx.navigation.ui.AppBarConfiguration;
-//import androidx.navigation.ui.NavigationUI;
-//import com.google.android.material.snackbar.Snackbar;
-//import com.example.unbrokebudgetapplication.databinding.ActivityMainBinding;
-//
-//import android.view.Menu;
-
 public class MainActivity extends AppCompatActivity {
-    DBHelper myDB;
+    //DBHelper myDB;
+    //BottomNavigationView navigationView;
 
-    //private AppBarConfiguration appBarConfiguration;
-    //private ActivityMainBinding binding;
-    BottomNavigationView navigationView;
+    Animation animation;
+
+    private static int SPLASH = 3000;
+    private ImageView imageView;
+    private TextView appName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        myDB = new DBHelper(this);
 
-        //hide action bar
-        //getSupportActionBar().hide();
+        //myDB = new DBHelper(this);
 
-//        binding = ActivityMainBinding.inflate(getLayoutInflater());
-//        setContentView(binding.getRoot());
-//        setSupportActionBar(binding.toolbar);
+        animation = AnimationUtils.loadAnimation(this, R.anim.animation);
 
-        navigationView = findViewById(R.id.bottom_nav);
+        imageView = findViewById(R.id.appLogo);
+        appName = findViewById(R.id.appName);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new fragment_money_record()).commit();
+        imageView.setAnimation(animation);
+        appName.setAnimation(animation);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(MainActivity.this, LoginFragment.class);
+                startActivity(intent);
+                finish();
+            }
+        },SPLASH);
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                Intent intent = new Intent(MainActivity.this, LoginFragment.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        }, SPLASH);
+
+
+        //getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new fragment_money_record()).commit();
         //navigationView.setSelectedItemId(R.id.dailyExpenses);
 
-        navigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item){
-                Fragment fragment = null;
-                switch (item.getItemId()){
-                    case R.id.redeem:
-                        fragment = new entertainment_page();
-                        break;
-
-                    case R.id.savingTip:
-                        fragment = new savingTips();
-                        break;
-                    case R.id.moneyRecord:
-                        fragment = new fragment_money_record();
-                        break;
-                    case R.id.dailyExpenses:
-                        fragment = new Fragment_Daily_Expenses() ;
-                        break;
-                    case R.id.profile:
-                        fragment = new LoginFragment();
-                        break;
-                }
-                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, fragment).commit();
-                return true;
-            }
-        });
-
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-//        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-//
-//        binding.fab.setOnClickListener(new View.OnClickListener() {
+//        navigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
 //            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                Fragment fragment = null;
+//                switch (item.getItemId()) {
+//                    case R.id.redeem:
+//                        fragment = new point_redemption();
+//                        break;
+//
+//                    case R.id.savingTip:
+//                        fragment = new savingTips();
+//                        break;
+//                    case R.id.moneyRecord:
+//                        fragment = new fragment_money_record();
+//                        break;
+//                    case R.id.dailyExpenses:
+//                        fragment = new Fragment_Daily_Expenses();
+//                        break;
+//                    case R.id.profile:
+//                        fragment = new LoginFragment();
+//                        break;
+//                }
+//                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, fragment).commit();
+//                return true;
 //            }
 //        });
+
     }
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
-//        return true;
-//    }
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//              return true;
-////        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
-
-//    @Override
-//    public boolean onSupportNavigateUp() {
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-//        return NavigationUI.navigateUp(navController, appBarConfiguration)
-//                || super.onSupportNavigateUp();
-//    }
 }
