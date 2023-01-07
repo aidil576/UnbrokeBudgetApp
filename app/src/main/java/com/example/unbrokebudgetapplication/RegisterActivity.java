@@ -2,6 +2,7 @@ package com.example.unbrokebudgetapplication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.Navigation;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -10,6 +11,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,6 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private EditText ETUsername,ETEmail,ETMobileNum,ETPass;
     private Button Btnregister;
+    private TextView TVLogin;
 
     private FirebaseAuth mAuth;
     private ProgressDialog progressDialog;
@@ -35,9 +38,19 @@ public class RegisterActivity extends AppCompatActivity {
         ETMobileNum = findViewById(R.id.ETMobileNum);
         ETPass = findViewById(R.id.ETPass);
         Btnregister = findViewById(R.id.Btnregister);
+        TVLogin = findViewById(R.id.TVLogin);
 
         mAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
+
+        TVLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Navigation.findNavController(view).navigate(R.id.action_FirstFragment_to_SecondFragment);
+                Intent intent = new Intent(RegisterActivity.this, LoginFragment.class);
+                startActivity(intent);
+            }
+        });
 
         Btnregister.setOnClickListener((view) ->{
             Intent intent = new Intent(RegisterActivity.this, LoginFragment.class);
