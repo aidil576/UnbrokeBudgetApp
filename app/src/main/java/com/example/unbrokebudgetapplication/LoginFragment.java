@@ -1,5 +1,6 @@
 package com.example.unbrokebudgetapplication;
 
+import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -104,14 +106,14 @@ public class LoginFragment extends AppCompatActivity {
 
         TVForgotPass.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginFragment.this, RegisterActivity.class);
-                startActivity(intent);
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.ForgotPass);
             }
         });
 
     }
-
+//                Intent intent = new Intent(LoginFragment.this, ForgotPassActivity.class);
+//                startActivity(intent);
 
     public LoginFragment() {
         // Required empty public constructor

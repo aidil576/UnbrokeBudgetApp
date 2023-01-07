@@ -62,7 +62,11 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String emailString = ETEmail.getText().toString();
                 String passwordString = ETPass.getText().toString();
+                String userName = ETUsername.getText().toString();
 
+                if (TextUtils.isEmpty(userName)){
+                    ETUsername.setError("Username is required");
+                }
                 if(TextUtils.isEmpty(emailString)){
                     ETEmail.setError("Email is required");
                 }
