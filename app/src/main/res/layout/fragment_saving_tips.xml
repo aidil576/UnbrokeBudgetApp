@@ -16,17 +16,17 @@
             android:id="@+id/savingTipID"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="4dp"
+            android:layout_marginEnd="24dp"
             android:layout_marginBottom="560dp"
             android:gravity="left"
             android:text="@string/saving_tip"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.168" />
+            app:layout_constraintVertical_bias="0.15" />
 
         <TextView
             android:id="@+id/contentTip"
@@ -100,15 +100,31 @@
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20sp"
+                        android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/infoInvest"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:text="Emergency savings should be placed in an account that is easily accessible, so you do not incur early-withdrawal penalties as you would with an account such as a certificate of deposit (CD) or Individual Retirement Account (IRA)."
+                        android:layout_marginTop="10dp"
+                        android:text="Top 10 Tips for First time investors."
                         android:textColor="@color/black"
                         android:textSize="14sp"/>
 
+                    <TextView
+                        android:id="@+id/linkInvest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textStyle="italic"
+                        android:textSize="11dp"
+                        android:text="@string/hyperlinkInvest"/>
+                    </LinearLayout>
                 </TableRow>
 
                 <TableRow
@@ -157,15 +173,32 @@
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/infoEmergency"
-                        android:layout_width="250dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:text="Emergency savings should be placed in an account that is easily accessible, so you do not incur early-withdrawal penalties as you would with an account such as a certificate of deposit (CD) or Individual Retirement Account (IRA)."
-                        android:textColor="@color/black"
-                        android:textSize="14sp"/>
+                        android:layout_margin="20sp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/infoEmergency"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Emergency savings should be placed in an account that is easily accessible, so you do not incur early-withdrawal penalties as you would with an account such as a certificate of deposit (CD) or Individual Retirement Account (IRA)."
+                            android:textColor="@color/black"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/linkEmergency"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="10dp"
+                            android:textStyle="italic"
+                            android:textSize="11dp"
+                            android:text="@string/hyperlinkEmergency"/>
+                    </LinearLayout>
+
                 </TableRow>
 
                 <TableRow
@@ -215,14 +248,32 @@
                             android:textSize="18sp" />
                     </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/infoDonation"
-                        android:layout_width="250dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:text="TextView"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"/>
+                        android:layout_margin="20sp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/infoDonation"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:text="12 of the Best Fundraising Sites for Nonprofits and Individuals"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/linkDonation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="10dp"
+                            android:textStyle="italic"
+                            android:textSize="11dp"
+                            android:text="@string/hyperlinkDonation"/>
+                    </LinearLayout>
+
                 </TableRow>
 
             </TableLayout>
