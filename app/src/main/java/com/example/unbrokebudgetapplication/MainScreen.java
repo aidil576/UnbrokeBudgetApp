@@ -41,8 +41,12 @@ public class MainScreen extends AppCompatActivity {
                     case R.id.redeem:
                         selectedFragment = new entertainment_page();
                         break;
+                    case R.id.dailyExpenses:
+                        selectedFragment = new Fragment_Daily_Expenses();
                     case R.id.profile:
                         selectedFragment = new lucky_wheel();
+                        break;
+
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.main_frame2, selectedFragment).commit();
                 return true;
