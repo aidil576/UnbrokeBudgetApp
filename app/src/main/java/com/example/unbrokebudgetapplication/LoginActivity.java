@@ -105,7 +105,7 @@ public class LoginActivity extends AppCompatActivity {
         TVForgotPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            Intent intent = new Intent(LoginActivity.this, EmptyActivity.class);
+            Intent intent = new Intent(LoginActivity.this, ForgotPassActivity.class);
             startActivity(intent);
 //                Navigation.findNavController(view).navigate(R.id.ForgotPass);
             }

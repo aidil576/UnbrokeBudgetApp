@@ -56,7 +56,7 @@
         android:background="@xml/corner_rect"
         android:backgroundTint="#29B6F6"
         android:text="@string/otp"
-        android:textColor="#FFFFFF"
+        android:textColor="#283593"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,5 +85,16 @@
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/TVOtherMethod"
         app:layout_constraintTop_toBottomOf="@+id/ETEnterEmail" />
+
+    <ImageView
+        android:id="@+id/IVBackButton"
+        android:layout_width="31dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="backFunction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
