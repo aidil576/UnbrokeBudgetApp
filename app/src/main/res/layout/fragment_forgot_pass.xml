@@ -10,14 +10,15 @@
 
     <TextView
         android:id="@+id/TVFrogotPass"
-        android:layout_width="225dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="256dp"
+        android:layout_width="282dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="252dp"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/forgotPass"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="28dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -88,13 +89,13 @@
 
     <ImageView
         android:id="@+id/IVBackBtn"
+        android:layout_width="31dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
         android:onClick="backFunction"
-        android:layout_width="55dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="32dp"
         android:src="@drawable/ic_baseline_arrow_back_ios_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

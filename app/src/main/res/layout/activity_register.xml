@@ -173,4 +173,14 @@
         app:layout_constraintStart_toEndOf="@+id/TVHasAcc"
         app:layout_constraintTop_toBottomOf="@+id/Btnregister" />
 
+    <ImageView
+        android:id="@+id/IVBack"
+        android:layout_width="31dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

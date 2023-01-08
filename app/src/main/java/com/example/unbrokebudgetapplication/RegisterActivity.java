@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText ETUsername,ETEmail,ETMobileNum,ETPass;
     private Button Btnregister;
     private TextView TVLogin;
+    private ImageView IVBack;
 
     private FirebaseAuth mAuth;
     private ProgressDialog progressDialog;
@@ -38,6 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
         ETPass = findViewById(R.id.ETPass);
         Btnregister = findViewById(R.id.Btnregister);
         TVLogin = findViewById(R.id.TVLogin);
+        IVBack = findViewById(R.id.IVBack);
 
         mAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
@@ -46,6 +49,14 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //                Navigation.findNavController(view).navigate(R.id.action_FirstFragment_to_SecondFragment);
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        IVBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
@@ -62,6 +73,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String emailString = ETEmail.getText().toString();
                 String passwordString = ETPass.getText().toString();
                 String userName = ETUsername.getText().toString();
+                String phoneNum = ETMobileNum.getText().toString();
 
                 if (TextUtils.isEmpty(userName)){
                     ETUsername.setError("Username is required");
@@ -69,9 +81,13 @@ public class RegisterActivity extends AppCompatActivity {
                 if(TextUtils.isEmpty(emailString)){
                     ETEmail.setError("Email is required");
                 }
+                if(TextUtils.isEmpty(phoneNum)){
+                    ETPass.setError("Phone Number Is required");
+                }
                 if(TextUtils.isEmpty(passwordString)){
                     ETPass.setError("Password Is required");
                 }
+
                 else{
                     progressDialog.setMessage("Register in progress");
                     progressDialog.setCanceledOnTouchOutside(false);
