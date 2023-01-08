@@ -99,6 +99,7 @@ public class RegisterActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                 startActivity(intent);
+                                Toast.makeText(RegisterActivity.this, "Account created successfully!", Toast.LENGTH_LONG).show();
                                 finish();
                                 progressDialog.dismiss();
                             }else{

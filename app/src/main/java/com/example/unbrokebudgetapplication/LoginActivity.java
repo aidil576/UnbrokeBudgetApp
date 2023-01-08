@@ -78,7 +78,8 @@ public class LoginActivity extends AppCompatActivity {
                                 finish();
                                 progressDialog.dismiss();
                             }else{
-                                Toast.makeText(LoginActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "The email or password you entered is wrong. Please try again" , Toast.LENGTH_LONG).show();
+                                //task.getException().toString()
                                 progressDialog.dismiss();
                             }
                         }

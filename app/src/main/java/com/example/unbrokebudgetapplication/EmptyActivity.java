@@ -28,4 +28,6 @@ public class EmptyActivity extends AppCompatActivity {
         Intent intent = new Intent(EmptyActivity.this, LoginActivity.class);
         startActivity(intent);
     }
+
+
 }
