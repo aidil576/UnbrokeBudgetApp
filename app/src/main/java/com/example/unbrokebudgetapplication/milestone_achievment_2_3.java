@@ -11,8 +11,8 @@ import androidx.navigation.Navigation;
 
 public class milestone_achievment_2_3 extends Fragment {
 
-    public milestone_achievment_2_3() {
-        // Required empty public constructor
+    public static milestone_achievment_2_3 newInstance() {
+        return new milestone_achievment_2_3();
     }
 
     @Override
@@ -29,7 +29,7 @@ public class milestone_achievment_2_3 extends Fragment {
         View.OnClickListener OCLbtn3 = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.BackToMilestone_Lv3);
+                ((MainScreen) getActivity()).switchContent(milestone_achievement.newInstance());
             }
         };
         BtnClaim3.setOnClickListener(OCLbtn3);

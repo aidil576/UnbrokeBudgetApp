@@ -1,7 +1,10 @@
 package com.example.unbrokebudgetapplication;
 
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -9,53 +12,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link video_page#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class video_page extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public video_page() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment video_page.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static video_page newInstance(String param1, String param2) {
-        video_page fragment = new video_page();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+    public static video_page newInstance() {
+        return new video_page();
     }
 
     @Override
@@ -65,14 +30,30 @@ public class video_page extends Fragment {
         return inflater.inflate(R.layout.fragment_video_page, container, false);
     }
 
-    public void onViewCreated(View view, Bundle savedInstanceState){
-        ImageView BtnCloseIV = view.findViewById(R.id.IVClose);
-        View.OnClickListener OCLCloseIV = new View.OnClickListener() {
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        //import video dalam page
+        VideoView videoView = view.findViewById(R.id.videoView);
+        String videoPath = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.vid_unbroke;
+        Uri uri = Uri.parse(videoPath);
+        videoView.setVideoURI(uri);
+
+        MediaController mediaController = new MediaController(getActivity());
+        videoView.setMediaController(mediaController);
+        mediaController.setAnchorView(videoView);
+
+        //navigate ke page point redemption
+        ImageButton Btnback_vid = view.findViewById(R.id.BtnBack_vid);
+        View.OnClickListener OCLBtnVid = new View.OnClickListener(){
             @Override
-            public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.BackToMilestone_Lv1);
+            public void onClick(View v){
+
+                ((MainScreen) getActivity()).switchContent(point_redemption.newInstance());
             }
         };
-        BtnCloseIV.setOnClickListener(OCLCloseIV);
+        Btnback_vid.setOnClickListener(OCLBtnVid);
+
     }
 }

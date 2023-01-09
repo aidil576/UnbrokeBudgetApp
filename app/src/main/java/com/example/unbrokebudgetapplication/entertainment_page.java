@@ -15,8 +15,8 @@ import android.widget.ImageButton;
 
 public class entertainment_page extends Fragment {
 
-    public entertainment_page() {
-        // Required empty public constructor
+    public static entertainment_page newInstance() {
+        return new entertainment_page();
     }
 
 

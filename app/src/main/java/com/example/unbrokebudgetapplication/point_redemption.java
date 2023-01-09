@@ -14,8 +14,8 @@ import android.widget.ImageView;
 
 public class point_redemption extends Fragment {
 
-    public point_redemption() {
-        // Required empty public constructor
+    public static point_redemption newInstance() {
+        return new point_redemption();
     }
 
     @Override
@@ -32,7 +32,7 @@ public class point_redemption extends Fragment {
         View.OnClickListener OCLIVGift = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.NextToVideo);
+                ((MainScreen) getActivity()).switchContent(video_page.newInstance());
             }
         };
         BtnIBGift.setOnClickListener(OCLIVGift);
