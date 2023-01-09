@@ -15,8 +15,8 @@ import android.widget.ImageButton;
 
 public class entertainment_page extends Fragment {
 
-    public entertainment_page() {
-        // Required empty public constructor
+    public static entertainment_page newInstance() {
+        return new entertainment_page();
     }
 
 
@@ -35,7 +35,7 @@ public class entertainment_page extends Fragment {
         View.OnClickListener OCLbtnPR = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.NextToPointRedemption);
+                ((MainScreen) getActivity()).switchContent(point_redemption.newInstance());
             }
         };
         BtnPR.setOnClickListener(OCLbtnPR);
@@ -44,7 +44,7 @@ public class entertainment_page extends Fragment {
         View.OnClickListener OCLbtnMA = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.NextToMilestone);
+                ((MainScreen) getActivity()).switchContent(milestone_achievement.newInstance());
             }
         };
         BtnMA.setOnClickListener(OCLbtnMA);
@@ -53,7 +53,7 @@ public class entertainment_page extends Fragment {
         View.OnClickListener OCLbtnLD = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.NextToLuckyWheel);
+                ((MainScreen) getActivity()).switchContent(lucky_wheel.newInstance());
             }
         };
         BtnLD.setOnClickListener(OCLbtnLD);

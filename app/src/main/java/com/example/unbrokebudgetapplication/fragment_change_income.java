@@ -55,15 +55,6 @@ public class fragment_change_income extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment fragment_change_income.
-     */
-    // TODO: Rename and change types and number of parameters
     public static fragment_change_income newInstance() {
         return new fragment_change_income();
     }

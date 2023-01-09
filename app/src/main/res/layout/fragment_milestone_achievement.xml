@@ -12,7 +12,7 @@
         android:id="@+id/TVtotal"
         android:layout_width="85dp"
         android:layout_height="33dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="68dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="Total"
         android:textColor="@color/white"
@@ -193,5 +193,19 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/TVlevel2"
         app:layout_constraintTop_toBottomOf="@+id/TVlevel2" />
+
+    <ImageButton
+        android:id="@+id/IBBacket"
+        android:layout_width="49dp"
+        android:layout_height="50dp"
+        android:background="#1F505B"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

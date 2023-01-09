@@ -16,8 +16,8 @@ import android.widget.ImageView;
 
 public class milestone_achievement extends Fragment {
 
-    public milestone_achievement() {
-        // Required empty public constructor
+    public static milestone_achievement newInstance() {
+        return new milestone_achievement();
     }
 
     @Override
@@ -34,7 +34,7 @@ public class milestone_achievement extends Fragment {
         View.OnClickListener OCL1 = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.NextToAchievment_Lv1);
+                ((MainScreen) getActivity()).switchContent(milestone_achievment_2.newInstance());
             }
         };
         Btnlv1.setOnClickListener(OCL1);
@@ -43,7 +43,7 @@ public class milestone_achievement extends Fragment {
         View.OnClickListener OCL2 = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.NextToAchievment_Lv2);
+                ((MainScreen) getActivity()).switchContent(milestone_achievment_2_2.newInstance());
             }
         };
         Btnlv2.setOnClickListener(OCL2);
@@ -52,10 +52,19 @@ public class milestone_achievement extends Fragment {
         View.OnClickListener OCL3 = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.NextToAchievment_Lv3);
+                ((MainScreen) getActivity()).switchContent(milestone_achievment_2_3.newInstance());
             }
         };
         Btnlv3.setOnClickListener(OCL3);
+
+        ImageButton BtnBacket = view.findViewById(R.id.IBBacket);
+        View.OnClickListener OCLBacket = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainScreen) getActivity()).switchContent(entertainment_page.newInstance());
+            }
+        };
+        BtnBacket.setOnClickListener(OCLBacket);
 
     }
 
