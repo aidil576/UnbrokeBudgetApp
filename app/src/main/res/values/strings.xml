@@ -34,10 +34,11 @@
     <string name="otp">Send code</string>
     <string name="textview">TextView</string>
     <string name="total_daily_balance">Total Daily Balance</string>
+    <string name="accountSettings">Account settings</string>
     <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
     <string name="facebook_application_id" translatable="false">YOUR_APP_ID</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fbYOUR_APP_ID</string>
-    
+
     <string name="hyperlinkInvest"> <a href="https://www.strawberryinvest.com/knowledge-hub/top-10-tips-for-first-time-investors/">learn more</a></string>
     <string name="hyperlinkEmergency"><a href="https://www.wellsfargo.com/financial-education/basic-finances/manage-money/cashflow-savings/emergencies/">learn more</a></string>
     <string name="hyperlinkDonation"><a href="https://donorbox.org/nonprofit-blog/fundraising-sites-for-nonprofits-and-individuals#1">learn more</a></string>

@@ -55,7 +55,7 @@
         android:background="@xml/corner_rect"
         android:ems="10"
         android:hint="@string/mobilenum"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TVMobileNum" />
 
