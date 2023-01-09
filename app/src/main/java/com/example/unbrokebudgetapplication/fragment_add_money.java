@@ -18,10 +18,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.sql.Date;
 import java.sql.Time;
+import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -46,22 +48,10 @@ public class fragment_add_money extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment fragment_add_money.
-     */
+
     // TODO: Rename and change types and number of parameters
-    public static fragment_add_money newInstance(String param1, String param2) {
-        fragment_add_money fragment = new fragment_add_money();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    public static fragment_add_money newInstance() {
+        return new fragment_add_money();
     }
 
     @Override
@@ -83,12 +73,17 @@ public class fragment_add_money extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+//        DecimalFormat df = new DecimalFormat("#.##");
+//        Double total_available = myDB.calc_Sum();
+//        TextView balance = view.findViewById(R.id.total_money_value);
+//        balance.setText("RM"+df.format(total_available));
+
 
         Button cancel = view.findViewById(R.id.cancel_button_addmoney);
         View.OnClickListener cancel_button_addmoney = new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Navigation.findNavController(view).navigate(R.id.addmoney_moneyrecord);
+                ((MainScreen) getActivity()).switchContent(fragment_money_record.newInstance());
             }
         };
         cancel.setOnClickListener(cancel_button_addmoney);
@@ -114,11 +109,11 @@ public class fragment_add_money extends Fragment {
                     }
                     else
                         System.out.println("not added");
-                    Navigation.findNavController(view).navigate(R.id.addmoney_moneyrecord);
+                    ((MainScreen) getActivity()).switchContent(fragment_money_record.newInstance());
 
                 }
                 else
-                    Navigation.findNavController(view).navigate(R.id.to_add_money);
+                    ((MainScreen) getActivity()).switchContent(fragment_add_money.newInstance());
 
             }
         };

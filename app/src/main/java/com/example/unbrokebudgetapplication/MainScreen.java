@@ -16,6 +16,21 @@ public class MainScreen extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     private FrameLayout frameLayout;
 
+    /**
+     * helper to switch content with backstack
+     *
+     * @param fragment
+     */
+    private Fragment mContentFragment = null;
+
+    public void switchContent(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main_frame2, fragment)
+                // add to backstack
+                .addToBackStack(fragment.getClass().getSimpleName())
+                .commit();
+        mContentFragment = fragment;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

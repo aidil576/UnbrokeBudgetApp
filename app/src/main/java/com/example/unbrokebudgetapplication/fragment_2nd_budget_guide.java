@@ -31,6 +31,9 @@ public class fragment_2nd_budget_guide extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    public static fragment_2nd_budget_guide newInstance() {
+        return new fragment_2nd_budget_guide();
+    }
     public fragment_2nd_budget_guide() {
         // Required empty public constructor
     }
@@ -75,7 +78,7 @@ public class fragment_2nd_budget_guide extends Fragment {
         View.OnClickListener back_button_2ndBudget = new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Navigation.findNavController(view).navigate(R.id.secondbudget_moneyrecord);
+                ((MainScreen) getActivity()).switchContent(fragment_money_record.newInstance());
             }
         };
         back.setOnClickListener(back_button_2ndBudget);
@@ -86,8 +89,7 @@ public class fragment_2nd_budget_guide extends Fragment {
             public void onClick(View v){
 
                 boolean isInserted = myDB.addGuide(getContext(),"60%RULE");
-
-                Navigation.findNavController(view).navigate(R.id.secondbudget_moneyrecord);
+                ((MainScreen) getActivity()).switchContent(fragment_money_record.newInstance());
             }
         };
         use.setOnClickListener(use_button_budget2);

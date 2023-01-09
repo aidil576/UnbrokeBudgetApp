@@ -46,7 +46,7 @@
             android:id="@+id/toincome"
             app:destination="@id/change_income" />
         <action
-            android:id="@+id/torecordpurchase"
+            android:id="@+id/to_record_purchase"
             app:destination="@id/fragment_record_purchase" />
     </fragment>
     <fragment
@@ -205,4 +205,9 @@
             android:id="@+id/recordpurchase_moneyrecord"
             app:destination="@id/fragment_money_record" />
     </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.unbrokebudgetapplication.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
 </navigation>

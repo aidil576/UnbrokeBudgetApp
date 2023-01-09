@@ -54,22 +54,9 @@ public class Fragment_record_purchase extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragment_record_purchase.
-     */
     // TODO: Rename and change types and number of parameters
-    public static Fragment_record_purchase newInstance(String param1, String param2) {
-        Fragment_record_purchase fragment = new Fragment_record_purchase();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    public static Fragment_record_purchase newInstance() {
+        return new Fragment_record_purchase();
     }
 
     @Override
@@ -144,7 +131,7 @@ public class Fragment_record_purchase extends Fragment {
                 else
                     System.out.println("not added");
 
-                Navigation.findNavController(view).navigate(R.id.recordpurchase_moneyrecord);
+                ((MainScreen) getActivity()).switchContent(fragment_money_record.newInstance());
             }
         };
         confirm_spend.setOnClickListener(spend_confirm_button);
@@ -154,7 +141,7 @@ public class Fragment_record_purchase extends Fragment {
         View.OnClickListener spend_cancel_button = new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Navigation.findNavController(view).navigate(R.id.recordpurchase_moneyrecord);
+                ((MainScreen) getActivity()).switchContent(fragment_money_record.newInstance());
             }
         };
         cancel_spend.setOnClickListener(spend_cancel_button);

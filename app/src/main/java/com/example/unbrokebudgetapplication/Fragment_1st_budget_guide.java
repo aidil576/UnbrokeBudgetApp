@@ -16,7 +16,9 @@ import android.widget.Button;
 public class Fragment_1st_budget_guide extends Fragment {
     private Context context;
     DBHelper myDB = new DBHelper(context);
-
+    public static Fragment_1st_budget_guide newInstance() {
+        return new Fragment_1st_budget_guide();
+    }
     public Fragment_1st_budget_guide() {
         // Required empty public constructor
     }
@@ -35,7 +37,7 @@ public class Fragment_1st_budget_guide extends Fragment {
         View.OnClickListener back_button_1stBudget = new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Navigation.findNavController(view).navigate(R.id.firstbudget_moneyrecord);
+                ((MainScreen) getActivity()).switchContent(fragment_money_record.newInstance());
             }
         };
         back.setOnClickListener(back_button_1stBudget);
@@ -47,7 +49,7 @@ public class Fragment_1st_budget_guide extends Fragment {
 
                 boolean isInserted = myDB.addGuide(getContext(),"532RULE");
 
-                Navigation.findNavController(view).navigate(R.id.firstbudget_moneyrecord);
+                ((MainScreen) getActivity()).switchContent(fragment_money_record.newInstance());
             }
         };
         use.setOnClickListener(use_button_budget1);

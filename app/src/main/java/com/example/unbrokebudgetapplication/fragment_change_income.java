@@ -64,13 +64,8 @@ public class fragment_change_income extends Fragment {
      * @return A new instance of fragment fragment_change_income.
      */
     // TODO: Rename and change types and number of parameters
-    public static fragment_change_income newInstance(String param1, String param2) {
-        fragment_change_income fragment = new fragment_change_income();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    public static fragment_change_income newInstance() {
+        return new fragment_change_income();
     }
 
     @Override
@@ -131,7 +126,7 @@ public class fragment_change_income extends Fragment {
                     System.out.println("not added");
 
 
-                Navigation.findNavController(view).navigate(R.id.income_moneyrecord);
+                ((MainScreen) getActivity()).switchContent(fragment_money_record.newInstance());
             }
         };
         update.setOnClickListener(confirm_salary);
@@ -140,7 +135,7 @@ public class fragment_change_income extends Fragment {
         View.OnClickListener income_cancel = new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Navigation.findNavController(view).navigate(R.id.income_moneyrecord);
+                ((MainScreen) getActivity()).switchContent(fragment_money_record.newInstance());
             }
         };
         cancel.setOnClickListener(income_cancel);
@@ -161,7 +156,7 @@ public class fragment_change_income extends Fragment {
                 else
                     System.out.println("not added");
 
-                Navigation.findNavController(view).navigate(R.id.income_moneyrecord);
+                ((MainScreen) getActivity()).switchContent(fragment_money_record.newInstance());
             }
         };
         confirm.setOnClickListener(income_confirm);

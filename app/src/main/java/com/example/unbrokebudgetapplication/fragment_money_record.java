@@ -6,15 +6,17 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import java.io.*;
 import java.text.DecimalFormat;
 
 /**
@@ -49,13 +51,8 @@ public class fragment_money_record extends Fragment {
      * @return A new instance of fragment fragment_money_record.
      */
     // TODO: Rename and change types and number of parameters
-    public static fragment_money_record newInstance(String param1, String param2) {
-        fragment_money_record fragment = new fragment_money_record();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    public static fragment_money_record newInstance() {
+        return new fragment_money_record();
     }
 
     @Override
@@ -64,27 +61,6 @@ public class fragment_money_record extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-            /*File income = new File(getContext().getFilesDir(), "income.txt");
-
-            // Create the file if it does not exist
-            try {
-                if (!income.exists()) {
-                    income.createNewFile();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }*/
-            //Double number = 0.0;
-            /*try {
-                BufferedReader reader = new BufferedReader(new FileReader(income));
-                String line = reader.readLine();
-                number = Integer.parseInt(line);
-                reader.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }*/
-
-
 
         }
     }
@@ -186,11 +162,12 @@ public class fragment_money_record extends Fragment {
 
 
 
+
         Button addmoney = view.findViewById(R.id.add_money_button);
         View.OnClickListener add_money_button = new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Navigation.findNavController(view).navigate(R.id.to_add_money);
+                ((MainScreen) getActivity()).switchContent(fragment_add_money.newInstance());
             }
         };
         addmoney.setOnClickListener(add_money_button);
@@ -199,7 +176,7 @@ public class fragment_money_record extends Fragment {
         View.OnClickListener budget_rule_1_button = new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Navigation.findNavController(view).navigate(R.id.to1stbudget);
+                ((MainScreen) getActivity()).switchContent(Fragment_1st_budget_guide.newInstance());
             }
         };
         budget1.setOnClickListener(budget_rule_1_button);
@@ -208,7 +185,7 @@ public class fragment_money_record extends Fragment {
         View.OnClickListener budget_rule_2_button = new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Navigation.findNavController(view).navigate(R.id.to2ndbudget);
+                ((MainScreen) getActivity()).switchContent(fragment_2nd_budget_guide.newInstance());
             }
         };
         budget2.setOnClickListener(budget_rule_2_button);
@@ -217,7 +194,7 @@ public class fragment_money_record extends Fragment {
         View.OnClickListener budget_rule_3_button = new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Navigation.findNavController(view).navigate(R.id.to3rdbudget);
+                ((MainScreen) getActivity()).switchContent(fragment_3rd_budget_guide.newInstance());
             }
         };
         budget3.setOnClickListener(budget_rule_3_button);
@@ -226,7 +203,7 @@ public class fragment_money_record extends Fragment {
         View.OnClickListener income_button = new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Navigation.findNavController(view).navigate(R.id.toincome);
+                ((MainScreen) getActivity()).switchContent(fragment_change_income.newInstance());
             }
         };
         income.setOnClickListener(income_button);
@@ -235,10 +212,14 @@ public class fragment_money_record extends Fragment {
         View.OnClickListener record_purchase_button = new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Navigation.findNavController(view).navigate(R.id.torecordpurchase);
+                ((MainScreen) getActivity()).switchContent(Fragment_record_purchase.newInstance());
             }
         };
         record.setOnClickListener(record_purchase_button);
+
+
+
+
     }
 
 }
