@@ -11,6 +11,8 @@ import androidx.navigation.Navigation;
 
 public class milestone_achievment_2_3 extends Fragment {
 
+    int earningsRecord = 0;
+
     public static milestone_achievment_2_3 newInstance() {
         return new milestone_achievment_2_3();
     }
@@ -33,5 +35,7 @@ public class milestone_achievment_2_3 extends Fragment {
             }
         };
         BtnClaim3.setOnClickListener(OCLbtn3);
+
+        earningsRecord = earningsRecord + 2000;
     }
 }

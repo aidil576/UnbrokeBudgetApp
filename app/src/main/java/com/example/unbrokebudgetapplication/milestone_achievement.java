@@ -16,6 +16,8 @@ import android.widget.ImageView;
 
 public class milestone_achievement extends Fragment {
 
+    int earningpoints = 0;
+
     public static milestone_achievement newInstance() {
         return new milestone_achievement();
     }
