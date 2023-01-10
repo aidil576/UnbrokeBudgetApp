@@ -2,6 +2,7 @@ package com.example.unbrokebudgetapplication;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -27,6 +29,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -37,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
     private ImageView IVGoogle;
 
     private FirebaseAuth mAuth;
+    private FirebaseUser mUser;
     private ProgressDialog progressDialog;
 
     GoogleSignInOptions googleSignInOptions;
@@ -52,7 +56,12 @@ public class LoginActivity extends AppCompatActivity {
         BtnLogin = findViewById(R.id.BtnLogin);
 
         mAuth =FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
         progressDialog = new ProgressDialog(this);
+
+        //save email and password
+        CheckBox checkBox = (CheckBox) findViewById(R.id.CBRemember);
+//        SharedPreferences sharedPreferences = getSharedPreferences(FILE_EMAIL, MODE_PRIVATE);
 
         loginDetails();
 

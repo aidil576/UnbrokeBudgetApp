@@ -35,6 +35,7 @@
     <string name="textview">TextView</string>
     <string name="total_daily_balance">Total Daily Balance</string>
     <string name="accountSettings">Account settings</string>
+    <string name="remember">Remember me</string>
     <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
     <string name="facebook_application_id" translatable="false">YOUR_APP_ID</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fbYOUR_APP_ID</string>

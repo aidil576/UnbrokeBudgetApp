@@ -23,9 +23,9 @@
             android:layout_height="820dp"
             android:background="#1A434E"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
         <TextView
             android:id="@+id/TVWelcome"
@@ -108,11 +108,25 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TVPassword" />
 
+        <CheckBox
+            android:id="@+id/CBRemember"
+            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="18dp"
+            android:buttonTint="#FFFFFF"
+            android:fontFamily="@font/poppins_thin"
+            android:text="@string/remember"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ETPassword" />
+
         <TextView
             android:id="@+id/TVForgotPass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="22dp"
             android:text="@string/forgotpass"
             android:textColor="#FF0000"
             app:layout_constraintEnd_toEndOf="parent"
@@ -196,6 +210,15 @@
             app:layout_constraintStart_toEndOf="@+id/IVFacebook"
             app:layout_constraintTop_toBottomOf="@+id/TVCreateAcc" />
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
