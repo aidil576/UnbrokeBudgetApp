@@ -34,7 +34,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText ETmail,ETPassword;
+    private static EditText ETmail,ETPassword;
     private Button BtnLogin;
     private TextView TVCreateAcc,TVForgotPass;
     private ImageView IVGoogle;
@@ -122,6 +122,11 @@ public class LoginActivity extends AppCompatActivity {
                 SignIn();
             }
         });
+    }
+    public static String getUserEmail()
+    {
+        String email = ETmail.getText().toString();
+        return email;
     }
 
     private void SignIn() {
