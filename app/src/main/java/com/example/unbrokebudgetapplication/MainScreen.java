@@ -59,7 +59,7 @@ public class MainScreen extends AppCompatActivity {
                     case R.id.dailyExpenses:
                         selectedFragment = new Fragment_Daily_Expenses();
                     case R.id.profile:
-                        selectedFragment = new lucky_wheel();
+                        selectedFragment = new fragment_account_setting();
                         break;
 
                 }
