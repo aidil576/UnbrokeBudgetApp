@@ -36,5 +36,14 @@ public class point_redemption extends Fragment {
             }
         };
         BtnIBGift.setOnClickListener(OCLIVGift);
+
+        ImageView BtnIBBack = view.findViewById(R.id.IVbackicon);
+        View.OnClickListener OCLIBBack = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainScreen) getActivity()).switchContent(entertainment_page.newInstance());
+            }
+        };
+        BtnIBBack.setOnClickListener(OCLIBBack);
     }
 }
