@@ -42,15 +42,24 @@ public class Fragment_Daily_Expenses extends Fragment {
         myDB = new DBHelper(context);
         DecimalFormat df = new DecimalFormat("#.##");
 
+
+        String foodTxt = "Food";
+        String billsTxt = "Bills";
+        String groceriesTxt = "Groceries";
+        String transportTxt = "Transportation";
+        String entertainmentTxt = "Entertainment";
+
         double expense = 0;
         double allocation = 0;
         double balance = 0;
 
-        double food = 0;
-        double grocery = 0;
-        double entertainment = 0;
-        double transportation = 0;
-        double bill = 0;
+        double food = (myDB.calcSumOfAType(foodTxt)*-1);
+        double grocery = (myDB.calcSumOfAType(groceriesTxt)*-1);
+        double entertainment = (myDB.calcSumOfAType(entertainmentTxt)*-1);
+        double transportation = (myDB.calcSumOfAType(transportTxt)*-1);
+        double bill = (myDB.calcSumOfAType(billsTxt)*-1);
+
+
 
         TextView Expense = view.findViewById(R.id.expensesAmount);
         Expense.setText("RM" + df.format(expense));
@@ -60,7 +69,7 @@ public class Fragment_Daily_Expenses extends Fragment {
         Balance.setText("RM" + df.format(balance));
 
         TextView Food = view.findViewById(R.id.food_price);
-        Food.setText("RM" + df.format(food));
+        Food.setText(("RM" + df.format(food)));
         TextView Grocery = view.findViewById(R.id.grocery_price);
         Grocery.setText("RM" + df.format(grocery));
         TextView Entertainment = view.findViewById(R.id.entertainment_price);
