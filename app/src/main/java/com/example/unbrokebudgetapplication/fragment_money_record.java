@@ -18,6 +18,8 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 
 public class fragment_money_record extends Fragment {
@@ -48,6 +50,14 @@ public class fragment_money_record extends Fragment {
         context = getContext();
         myDB = new DBHelper(context);
 
+
+        TextView monthTextView = view.findViewById(R.id.month_top);
+
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat month_date = new SimpleDateFormat("MMMM");
+        String month_name = month_date.format(cal.getTime());
+
+        monthTextView.setText(month_name);
 
         DecimalFormat df = new DecimalFormat("#.##");
 //        Double income_latest = Double.valueOf(myDB.ShowLast());
@@ -86,29 +96,30 @@ public class fragment_money_record extends Fragment {
         double transportation = 0;
         String budget = myDB.getBudget();
         //budget:
-        if(!budget.isEmpty()) {
-            if (budget.equals("532RULE")) {
-                total_income = Double.parseDouble(myDB.ShowLast());
-                need = (0.5) * total_income;
-                want = (0.3) * total_income;
-                savings = (0.2) * total_income;
+        if(!myDB.isIncomeTableEmpty())
+        {
+            if(!budget.isEmpty()) {
+                if (budget.equals("532RULE")) {
+                    total_income = Double.parseDouble(myDB.ShowLast());
+                    need = (0.5) * total_income;
+                    want = (0.3) * total_income;
+                    savings = (0.2) * total_income;
 
-                bills = (0.4) * need;
-                groceries = (0.3) * need;
-                food = (0.2) * need;
-                transportation = (0.1) * need;
-            }
-            else if(budget.equals("60%RULE"))
-            {
-                total_income = Double.parseDouble(myDB.ShowLast());
-                need = (0.6) * total_income;
-                want = (0.4) * total_income;
-                savings = (0.0) * total_income;
+                    bills = (0.4) * need;
+                    groceries = (0.3) * need;
+                    food = (0.2) * need;
+                    transportation = (0.1) * need;
+                } else if (budget.equals("60%RULE")) {
+                    total_income = Double.parseDouble(myDB.ShowLast());
+                    need = (0.6) * total_income;
+                    want = (0.4) * total_income;
+                    savings = (0.0) * total_income;
 
-                bills = (0.4) * need;
-                groceries = (0.3) * need;
-                food = (0.2) * need;
-                transportation = (0.1) * need;
+                    bills = (0.4) * need;
+                    groceries = (0.3) * need;
+                    food = (0.2) * need;
+                    transportation = (0.1) * need;
+                }
             }
         }
 
@@ -183,6 +194,15 @@ public class fragment_money_record extends Fragment {
             }
         };
         record.setOnClickListener(record_purchase_button);
+
+        Button viewDetail = view.findViewById(R.id.more_expenses_button);
+        View.OnClickListener more_expenses_button = new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                ((MainScreen) getActivity()).switchContent(Fragment_Daily_Expenses.newInstance());
+            }
+        };
+        viewDetail.setOnClickListener(more_expenses_button);
 
 
 

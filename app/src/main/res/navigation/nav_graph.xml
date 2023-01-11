@@ -48,6 +48,9 @@
         <action
             android:id="@+id/to_record_purchase"
             app:destination="@id/fragment_record_purchase" />
+        <action
+            android:id="@+id/action_fragment_money_record_to_fragment_Daily_Expenses"
+            app:destination="@id/fragment_Daily_Expenses" />
     </fragment>
     <fragment
         android:id="@+id/budget1"
@@ -210,4 +213,13 @@
         android:name="com.example.unbrokebudgetapplication.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/fragment_Daily_Expenses"
+        android:name="com.example.unbrokebudgetapplication.Fragment_Daily_Expenses"
+        android:label="fragment__daily__expenses"
+        tools:layout="@layout/fragment__daily__expenses" >
+        <action
+            android:id="@+id/action_fragment_Daily_Expenses_to_fragment_money_record"
+            app:destination="@id/fragment_money_record" />
+    </fragment>
 </navigation>

@@ -9,11 +9,16 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import com.google.firebase.auth.FirebaseUser;
+
 import java.sql.Date;
 import java.sql.Time;
 
 public class DBHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME ="credit.db";
+
+    public static String user1 = LoginActivity.getUserEmail();
+    public static final String DATABASE_NAME = user1+".db";
+
 
     public static final String TABLE_NAME_1 ="money_in_out";
     public static final String COL_1 ="ID";
@@ -136,5 +141,13 @@ public class DBHelper extends SQLiteOpenHelper {
             str = cursor.getString(cursor.getColumnIndex(COL_2_BUDGET));
         cursor.close();
         return str;
+    }
+    public boolean isIncomeTableEmpty() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT COUNT(*) FROM " + TABLE_NAME_2, null);
+        cursor.moveToFirst();
+        int count = cursor.getInt(0);
+        cursor.close();
+        return count == 0;
     }
 }

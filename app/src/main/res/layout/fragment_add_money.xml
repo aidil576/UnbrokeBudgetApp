@@ -34,63 +34,36 @@
         android:id="@+id/amount_add_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="sans-serif-medium"
         android:text="Enter amount you wish to add"
         android:textColor="#ffffff"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/box_addmoney"
         app:layout_constraintStart_toStartOf="@+id/box_addmoney"
-        app:layout_constraintTop_toBottomOf="@+id/total_money_value" />
-
-    <TextView
-        android:id="@+id/total_money_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Your total money now:"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/box_addmoney"
-        app:layout_constraintHorizontal_bias="0.287"
-        app:layout_constraintStart_toStartOf="@+id/box_addmoney"
         app:layout_constraintTop_toTopOf="@+id/box_addmoney" />
-
-    <TextView
-        android:id="@+id/total_money_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="RM5000.00"
-        android:textColor="#FFFFFF"
-        android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="@+id/box_addmoney"
-        app:layout_constraintHorizontal_bias="0.435"
-        app:layout_constraintStart_toStartOf="@+id/box_addmoney"
-        app:layout_constraintTop_toBottomOf="@+id/total_money_text" />
 
     <Button
         android:id="@+id/confirm_button_addmoney"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="40dp"
         android:background="@drawable/rounded_box_blue"
         android:text="Confirm"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="@+id/box_addmoney"
-        app:layout_constraintTop_toBottomOf="@+id/box_addmoney" />
+        app:layout_constraintTop_toBottomOf="@+id/amount_add_value" />
 
     <Button
         android:id="@+id/cancel_button_addmoney"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/rounded_box_red"
         android:text="Cancel"
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="@+id/box_addmoney"
-        app:layout_constraintTop_toBottomOf="@+id/box_addmoney" />
+        app:layout_constraintTop_toBottomOf="@+id/amount_add_value" />
 </androidx.constraintlayout.widget.ConstraintLayout>
