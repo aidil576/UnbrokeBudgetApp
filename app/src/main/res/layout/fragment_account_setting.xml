@@ -108,22 +108,40 @@
                             android:text="Feedback"
                             android:textColor="@color/black"
                             android:textSize="20dp" />
+
                         <ImageButton
                             android:id="@+id/BtnNextFeedback"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_navigate_next"
-                            android:layout_marginTop="23dp"
                             android:layout_marginLeft="170dp"
-                            android:layout_marginRight="10dp">
-
+                            android:layout_marginTop="23dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/ic_navigate_next">
                         </ImageButton>
+
                     </LinearLayout>
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/TVSignOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Sign Out"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <ImageButton
+                    android:id="@+id/BtnSignOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:src="@drawable/ic_navigate_next">
+                </ImageButton>
 
                 <TableRow
                     android:layout_width="match_parent"
