@@ -16,6 +16,8 @@ import android.widget.ImageView;
 
 public class milestone_achievement extends Fragment {
 
+    int earningpoints = 0;
+
     public static milestone_achievement newInstance() {
         return new milestone_achievement();
     }
@@ -30,7 +32,7 @@ public class milestone_achievement extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
 
-        ImageButton Btnlv1 = view.findViewById(R.id.IBrtgl1);
+        ImageView Btnlv1 = view.findViewById(R.id.IBrtgl1);
         View.OnClickListener OCL1 = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +41,7 @@ public class milestone_achievement extends Fragment {
         };
         Btnlv1.setOnClickListener(OCL1);
 
-        ImageButton Btnlv2 = view.findViewById(R.id.IBrtgl2);
+        ImageView Btnlv2 = view.findViewById(R.id.IBrtgl2);
         View.OnClickListener OCL2 = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +50,7 @@ public class milestone_achievement extends Fragment {
         };
         Btnlv2.setOnClickListener(OCL2);
 
-        ImageButton Btnlv3 = view.findViewById(R.id.IBrtgl3);
+        ImageView Btnlv3 = view.findViewById(R.id.IBrtgl3);
         View.OnClickListener OCL3 = new View.OnClickListener() {
             @Override
             public void onClick(View v) {

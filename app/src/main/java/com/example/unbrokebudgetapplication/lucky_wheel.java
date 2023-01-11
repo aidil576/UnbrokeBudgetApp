@@ -83,6 +83,7 @@ public class lucky_wheel extends Fragment {
             if(!spinning){
                 spin();
                 spinning = true; //now spinning
+
             }
 
         });
@@ -143,7 +144,7 @@ public class lucky_wheel extends Fragment {
     }
 
     private void toast(String s) {
-        Toast.makeText(getActivity(), s, Toast.LENGTH_SHORT).show(); //
+        Toast.makeText(getActivity(), s, Toast.LENGTH_SHORT).show();
     }
 
     private void savedEarnings(int earnedPoints) {

@@ -14,6 +14,8 @@ import android.widget.ImageView;
 
 public class milestone_achievment_2 extends Fragment {
 
+    int earningsRecord = 0;
+
     public static milestone_achievment_2 newInstance() {
         return new milestone_achievment_2();
     }
@@ -36,5 +38,7 @@ public class milestone_achievment_2 extends Fragment {
             }
         };
         BtnClaim1.setOnClickListener(OCLbtn1);
+
+        earningsRecord = earningsRecord + 100;
     }
 }

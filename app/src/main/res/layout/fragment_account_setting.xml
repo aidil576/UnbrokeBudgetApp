@@ -61,95 +61,187 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <!--                    tools:src="@tools:sample/avatars" />-->
+
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/IVProfilePic"
                     android:layout_width="102dp"
                     android:layout_height="103dp"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginBottom="52dp"
+                    android:layout_marginStart="152dp"
+                    android:layout_marginBottom="64dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    tools:src="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/profile_user_avatar_man_person_svgrepo_com" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/TVUserName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginBottom="92dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="Username"
                     android:textColor="@color/white"
                     android:textSize="20dp"
-                    android:text="Username"
                     app:layout_constraintBottom_toBottomOf="@+id/IVBGBack"
-                    app:layout_constraintStart_toEndOf="@+id/imageView3" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/IVProfilePic" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TableLayout
+            <LinearLayout
                 android:layout_width="346dp"
                 android:layout_height="521dp"
+                android:orientation="vertical"
                 android:layout_gravity="center"
                 android:background="@drawable/rounded_box_white">
 
-                <TableRow
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/feedbackText"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:text="Feedback"
+                                android:textColor="@color/black"
+                                android:textSize="20dp" />
+
+                            <ImageButton
+                                android:id="@+id/BtnNextFeedback"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="50dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/ic_navigate_next">
+                            </ImageButton>
+
+                        </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/TVTermCond"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="20dp"
+                                    android:textSize="20dp"
+                                    android:textColor="@color/black"
+                                    android:text="Terms &amp; Conditions"/>
+
+                                <ImageButton
+                                    android:id="@+id/BtnTermCond"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="50dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/ic_navigate_next">
+                                </ImageButton>
+                            </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="30dp"
+                    android:orientation="vertical">
 
-                    <LinearLayout
+                    <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal" >
+                        android:layout_height="wrap_content"
+                        android:text="More"
+                        android:textColor="@color/kelabu"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/feedbackText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="20dp"
-                            android:text="Feedback"
-                            android:textColor="@color/black"
-                            android:textSize="20dp" />
+                    <TextView
+                        android:id="@+id/TVAboutUs"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:text="About Us"/>
 
-                        <ImageButton
-                            android:id="@+id/BtnNextFeedback"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="170dp"
-                            android:layout_marginTop="23dp"
-                            android:layout_marginRight="10dp"
-                            android:src="@drawable/ic_navigate_next">
-                        </ImageButton>
+                    <ImageButton
+                        android:id="@+id/BtnAboutUs"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ic_navigate_next">
+                    </ImageButton>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/TVPrivacyPolicy"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:text="Privacy Policy"/>
+
+                    <ImageButton
+                        android:id="@+id/BtnPrivacyPolicy"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_navigate_next">
+                    </ImageButton>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/TVSignOut"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:text="@string/signout"/>
+
+                    <ImageButton
+                        android:id="@+id/BtnSignOut"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_navigate_next">
+                    </ImageButton>
+                </LinearLayout>
+
+
+
+
 
                     </LinearLayout>
-                </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    </LinearLayout>
 
-                <TextView
-                    android:id="@+id/TVSignOut"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:text="Sign Out"
-                    android:textColor="@color/black"
-                    android:textSize="20dp" />
 
-                <ImageButton
-                    android:id="@+id/BtnSignOut"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:src="@drawable/ic_navigate_next">
-                </ImageButton>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-            </TableLayout>
-
-        </LinearLayout>
     </ScrollView>
 
 
