@@ -31,7 +31,7 @@
             android:id="@+id/TVWelcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="108dp"
             android:fontFamily="@font/poppins_semibold"
             android:text="@string/welcome"
             android:textColor="#FFFFFF"
@@ -42,118 +42,47 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/TVWelcomeDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="@string/welcomedesc"
-            android:textColor="#C4C4C4"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
+        <ImageView
+            android:id="@+id/IVGoogle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="36dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/google_svgrepo_com"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TVWelcome" />
+            app:layout_constraintTop_toBottomOf="@+id/TVNoAcc" />
 
-        <TextView
-            android:id="@+id/TVEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/email"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TVWelcomeDesc" />
+        <ImageView
+            android:id="@+id/IVFacebook"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="36dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/facebook_svgrepo_com"
+            app:layout_constraintStart_toEndOf="@+id/IVGoogle"
+            app:layout_constraintTop_toBottomOf="@+id/TVNoAcc" />
 
-        <EditText
-            android:id="@+id/ETmail"
-            android:layout_width="332dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="8dp"
-            android:background="#FFFFFF"
-            android:ems="10"
-            android:hint="@string/email"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TVEmail" />
-
-        <TextView
-            android:id="@+id/TVPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="@string/password"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.111"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ETmail" />
-
-        <EditText
-            android:id="@+id/ETPassword"
-            android:layout_width="332dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="8dp"
-            android:background="#FFFFFF"
-            android:ems="10"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TVPassword" />
-
-        <CheckBox
-            android:id="@+id/CBRemember"
-            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
-            android:layout_width="145dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="18dp"
-            android:buttonTint="#FFFFFF"
-            android:fontFamily="@font/poppins_thin"
-            android:text="@string/remember"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ETPassword" />
-
-        <TextView
-            android:id="@+id/TVForgotPass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
-            android:text="@string/forgotpass"
-            android:textColor="#FF0000"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.855"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ETPassword" />
-
-        <Button
-            android:id="@+id/BtnLogin"
-            android:layout_width="257dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="100dp"
-            android:background="@xml/corner_rect"
-            android:backgroundTint="#29B6F6"
-            android:text="@string/login"
-            android:textColor="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.48"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ETPassword" />
+        <ImageView
+            android:id="@+id/IVInsta"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="36dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/instagram_1_svgrepo_com"
+            app:layout_constraintStart_toEndOf="@+id/IVFacebook"
+            app:layout_constraintTop_toBottomOf="@+id/TVCreateAcc" />
 
         <TextView
             android:id="@+id/TVCreateAcc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="80dp"
             android:text="@string/createacc"
             android:textColor="#FFFFFF"
@@ -166,60 +95,55 @@
             android:id="@+id/TVNoAcc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="20dp"
             android:text="@string/noacc"
             android:textColor="#616161"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.256"
+            app:layout_constraintHorizontal_bias="0.254"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/BtnLogin" />
 
-        <ImageView
-            android:id="@+id/IVGoogle"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="112dp"
-            android:layout_marginTop="56dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/google_svgrepo_com"
+        <Button
+            android:id="@+id/BtnLogin"
+            android:layout_width="257dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="108dp"
+            android:background="@xml/corner_rect"
+            android:backgroundTint="#29B6F6"
+            android:text="@string/login"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TVNoAcc" />
+            app:layout_constraintTop_toBottomOf="@+id/ETPassword" />
 
-        <ImageView
-            android:id="@+id/IVFacebook"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="56dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/facebook_svgrepo_com"
-            app:layout_constraintStart_toEndOf="@+id/IVGoogle"
-            app:layout_constraintTop_toBottomOf="@+id/TVNoAcc" />
+        <CheckBox
+            android:id="@+id/CBRemember"
+            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+            android:layout_width="145dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="20dp"
+            android:buttonTint="#FFFFFF"
+            android:fontFamily="@font/poppins_thin"
+            android:text="@string/remember"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ETPassword" />
 
-        <ImageView
-            android:id="@+id/IVInsta"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="56dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/instagram_1_svgrepo_com"
-            app:layout_constraintStart_toEndOf="@+id/IVFacebook"
-            app:layout_constraintTop_toBottomOf="@+id/TVCreateAcc" />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
+        <TextView
+            android:id="@+id/TVForgotPass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="24dp"
+            android:text="@string/forgotpass"
+            android:textColor="#FF0000"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.855"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/ETPassword" />
 
         <ImageView
             android:id="@+id/IVShowHidePass"
@@ -230,11 +154,87 @@
             android:scaleType="centerInside"
             app:layout_constraintBottom_toBottomOf="@+id/ETPassword"
             app:layout_constraintEnd_toEndOf="@+id/ETPassword"
-            app:layout_constraintHorizontal_bias="0.957"
+            app:layout_constraintHorizontal_bias="0.958"
             app:layout_constraintStart_toStartOf="@+id/ETPassword"
             app:layout_constraintTop_toTopOf="@+id/ETPassword"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
+
+        <EditText
+            android:id="@+id/ETPassword"
+            android:layout_width="332dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="12dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVPassword" />
+
+        <TextView
+            android:id="@+id/TVPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="@string/password"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.112"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ETmail" />
+
+        <EditText
+            android:id="@+id/ETmail"
+            android:layout_width="332dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="20dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVEmail" />
+
+        <TextView
+            android:id="@+id/TVEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/email"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.099"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVWelcomeDesc" />
+
+        <TextView
+            android:id="@+id/TVWelcomeDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/welcomedesc"
+            android:textColor="#C4C4C4"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVWelcome" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

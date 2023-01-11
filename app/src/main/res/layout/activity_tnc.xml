@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ombakterm"
+    tools:context=".TncActivity">
+
+
+    <ImageView
+        android:id="@+id/IVLogo"
+        android:layout_width="160dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="72dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/walletlogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TVFirstTerm"
+        android:layout_width="308dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="68dp"
+        android:elevation="2dp"
+        android:text="1. Acceptance of terms: By accessing and using our workout app, you agree to be bound by these terms and conditions. If you do not agree to these terms, please do not use our app."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IVLogo" />
+
+    <TextView
+        android:id="@+id/TVSecTerm"
+        android:layout_width="314dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="28dp"
+        android:elevation="2dp"
+        android:text="2. Modification of terms: We reserve the right to modify these terms at any time. Such modifications will be effective immediately upon posting. You are responsible for regularly reviewing these terms. Your continued use of our app following the posting of any modifications will constitute your acceptance of the modified terms."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVFirstTerm" />
+
+    <TextView
+        android:id="@+id/TVDesc20"
+        android:layout_width="315dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="28dp"
+        android:elevation="2dp"
+        android:text="3. User conduct: You agree to use our app only for lawful purposes and in a manner that does not infringe the rights of, or restrict or inhibit the use and enjoyment of, the app by any third party."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVSecTerm" />
+
+    <TextView
+        android:id="@+id/TVJoinCommunity6"
+        android:layout_width="237dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:elevation="2dp"
+        android:text="Terms and Conditions"
+        android:textAlignment="center"
+        android:textColor="#7D4949"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IVLogo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -78,5 +78,33 @@ public class fragment_account_setting extends Fragment {
                 startActivity(intent);
             }
         });
+
+        ImageButton BtnTermCond = view.findViewById(R.id.BtnTermCond);
+
+        BtnTermCond.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), TncActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton BtnPrivacyPolicy = view.findViewById(R.id.BtnPrivacyPolicy);
+        BtnPrivacyPolicy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), PrivacyPolicyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton BtnAboutUs = view.findViewById(R.id.BtnAboutUs);
+        BtnAboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ActivityAboutUs.class);
+                startActivity(intent);
+            }
+        });
     }
 }
