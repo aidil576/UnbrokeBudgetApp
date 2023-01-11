@@ -1,8 +1,13 @@
 package com.example.unbrokebudgetapplication;
 
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
@@ -16,7 +21,8 @@ import android.widget.Toast;
 
 public class point_redemption extends Fragment {
 
-    int earningsRecord = 0;
+    int earningsRecord = 1000000;
+    Dialog popup;
 
     public static point_redemption newInstance() {
         return new point_redemption();
@@ -31,6 +37,7 @@ public class point_redemption extends Fragment {
 
     public void onViewCreated(View view, Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
+        popup = new Dialog(getActivity());
 
         ImageButton BtnIBGift = view.findViewById(R.id.IBGift);
         View.OnClickListener OCLIVGift = new View.OnClickListener() {
@@ -56,6 +63,11 @@ public class point_redemption extends Fragment {
             int num1 = Integer.parseInt(tv1.getText().toString());
             if (earningsRecord>num1){
                 earningsRecord = earningsRecord - 10000;
+                popup.setContentView(R.layout.fragment_voucherlv1_popup);
+                popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                popup.show();
+                //String message = "your points balance is "+ earningsRecord + " pts";
+                //toast(message);
             }else {
                 String message = "Not enough points";
                 toast(message);
@@ -68,6 +80,9 @@ public class point_redemption extends Fragment {
             int num2 = Integer.parseInt(tv2.getText().toString());
             if (earningsRecord>num2){
                 earningsRecord = earningsRecord - 42000;
+                popup.setContentView(R.layout.fragment_voucherlv2_popup);
+                popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                popup.show();
             }else {
                 String message = "Not enough points";
                 toast(message);
@@ -80,6 +95,9 @@ public class point_redemption extends Fragment {
             int num3 = Integer.parseInt(tv3.getText().toString());
             if (earningsRecord>num3){
                 earningsRecord = earningsRecord - 50000;
+                popup.setContentView(R.layout.fragment_voucherlv3_popup);
+                popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                popup.show();
             }else {
                 String message = "Not enough points";
                 toast(message);
@@ -92,6 +110,9 @@ public class point_redemption extends Fragment {
             int num4 = Integer.parseInt(tv4.getText().toString());
             if (earningsRecord>num4){
                 earningsRecord = earningsRecord - 35000;
+                popup.setContentView(R.layout.fragment_voucherlv1_popup);
+                popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                popup.show();
             }else {
                 String message = "Not enough points";
                 toast(message);
@@ -104,6 +125,9 @@ public class point_redemption extends Fragment {
             int num5 = Integer.parseInt(tv5.getText().toString());
             if (earningsRecord>num5){
                 earningsRecord = earningsRecord - 45000;
+                popup.setContentView(R.layout.fragment_voucherlv2_popup);
+                popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                popup.show();
             }else {
                 String message = "Not enough points";
                 toast(message);
@@ -116,6 +140,9 @@ public class point_redemption extends Fragment {
             int num6 = Integer.parseInt(tv6.getText().toString());
             if (earningsRecord>num6){
                 earningsRecord = earningsRecord - 56000;
+                popup.setContentView(R.layout.fragment_voucherlv3_popup);
+                popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                popup.show();
             }else {
                 String message = "Not enough coin";
                 toast(message);
