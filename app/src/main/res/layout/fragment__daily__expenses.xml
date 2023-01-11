@@ -14,30 +14,20 @@
         android:src="@drawable/rounded_box_darkblue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.029" />
+        app:layout_constraintVertical_bias="0.032" />
 
     <TextView
         android:id="@+id/Transaction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Transaction"
+        android:text="Total Transaction"
         android:textColor="#000000"
         android:textSize="32sp"
         app:layout_constraintStart_toStartOf="@+id/background"
-        app:layout_constraintTop_toBottomOf="@+id/background" />
-
-    <Button
-        android:id="@+id/viewAllButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#E5E5E5"
-        android:text="view all"
-        android:textColor="#5A5A5A"
-        app:layout_constraintEnd_toEndOf="@+id/background"
         app:layout_constraintTop_toBottomOf="@+id/background" />
 
     <TextView
@@ -70,8 +60,8 @@
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
-        android:layout_width="389dp"
-        android:layout_height="337dp"
+        android:layout_width="402dp"
+        android:layout_height="429dp"
         android:fillViewport="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,9 +75,10 @@
                 android:id="@+id/transactionItem1"
                 android:layout_width="360dp"
                 android:layout_height="75dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 android:src="@drawable/round_corner"
                 app:layout_constraintEnd_toEndOf="@+id/transactionItem2"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/transactionItem2"
                 app:layout_constraintTop_toBottomOf="@+id/transactionItem2" />
 
@@ -95,9 +86,10 @@
                 android:id="@+id/transactionItem2"
                 android:layout_width="360dp"
                 android:layout_height="75dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="12dp"
                 android:src="@drawable/round_corner"
                 app:layout_constraintEnd_toEndOf="@+id/transactionItem3"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/transactionItem3"
                 app:layout_constraintTop_toBottomOf="@+id/transactionItem3" />
 
@@ -105,10 +97,10 @@
                 android:id="@+id/transactionItem3"
                 android:layout_width="360dp"
                 android:layout_height="75dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 android:src="@drawable/round_corner"
                 app:layout_constraintEnd_toEndOf="@+id/transactionItem4"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/transactionItem4"
                 app:layout_constraintTop_toBottomOf="@+id/transactionItem4" />
 
@@ -116,7 +108,7 @@
                 android:id="@+id/transactionItem4"
                 android:layout_width="360dp"
                 android:layout_height="75dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:src="@drawable/round_corner"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.515"
@@ -174,7 +166,7 @@
                 android:id="@+id/transactionItem9"
                 android:layout_width="360dp"
                 android:layout_height="75dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 android:src="@drawable/round_corner"
                 app:layout_constraintEnd_toEndOf="@+id/transactionItem1"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -248,7 +240,7 @@
                 app:layout_constraintTop_toTopOf="@+id/transactionItem1" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/transportation_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="RM 1.50"
@@ -256,12 +248,12 @@
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/transactionItem1"
                 app:layout_constraintEnd_toEndOf="@+id/transactionItem1"
-                app:layout_constraintHorizontal_bias="0.898"
+                app:layout_constraintHorizontal_bias="0.88"
                 app:layout_constraintStart_toStartOf="@+id/transactionItem1"
                 app:layout_constraintTop_toTopOf="@+id/transactionItem1" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/food_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="RM 5.50"
@@ -269,13 +261,13 @@
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/transactionItem4"
                 app:layout_constraintEnd_toEndOf="@+id/transactionItem4"
-                app:layout_constraintHorizontal_bias="0.919"
+                app:layout_constraintHorizontal_bias="0.88"
                 app:layout_constraintStart_toStartOf="@+id/transactionItem4"
                 app:layout_constraintTop_toTopOf="@+id/transactionItem4"
-                app:layout_constraintVertical_bias="0.541" />
+                app:layout_constraintVertical_bias="0.52" />
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/grocery_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="RM 4.00"
@@ -283,23 +275,24 @@
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/transactionItem3"
                 app:layout_constraintEnd_toEndOf="@+id/transactionItem3"
-                app:layout_constraintHorizontal_bias="0.919"
+                app:layout_constraintHorizontal_bias="0.88"
                 app:layout_constraintStart_toStartOf="@+id/transactionItem3"
                 app:layout_constraintTop_toTopOf="@+id/transactionItem3"
                 app:layout_constraintVertical_bias="0.541" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/entertainment_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="RM 10.00"
+                android:text="RM 8.00"
                 android:textColor="#333333"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/transactionItem2"
                 app:layout_constraintEnd_toEndOf="@+id/transactionItem2"
-                app:layout_constraintHorizontal_bias="0.927"
+                app:layout_constraintHorizontal_bias="0.88"
                 app:layout_constraintStart_toStartOf="@+id/transactionItem2"
-                app:layout_constraintTop_toTopOf="@+id/transactionItem2" />
+                app:layout_constraintTop_toTopOf="@+id/transactionItem2"
+                app:layout_constraintVertical_bias="0.437" />
 
             <TextView
                 android:id="@+id/textView14"
@@ -316,15 +309,15 @@
                 app:layout_constraintVertical_bias="0.479" />
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/bill_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="RM 20.00"
+                android:text="RM 9.00"
                 android:textColor="#333333"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/transactionItem9"
                 app:layout_constraintEnd_toEndOf="@+id/transactionItem9"
-                app:layout_constraintHorizontal_bias="0.934"
+                app:layout_constraintHorizontal_bias="0.88"
                 app:layout_constraintStart_toStartOf="@+id/transactionItem9"
                 app:layout_constraintTop_toTopOf="@+id/transactionItem9"
                 app:layout_constraintVertical_bias="0.479" />
@@ -339,10 +332,10 @@
         android:src="@drawable/arrowup"
         app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="@+id/background"
-        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="@+id/background"
         app:layout_constraintTop_toTopOf="@+id/background"
-        app:layout_constraintVertical_bias="0.942" />
+        app:layout_constraintVertical_bias="0.936" />
 
     <ImageView
         android:id="@+id/arrowDown"
@@ -355,7 +348,7 @@
         app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toStartOf="@+id/background"
         app:layout_constraintTop_toTopOf="@+id/background"
-        app:layout_constraintVertical_bias="0.942" />
+        app:layout_constraintVertical_bias="0.936" />
 
     <TextView
         android:id="@+id/dailyAllo"
@@ -365,8 +358,8 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="@+id/background"
-        app:layout_constraintHorizontal_bias="0.265"
-        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/arrowUp"
         app:layout_constraintTop_toTopOf="@+id/background"
         app:layout_constraintVertical_bias="0.809" />
 
@@ -374,14 +367,14 @@
         android:id="@+id/dailyAlloAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RM 50.00"
+        android:text="RM 0.00"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="@+id/background"
-        app:layout_constraintHorizontal_bias="0.233"
-        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/arrowUp"
         app:layout_constraintTop_toTopOf="@+id/background"
-        app:layout_constraintVertical_bias="0.895" />
+        app:layout_constraintVertical_bias="0.886" />
 
     <TextView
         android:id="@+id/expenses"
@@ -391,21 +384,21 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="@+id/background"
-        app:layout_constraintHorizontal_bias="0.792"
-        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/arrowDown"
         app:layout_constraintTop_toTopOf="@+id/background"
-        app:layout_constraintVertical_bias="0.809" />
+        app:layout_constraintVertical_bias="0.805" />
 
     <TextView
         android:id="@+id/expensesAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RM 21.30"
+        android:text="RM 0.00"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="@+id/background"
-        app:layout_constraintHorizontal_bias="0.79"
-        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/arrowDown"
         app:layout_constraintTop_toTopOf="@+id/background"
         app:layout_constraintVertical_bias="0.891" />
 
