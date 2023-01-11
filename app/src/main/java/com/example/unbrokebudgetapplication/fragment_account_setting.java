@@ -1,6 +1,7 @@
 package com.example.unbrokebudgetapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -64,5 +67,16 @@ public class fragment_account_setting extends Fragment {
             }
         };
         BtnNext.setOnClickListener(BtnNextFeedback);
+
+        ImageButton BtnSignOut = view.findViewById(R.id.BtnSignOut);
+
+        BtnSignOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
