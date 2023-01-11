@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.text.TextUtils;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -61,6 +63,23 @@ public class LoginActivity extends AppCompatActivity {
         mUser = mAuth.getCurrentUser();
         progressDialog = new ProgressDialog(this);
 
+        //show hide password by clicking eye icon
+        ImageView IVShowHidePass = findViewById(R.id.IVShowHidePass);
+        IVShowHidePass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ETPassword.getTransformationMethod().equals(HideReturnsTransformationMethod.getInstance())){
+                    // if password visible hide it first
+                    ETPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    //change icon to closed eye
+                    IVShowHidePass.setImageResource(R.drawable.hide_password);
+                } else {
+                    ETPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    IVShowHidePass.setImageResource(R.drawable.ic_baseline_remove_red_eye_24);
+                }
+            }
+        });
+
         //save email and password
         CheckBox checkBox = (CheckBox) findViewById(R.id.CBRemember);
         SharedPreferences sharedPreferences = getSharedPreferences(FILE_EMAIL, MODE_PRIVATE);
@@ -87,8 +106,8 @@ public class LoginActivity extends AppCompatActivity {
         BtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String emailString = ETmail.getText().toString();
-                String passwordString = ETPassword.getText().toString();
+                String emailString = ETmail.getText().toString().trim();
+                String passwordString = ETPassword.getText().toString().trim();
 
                 if (checkBox.isChecked()) {
                     editor.putBoolean("checked", true);

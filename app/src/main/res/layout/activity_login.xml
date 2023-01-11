@@ -221,6 +221,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/IVShowHidePass"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="@+id/ETPassword"
+            app:layout_constraintEnd_toEndOf="@+id/ETPassword"
+            app:layout_constraintHorizontal_bias="0.957"
+            app:layout_constraintStart_toStartOf="@+id/ETPassword"
+            app:layout_constraintTop_toTopOf="@+id/ETPassword"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
