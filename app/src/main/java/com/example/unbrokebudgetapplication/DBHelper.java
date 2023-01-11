@@ -150,4 +150,19 @@ public class DBHelper extends SQLiteOpenHelper {
         cursor.close();
         return count == 0;
     }
+
+    @SuppressLint("Range")
+    public double calcSumOfAType(String type) {
+        double total = 0.00;
+        SQLiteDatabase db = this.getWritableDatabase();
+        String[] selectionArgs = { type };
+        Cursor cursor = db.rawQuery("SELECT SUM(" + COL_3 + ") as Total FROM " + TABLE_NAME_1 + " WHERE " + COL_2 + " = ?", selectionArgs);
+
+        if (cursor.moveToFirst()) {
+            total = cursor.getDouble(cursor.getColumnIndex("Total"));
+        }
+        cursor.close();
+        db.close();
+        return total;
+    }
 }

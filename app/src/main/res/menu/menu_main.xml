@@ -24,11 +24,6 @@
         android:icon="@drawable/ic_baseline_bulb_24"
         android:id="@+id/savingTip"
          />
-    <item
-        android:title="DailyExpenses"
-        app:labelVisibilityMode="labeled"
-        android:icon="@drawable/ic_baseline_wallet_24"
-        android:id="@+id/dailyExpenses"/>
     <item android:title="Profile"
         app:labelVisibilityMode="labeled"
         android:icon = "@drawable/ic_baseline_person_24"

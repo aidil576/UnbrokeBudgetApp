@@ -36,7 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
     private ImageView IVBack;
 
     private FirebaseAuth mAuth;
-    private FirebaseUser mUser;
+//    private FirebaseUser mUser;
     private ProgressDialog progressDialog;
     private String Uid;
     //public FirebaseDatabase db;
@@ -83,10 +83,10 @@ public class RegisterActivity extends AppCompatActivity {
         Btnregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String emailString = ETEmail.getText().toString();
-                String passwordString = ETPass.getText().toString();
-                String userName = ETUsername.getText().toString();
-                String phoneNum = ETMobileNum.getText().toString();
+                String emailString = ETEmail.getText().toString().trim();
+                String passwordString = ETPass.getText().toString().trim();
+                String userName = ETUsername.getText().toString().trim();
+                String phoneNum = ETMobileNum.getText().toString().trim();
 
                 if (TextUtils.isEmpty(userName)){
                     ETUsername.setError("Username is required");

@@ -125,7 +125,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 else{
-                    progressDialog.setMessage("login in progress");
+                    progressDialog.setMessage("Login in progress");
                     progressDialog.setCanceledOnTouchOutside(false);
                     progressDialog.show();
 

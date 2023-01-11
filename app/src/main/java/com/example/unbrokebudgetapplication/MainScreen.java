@@ -56,8 +56,9 @@ public class MainScreen extends AppCompatActivity {
                     case R.id.redeem:
                         selectedFragment = new entertainment_page();
                         break;
-                    case R.id.dailyExpenses:
-                        selectedFragment = new Fragment_Daily_Expenses();
+//                    case R.id.dailyExpenses:
+//                        selectedFragment = new Fragment_Daily_Expenses();
+//                        break;
                     case R.id.profile:
                         selectedFragment = new fragment_account_setting();
                         break;

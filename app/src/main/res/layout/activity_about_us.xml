@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ombakterm"
+    tools:context=".ActivityAboutUs">
+
+    <ImageView
+        android:id="@+id/IVLogo"
+        android:layout_width="160dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="72dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/walletlogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TVFirstTerm"
+        android:layout_width="309dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="68dp"
+        android:elevation="2dp"
+        android:text="UnBroke is an Android app that aims to empower individuals to take control of their finances and achieve financial stability. The app comes equipped with several powerful features that make budgeting and expense tracking easy and efficient."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IVLogo" />
+
+    <TextView
+        android:id="@+id/TVSecTerm"
+        android:layout_width="315dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:elevation="2dp"
+        android:text="One of the key features of UnBroke is its budget tracking capability, which allows users to set budgets for different categories of expenses, such as food, transportation, and entertainment, and track their spending against those budgets in real-time. With this feature, users can quickly identify areas where they may be overspending and make adjustments to stay on track with their budget."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVFirstTerm" />
+
+    <TextView
+        android:id="@+id/TVDesc20"
+        android:layout_width="318dp"
+        android:layout_height="226dp"
+        android:layout_marginTop="8dp"
+        android:elevation="2dp"
+        android:text="In addition to budgeting and expense tracking features, UnBroke offers educational resources such as articles and videos on financial management and budgeting, which aim to assist users in achieving financial stability. The overall goal of UnBroke is to provide a comprehensive and user-friendly tool for individuals looking to take control of their finances and make steady progress towards financial stability."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVSecTerm" />
+
+    <TextView
+        android:id="@+id/TVJoinCommunity6"
+        android:layout_width="237dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:elevation="2dp"
+        android:text="About Us"
+        android:textAlignment="center"
+        android:textColor="#7D4949"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IVLogo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
