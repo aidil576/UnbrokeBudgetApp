@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class milestone_achievement extends Fragment {
@@ -31,6 +32,9 @@ public class milestone_achievement extends Fragment {
 
     public void onViewCreated(View view, Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
+
+        //TextView tv = getView().findViewById(R.id.TVpointsbalance); //
+        //tv.setText(String.valueOf("hai"));
 
         ImageView Btnlv1 = view.findViewById(R.id.IBrtgl1);
         View.OnClickListener OCL1 = new View.OnClickListener() {

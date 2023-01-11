@@ -35,8 +35,13 @@ public class point_redemption extends Fragment {
         return inflater.inflate(R.layout.fragment_point_redemption, container, false);
     }
 
+
     public void onViewCreated(View view, Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
+
+        //TextView tv = getView().findViewById(R.id.TVpoints); //
+        //tv.setText(String.valueOf("hai"));
+
         popup = new Dialog(getActivity());
 
         ImageButton BtnIBGift = view.findViewById(R.id.IBGift);
@@ -44,6 +49,7 @@ public class point_redemption extends Fragment {
             @Override
             public void onClick(View v) {
                 ((MainScreen) getActivity()).switchContent(video_page.newInstance());
+                //earningsRecord = earningsRecord + 10;
             }
         };
         BtnIBGift.setOnClickListener(OCLIVGift);

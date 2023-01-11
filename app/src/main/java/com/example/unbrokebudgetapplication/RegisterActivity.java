@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -20,9 +21,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
 import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -36,6 +39,8 @@ public class RegisterActivity extends AppCompatActivity {
     private FirebaseUser mUser;
     private ProgressDialog progressDialog;
     private String Uid;
+    //public FirebaseDatabase db;
+    //public DatabaseReference reference ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -130,12 +135,14 @@ public class RegisterActivity extends AppCompatActivity {
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 if (task.isSuccessful()){
                                                     Toast.makeText(RegisterActivity.this, "Registration is success", Toast.LENGTH_SHORT).show();
+
                                                 }else{
                                                     Toast.makeText(RegisterActivity.this, "Failed to register", Toast.LENGTH_SHORT).show();
                                                 }
                                             }
                                         });
-
+                                mUser = mAuth.getCurrentUser();
+                                updateUI(mUser);
                                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                 startActivity(intent);
                                 Toast.makeText(RegisterActivity.this, "Account created successfully!", Toast.LENGTH_LONG).show();
@@ -146,6 +153,47 @@ public class RegisterActivity extends AppCompatActivity {
                                 progressDialog.dismiss();
                             }
                         }
+
+                        private void updateUI(FirebaseUser user) {
+
+                            //DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(user.getUid());
+
+                           // String email = user.getEmail();
+                            //int points = 0;
+
+                            //Userhelperclass helperclass = new Userhelperclass(email, points);
+
+                            //reference.child(user.getUid()).setValue(helperclass);
+
+                            HashMap<String, Object> map = new HashMap<>();
+                            map.put("email", user.getEmail());
+                            map.put("points", 0);
+                            map.put("uid",user.getUid());
+
+//                            reference = db.getInstance().getReference().child("Users");
+                            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(user.getUid());
+
+                            reference.child(user.getUid())
+                                    .setValue(map)
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+
+                                            if (task.isSuccessful()){
+                                                //Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                                //startActivity(intent);
+
+                                                //finish();
+                                            }
+                                            else{
+                                                Toast.makeText(RegisterActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+
+                                            }
+                                        }
+                                    });
+
+                        }
+
                     });
                 }
             }
