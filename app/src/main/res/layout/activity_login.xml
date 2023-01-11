@@ -5,10 +5,11 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/greendark"
+    android:background="@drawable/ombakfull"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="parent">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,8 +21,7 @@
         <View
             android:id="@+id/view3"
             android:layout_width="410dp"
-            android:layout_height="820dp"
-            android:background="#1A434E"
+            android:layout_height="900dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
