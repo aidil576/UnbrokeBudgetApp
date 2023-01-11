@@ -46,7 +46,7 @@
         app:layout_constraintStart_toStartOf="@+id/TVpointsbalance"
         app:layout_constraintTop_toBottomOf="@+id/TVpointsbalance" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/IBrtgl1"
         android:layout_width="400dp"
         android:layout_height="135dp"
@@ -57,17 +57,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/IBrtgl3"
-        android:layout_width="400dp"
-        android:layout_height="135dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/rectangle_silver"
-        app:layout_constraintEnd_toEndOf="@+id/IBrtgl2"
-        app:layout_constraintStart_toStartOf="@+id/IBrtgl2"
-        app:layout_constraintTop_toBottomOf="@+id/IBrtgl2" />
-
-    <ImageView
+    <ImageButton
         android:id="@+id/IBrtgl2"
         android:layout_width="400dp"
         android:layout_height="135dp"
@@ -76,6 +66,16 @@
         app:layout_constraintEnd_toEndOf="@+id/IBrtgl1"
         app:layout_constraintStart_toStartOf="@+id/IBrtgl1"
         app:layout_constraintTop_toBottomOf="@+id/IBrtgl1" />
+
+    <ImageButton
+        android:id="@+id/IBrtgl3"
+        android:layout_width="400dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/rectangle_silver"
+        app:layout_constraintEnd_toEndOf="@+id/IBrtgl2"
+        app:layout_constraintStart_toStartOf="@+id/IBrtgl2"
+        app:layout_constraintTop_toBottomOf="@+id/IBrtgl2" />
 
     <ImageView
         android:id="@+id/IVmedal1"

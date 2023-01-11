@@ -19,13 +19,13 @@
             android:id="@+id/appLogo"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:src="@drawable/ic_baseline_wallet_24"
+            android:src="@drawable/wallet"
             android:layout_gravity="center"/>
         <TextView
             android:id="@+id/appName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="440dp"
+            android:layout_marginTop="470dp"
             android:gravity="center"
             android:text="UnBroke"
             android:textColor="@color/black"
