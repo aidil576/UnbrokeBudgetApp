@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "154509751485",
-    "project_id": "unbroke-budget-application",
-    "storage_bucket": "unbroke-budget-application.appspot.com"
+    "project_number": "221344171963",
+    "firebase_url": "https://unbroke-324b4-default-rtdb.firebaseio.com",
+    "project_id": "unbroke-324b4",
+    "storage_bucket": "unbroke-324b4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:154509751485:android:33132872379421f2eeb3d4",
+        "mobilesdk_app_id": "1:221344171963:android:87864be10c0475ddaf269e",
         "android_client_info": {
           "package_name": "com.example.unbrokebudgetapplication"
         }
       },
       "oauth_client": [
         {
-          "client_id": "154509751485-niub1mhjs9g9e582012mu3dks9gcb0j0.apps.googleusercontent.com",
+          "client_id": "221344171963-m1su6edkedbmvr0vmpk4bat71ip2hvrb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAYXgbqrl4CfCTbwSUyCf6wxWwH75-V7GM"
+          "current_key": "AIzaSyBzH8HAZNn8RIzAoV-NEp99MeuIj7asIxQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "154509751485-niub1mhjs9g9e582012mu3dks9gcb0j0.apps.googleusercontent.com",
+              "client_id": "221344171963-m1su6edkedbmvr0vmpk4bat71ip2hvrb.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
