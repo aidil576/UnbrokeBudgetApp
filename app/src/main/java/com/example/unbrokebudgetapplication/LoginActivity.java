@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         String email = sharedPreferences.getString("svEmail", "");
         String password = sharedPreferences.getString("svPassword", "");
-        if (sharedPreferences.contains("checked") && sharedPreferences.getBoolean("checked", false) == true){
+        if (sharedPreferences.contains("checked") && sharedPreferences.getBoolean("checked", false)){
             checkBox.setChecked(true);
         } else {
             checkBox.setChecked(false);
@@ -155,6 +155,12 @@ public class LoginActivity extends AppCompatActivity {
 
         googleSignInClient = GoogleSignIn.getClient(this, googleSignInOptions);
 
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        if (account!=null){
+            String Name = account.getDisplayName();
+            String Mail = account.getDisplayName();
+        }
+
         IVGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -182,8 +188,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultcode, @Nullable Intent data){
-        super.onActivityResult(requestCode, resultcode, data);
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
 
         if(requestCode==100){
             Task<GoogleSignInAccount> task=GoogleSignIn.getSignedInAccountFromIntent(data);
@@ -198,7 +204,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void HomeActivity() {
         finish();
-        Intent intent = new Intent(getApplicationContext(), savingTips.class);
+        Intent intent = new Intent(getApplicationContext(), fragment_money_record.class);
         startActivity(intent);
 
     }

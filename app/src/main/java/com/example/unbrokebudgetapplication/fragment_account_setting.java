@@ -2,6 +2,7 @@ package com.example.unbrokebudgetapplication;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,8 +13,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +33,11 @@ import com.google.firebase.auth.FirebaseAuth;
 public class fragment_account_setting extends Fragment {
 
    private Context context;
+   private FirebaseUser user;
+   private DatabaseReference reference;
+   private String userID;
+
+   private TextView TVUserName;
 
     public fragment_account_setting() {
         // Required empty public constructor
@@ -40,11 +55,14 @@ public class fragment_account_setting extends Fragment {
         return fragment;
     }
 
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
         }
+
     }
 
     @Override
@@ -106,5 +124,53 @@ public class fragment_account_setting extends Fragment {
                 startActivity(intent);
             }
         });
+
+        ImageView IVProfilePic = view.findViewById(R.id.IVProfilePic);
+        IVProfilePic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+//                Intent intent = new Intent();
+//                intent.setType("image/*");
+//                intent.setAction(Intent.ACTION_GET_CONTENT);
+//                startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
+            }
+        });
+
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        reference = FirebaseDatabase.getInstance().getReference("Users");
+        userID = user.getUid();
+
+        final TextView TVUsername = view.findViewById(R.id.TVUserName);
+
+        reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User userProfile = snapshot.getValue(User.class);
+
+                if (userProfile != null){
+                    String userName = userProfile.username;
+
+                    TVUsername.setText(userName);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
+
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if (requestCode == PICK_IMAGE && resultCode == RESULT_OK && data != null && data.getData() != null) {
+//            Uri uri = data.getData();
+//            // Do something with the URI, such as setting it as the source of the ImageView
+//            profilePicture.setImageURI(uri);
+//        }
+//    }
+
 }

@@ -145,6 +145,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ETPassword" />
 
+        <EditText
+            android:id="@+id/ETPassword"
+            android:layout_width="332dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="12dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVPassword" />
+
         <ImageView
             android:id="@+id/IVShowHidePass"
             android:layout_width="20dp"
@@ -159,19 +172,6 @@
             app:layout_constraintTop_toTopOf="@+id/ETPassword"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
-
-        <EditText
-            android:id="@+id/ETPassword"
-            android:layout_width="332dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="12dp"
-            android:background="#FFFFFF"
-            android:ems="10"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TVPassword" />
 
         <TextView
             android:id="@+id/TVPassword"
