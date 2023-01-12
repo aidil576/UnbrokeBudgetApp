@@ -87,6 +87,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String passwordString = ETPass.getText().toString().trim();
                 String userName = ETUsername.getText().toString().trim();
                 String phoneNum = ETMobileNum.getText().toString().trim();
+                int points = 0;
 
                 if (TextUtils.isEmpty(userName)){
                     ETUsername.setError("Username is required");
@@ -127,7 +128,7 @@ public class RegisterActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
-                                User user = new User(userName, emailString, phoneNum);
+                                User user = new User(userName, emailString, phoneNum, points);
                                 FirebaseDatabase.getInstance().getReference("Users") //send data to realtime database
                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                         .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -141,8 +142,6 @@ public class RegisterActivity extends AppCompatActivity {
                                                 }
                                             }
                                         });
-                                mUser = mAuth.getCurrentUser();
-                                updateUI(mUser);
                                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                 startActivity(intent);
                                 Toast.makeText(RegisterActivity.this, "Account created successfully!", Toast.LENGTH_LONG).show();
@@ -152,48 +151,6 @@ public class RegisterActivity extends AppCompatActivity {
                                 Toast.makeText(RegisterActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                                 progressDialog.dismiss();
                             }
-                        }
-
-                        private void updateUI(FirebaseUser user) {
-
-
-                            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(user.getUid());
-                            reference.setValue("points", 0);
-
-                           // String email = user.getEmail();
-                            //int points = 0;
-
-                            //Userhelperclass helperclass = new Userhelperclass(email, points);
-
-                            //reference.child(user.getUid()).setValue(helperclass);
-
-                           /* HashMap<String, Object> map = new HashMap<>();
-                            map.put("email", user.getEmail());
-                            map.put("points", 0);
-                            map.put("uid",user.getUid());
-
-//                            reference = db.getInstance().getReference().child("Users");
-                            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(user.getUid());
-
-                            reference.child(user.getUid())
-                                    .setValue(map)
-                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<Void> task) {
-
-                                            if (task.isSuccessful()){
-                                                //Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                                                //startActivity(intent);
-
-                                                //finish();
-                                            }
-                                            else{
-                                                Toast.makeText(RegisterActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
-
-                                            }
-                                        }
-                                    });*/
-
                         }
 
                     });

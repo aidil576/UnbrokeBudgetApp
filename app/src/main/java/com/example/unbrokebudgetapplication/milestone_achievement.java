@@ -2,10 +2,12 @@ package com.example.unbrokebudgetapplication;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,10 +16,24 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.unbrokebudgetapplication.databinding.FragmentMilestoneAchievementBinding;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.core.Tag;
+
+import java.util.HashMap;
+
 
 public class milestone_achievement extends Fragment {
 
-    int earningpoints = 0;
+    DatabaseReference reference;
+    FirebaseAuth auth;
+    int pointscollected;
 
     public static milestone_achievement newInstance() {
         return new milestone_achievement();
@@ -33,8 +49,20 @@ public class milestone_achievement extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
 
-        //TextView tv = getView().findViewById(R.id.TVpointsbalance); //
-        //tv.setText(String.valueOf("hai"));
+        auth = FirebaseAuth.getInstance();
+        FirebaseUser user = auth.getCurrentUser();
+        reference = FirebaseDatabase.getInstance().getReference("Users");
+        reference.child(user.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                DataSnapshot dataSnapshot = task.getResult();
+                pointscollected = dataSnapshot.child("points").getValue(Integer.class);
+                //TextView tv = getView().findViewById(R.id.TVpointsbalance); //
+                //tv.setText(String.valueOf(pointscollected));
+            }
+        });
+
+
 
         ImageView Btnlv1 = view.findViewById(R.id.IBrtgl1);
         View.OnClickListener OCL1 = new View.OnClickListener() {
