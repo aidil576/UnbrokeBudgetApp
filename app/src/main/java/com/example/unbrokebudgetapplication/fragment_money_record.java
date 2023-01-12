@@ -102,23 +102,23 @@ public class fragment_money_record extends Fragment {
                 if (budget.equals("532RULE")) {
                     total_income = Double.parseDouble(myDB.ShowLast());
                     need = (0.5) * total_income;
-                    want = (0.3) * total_income;
+                    want = Double.parseDouble(df.format((0.3) * total_income));
                     savings = (0.2) * total_income;
 
-                    bills = (0.4) * need;
-                    groceries = (0.3) * need;
-                    food = (0.2) * need;
-                    transportation = (0.1) * need;
+                    bills = Double.parseDouble(df.format((0.4) * need));
+                    groceries = Double.parseDouble(df.format((0.3) * need));
+                    food = Double.parseDouble(df.format((0.2) * need));
+                    transportation = Double.parseDouble(df.format((0.1) * need));
                 } else if (budget.equals("60%RULE")) {
                     total_income = Double.parseDouble(myDB.ShowLast());
-                    need = (0.6) * total_income;
+                    need = Double.parseDouble(df.format((0.6) * total_income));
                     want = (0.4) * total_income;
                     savings = (0.0) * total_income;
 
-                    bills = (0.4) * need;
-                    groceries = (0.3) * need;
-                    food = (0.2) * need;
-                    transportation = (0.1) * need;
+                    bills = Double.parseDouble(df.format((0.4) * need));
+                    groceries = Double.parseDouble(df.format((0.3) * need));
+                    food = Double.parseDouble(df.format((0.2) * need));
+                    transportation = Double.parseDouble(df.format((0.1) * need));
                 }
             }
         }

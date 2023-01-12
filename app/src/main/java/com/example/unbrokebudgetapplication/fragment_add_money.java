@@ -96,7 +96,7 @@ public class fragment_add_money extends Fragment {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
-                if(R.id.amount_add_value != 0) {
+                if(!amounttoadd.getText().toString().isEmpty()) {
                     LocalDateTime now = LocalDateTime.now();
                     Date date = Date.valueOf(String.valueOf(now.toLocalDate()));
                     Time time = Time.valueOf(now.toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
