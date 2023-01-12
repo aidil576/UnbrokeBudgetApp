@@ -36,7 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
     private ImageView IVBack;
 
     private FirebaseAuth mAuth;
-//    private FirebaseUser mUser;
+    private FirebaseUser mUser;
     private ProgressDialog progressDialog;
     private String Uid;
     //public FirebaseDatabase db;
@@ -156,7 +156,9 @@ public class RegisterActivity extends AppCompatActivity {
 
                         private void updateUI(FirebaseUser user) {
 
-                            //DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(user.getUid());
+
+                            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(user.getUid());
+                            reference.setValue("points", 0);
 
                            // String email = user.getEmail();
                             //int points = 0;
@@ -165,7 +167,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                             //reference.child(user.getUid()).setValue(helperclass);
 
-                            HashMap<String, Object> map = new HashMap<>();
+                           /* HashMap<String, Object> map = new HashMap<>();
                             map.put("email", user.getEmail());
                             map.put("points", 0);
                             map.put("uid",user.getUid());
@@ -190,7 +192,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                                             }
                                         }
-                                    });
+                                    });*/
 
                         }
 
