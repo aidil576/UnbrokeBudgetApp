@@ -49,9 +49,7 @@ public class Fragment_Daily_Expenses extends Fragment {
         String transportTxt = "Transportation";
         String entertainmentTxt = "Entertainment";
 
-        double expense = 0;
-        double allocation = 0;
-        double balance = 0;
+        double balance = (myDB.calcSumOfAType(foodTxt) + myDB.calcSumOfAType(groceriesTxt) + myDB.calcSumOfAType(entertainmentTxt) + myDB.calcSumOfAType(transportTxt) + myDB.calcSumOfAType(billsTxt))*-1;
 
         double food = (myDB.calcSumOfAType(foodTxt)*-1);
         double grocery = (myDB.calcSumOfAType(groceriesTxt)*-1);
@@ -60,11 +58,6 @@ public class Fragment_Daily_Expenses extends Fragment {
         double bill = (myDB.calcSumOfAType(billsTxt)*-1);
 
 
-
-        TextView Expense = view.findViewById(R.id.expensesAmount);
-        Expense.setText("RM" + df.format(expense));
-        TextView Allocation = view.findViewById(R.id.dailyAlloAmount);
-        Allocation.setText("RM" + df.format(allocation));
         TextView Balance = view.findViewById(R.id.totalBalanceAmount);
         Balance.setText("RM" + df.format(balance));
 

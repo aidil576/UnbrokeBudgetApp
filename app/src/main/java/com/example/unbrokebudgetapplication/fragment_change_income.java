@@ -138,6 +138,8 @@ public class fragment_change_income extends Fragment {
             @Override
             public void onClick(View v) {
 
+                if(!editIncome.getText().toString().isEmpty())
+                {
                 double income_amount = Double.parseDouble(editIncome.getText().toString());
                 boolean isInserted = myDB.changeIncome(getContext(), income_amount);
                 if(isInserted =true)
@@ -148,7 +150,8 @@ public class fragment_change_income extends Fragment {
                     System.out.println("not added");
 
                 ((MainScreen) getActivity()).switchContent(fragment_money_record.newInstance());
-            }
+            }}
+
         };
         confirm.setOnClickListener(income_confirm);
 

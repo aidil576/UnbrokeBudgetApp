@@ -34,16 +34,17 @@
         android:id="@+id/TotalBalanceTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/total_daily_balance"
+        android:text="Total Actual Expense"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="@+id/background"
         app:layout_constraintTop_toTopOf="@+id/background"
-        app:layout_constraintVertical_bias="0.347" />
+        app:layout_constraintVertical_bias="0.46" />
 
     <TextView
         android:id="@+id/totalBalanceAmount"
@@ -56,7 +57,7 @@
         app:layout_constraintEnd_toEndOf="@+id/background"
         app:layout_constraintStart_toStartOf="@+id/background"
         app:layout_constraintTop_toTopOf="@+id/background"
-        app:layout_constraintVertical_bias="0.54" />
+        app:layout_constraintVertical_bias="0.673" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
@@ -194,7 +195,7 @@
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/transactionItem4"
                 app:layout_constraintEnd_toEndOf="@+id/transactionItem4"
-                app:layout_constraintHorizontal_bias="0.326"
+                app:layout_constraintHorizontal_bias="0.323"
                 app:layout_constraintStart_toStartOf="@+id/transactionItem4"
                 app:layout_constraintTop_toTopOf="@+id/transactionItem4"
                 app:layout_constraintVertical_bias="0.52" />
@@ -325,83 +326,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <ImageView
-        android:id="@+id/arrowUp"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/arrowup"
-        app:layout_constraintBottom_toBottomOf="@+id/background"
-        app:layout_constraintEnd_toEndOf="@+id/background"
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toStartOf="@+id/background"
-        app:layout_constraintTop_toTopOf="@+id/background"
-        app:layout_constraintVertical_bias="0.936" />
-
-    <ImageView
-        android:id="@+id/arrowDown"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:rotationX="180"
-        android:src="@drawable/arrowup"
-        app:layout_constraintBottom_toBottomOf="@+id/background"
-        app:layout_constraintEnd_toEndOf="@+id/background"
-        app:layout_constraintHorizontal_bias="0.603"
-        app:layout_constraintStart_toStartOf="@+id/background"
-        app:layout_constraintTop_toTopOf="@+id/background"
-        app:layout_constraintVertical_bias="0.936" />
-
-    <TextView
-        android:id="@+id/dailyAllo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Daily Allocation"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/background"
-        app:layout_constraintEnd_toEndOf="@+id/background"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/arrowUp"
-        app:layout_constraintTop_toTopOf="@+id/background"
-        app:layout_constraintVertical_bias="0.809" />
-
-    <TextView
-        android:id="@+id/dailyAlloAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RM 0.00"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/background"
-        app:layout_constraintEnd_toEndOf="@+id/background"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/arrowUp"
-        app:layout_constraintTop_toTopOf="@+id/background"
-        app:layout_constraintVertical_bias="0.886" />
-
-    <TextView
-        android:id="@+id/expenses"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Expenses"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/background"
-        app:layout_constraintEnd_toEndOf="@+id/background"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/arrowDown"
-        app:layout_constraintTop_toTopOf="@+id/background"
-        app:layout_constraintVertical_bias="0.805" />
-
-    <TextView
-        android:id="@+id/expensesAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RM 0.00"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/background"
-        app:layout_constraintEnd_toEndOf="@+id/background"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/arrowDown"
-        app:layout_constraintTop_toTopOf="@+id/background"
-        app:layout_constraintVertical_bias="0.891" />
-
     <TextView
         android:id="@+id/plannerTitle"
         android:layout_width="wrap_content"
@@ -415,6 +339,6 @@
         app:layout_constraintEnd_toEndOf="@+id/background"
         app:layout_constraintStart_toStartOf="@+id/background"
         app:layout_constraintTop_toTopOf="@+id/background"
-        app:layout_constraintVertical_bias="0.067" />
+        app:layout_constraintVertical_bias="0.153" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
