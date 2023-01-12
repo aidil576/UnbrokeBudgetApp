@@ -158,6 +158,7 @@ public class FeedbackFragment extends Fragment {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         mReference.setValue(feedbackForm);
                         Toast.makeText(getActivity(), "data added", Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
                     }
 
                     @Override
