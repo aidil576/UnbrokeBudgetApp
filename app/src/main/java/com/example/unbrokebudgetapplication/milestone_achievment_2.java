@@ -54,25 +54,15 @@ public class milestone_achievment_2 extends Fragment {
                 auth = FirebaseAuth.getInstance();
                 FirebaseUser user = auth.getCurrentUser();
                 reference = FirebaseDatabase.getInstance().getReference();
-//                reference.child(user.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<DataSnapshot> task) {
-//                        DataSnapshot dataSnapshot = task.getResult();
-//                        pointscollected = dataSnapshot.child("points").getValue(Integer.class);
-//                        pointscollected = pointscollected +100;
-//                        reference.child(user.getUid()).child("points").setValue(pointscollected);
-//                        ServerValue.increment(100);
-//                    }
-//                });
+//
                 Map<String, Object> updates = new HashMap<>();
 
-                updates.put("/Users/" +user.getUid()+ "/points/",ServerValue.increment(100));
+                updates.put("/Users/" +user.getUid()+ "/points/",ServerValue.increment(-100));
                 reference.updateChildren(updates);
-
             }
         };
         BtnClaim1.setOnClickListener(OCLbtn1);
 
-        //earningsRecord = earningsRecord + 100;
+
     }
 }

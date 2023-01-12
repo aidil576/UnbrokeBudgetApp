@@ -16,9 +16,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class lucky_wheel extends Fragment {
+
+    private DatabaseReference reference;
+    private FirebaseAuth auth;
 
     //wheel values
     final int [] sectors = {5, 10, 0, 100, 0, 0, 0, 200};
@@ -149,7 +160,16 @@ public class lucky_wheel extends Fragment {
 
     private void savedEarnings(int earnedPoints) {
         //saved it in earning records
+
         earningsRecord = earningsRecord + earnedPoints;
+        auth = FirebaseAuth.getInstance();
+        FirebaseUser user1 = auth.getCurrentUser();
+        reference = FirebaseDatabase.getInstance().getReference();
+
+        Map<String, Object> updates = new HashMap<>();
+
+        updates.put("/Users/" +user1.getUid()+ "/points/", ServerValue.increment(earningsRecord));
+        reference.updateChildren(updates);
         //set the value to tv so the user can see how much points they get
         TextView tv = getView().findViewById(R.id.earnings); //
         tv.setText(String.valueOf(earningsRecord));
