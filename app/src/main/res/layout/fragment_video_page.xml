@@ -9,6 +9,7 @@
     tools:context=".video_page">
 
     <FrameLayout
+        android:id="@+id/frameLayout6"
         android:layout_width="413dp"
         android:layout_height="433dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,42 +23,13 @@
             android:layout_height="263dp"
             android:layout_marginTop="150dp" />
 
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/round_corner" />
+
     </FrameLayout>
-
-    <ImageView
-        android:id="@+id/IVHolderPointsTV"
-        android:layout_width="339dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="76dp"
-        android:src="@drawable/frame"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/TVGetMPoints"
-        android:layout_width="178dp"
-        android:layout_height="87dp"
-        android:text="Enjoy the video"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/IVHolderPointsTV"
-        app:layout_constraintEnd_toEndOf="@+id/IVHolderPointsTV"
-        app:layout_constraintStart_toStartOf="@+id/IVHolderPointsTV"
-        app:layout_constraintTop_toTopOf="@+id/IVHolderPointsTV"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/IVAirBaloon"
-        android:layout_width="98dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="292dp"
-        android:src="@drawable/icons8_air_balloon_94"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.075" />
 
     <ImageButton
         android:id="@+id/BtnBack_vid"
@@ -72,6 +44,40 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.038"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="229dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/round_corner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/IVAirBaloon"
+        android:layout_width="98dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="292dp"
+        android:src="@drawable/icons8_air_balloon_94"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <TextView
+        android:id="@+id/TVGetMPoints"
+        android:layout_width="178dp"
+        android:layout_height="87dp"
+        android:text="Enjoy the video"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout6"
+        app:layout_constraintEnd_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="@+id/imageView7" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

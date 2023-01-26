@@ -63,7 +63,6 @@ public class point_redemption extends Fragment {
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 DataSnapshot dataSnapshot = task.getResult();
                 pointscollected = dataSnapshot.child("points").getValue(Integer.class);
-                String TAG = "test";
                 TextView tv = getView().findViewById(R.id.TVpoints); //
                 tv.setText(Integer.toString(pointscollected));
                 ImageView IV1 = view.findViewById(R.id.IVpoints1);
@@ -82,6 +81,7 @@ public class point_redemption extends Fragment {
                         popup.setContentView(R.layout.fragment_voucherlv1_popup);
                         popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         popup.show();
+                        tv.setText(Integer.toString(pointscollected));
                     }else {
                         String message = "Not enough points";
                         toast(message);
@@ -103,6 +103,8 @@ public class point_redemption extends Fragment {
                         popup.setContentView(R.layout.fragment_voucherlv2_popup);
                         popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         popup.show();
+                        tv.setText(Integer.toString(pointscollected));
+
                     }else {
                         String message = "Not enough points";
                         toast(message);
@@ -125,6 +127,7 @@ public class point_redemption extends Fragment {
                         popup.setContentView(R.layout.fragment_voucherlv3_popup);
                         popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         popup.show();
+                        tv.setText(Integer.toString(pointscollected));
                     }else {
                         String message = "Not enough points";
                         toast(message);
@@ -147,6 +150,7 @@ public class point_redemption extends Fragment {
                         popup.setContentView(R.layout.fragment_voucherlv1_popup);
                         popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         popup.show();
+                        tv.setText(Integer.toString(pointscollected));
                     }else {
                         String message = "Not enough points";
                         toast(message);
@@ -169,6 +173,7 @@ public class point_redemption extends Fragment {
                         popup.setContentView(R.layout.fragment_voucherlv2_popup);
                         popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         popup.show();
+                        tv.setText(Integer.toString(pointscollected));
                     }else {
                         String message = "Not enough points";
                         toast(message);
@@ -191,6 +196,7 @@ public class point_redemption extends Fragment {
                         popup.setContentView(R.layout.fragment_voucherlv3_popup);
                         popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         popup.show();
+                        tv.setText(Integer.toString(pointscollected));
                     }else {
                         String message = "Not enough coin";
                         toast(message);

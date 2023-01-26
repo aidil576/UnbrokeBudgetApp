@@ -57,7 +57,7 @@ public class milestone_achievment_2 extends Fragment {
 //
                 Map<String, Object> updates = new HashMap<>();
 
-                updates.put("/Users/" +user.getUid()+ "/points/",ServerValue.increment(-100));
+                updates.put("/Users/" +user.getUid()+ "/points/",ServerValue.increment(100));
                 reference.updateChildren(updates);
             }
         };
