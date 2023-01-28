@@ -67,7 +67,7 @@ public class point_redemption extends Fragment {
                 DataSnapshot dataSnapshot = task.getResult();
                 pointscollected = dataSnapshot.child("points").getValue(Integer.class);
                 TextView tv = getView().findViewById(R.id.TVpoints); //
-                tv.setText(Integer.toString(pointscollected));
+                tv.setText(Integer.toString(pointscollected)); //display point balance
                 ImageView IV1 = view.findViewById(R.id.IVpoints1);
                 IV1.setOnClickListener(view1 -> {
                     TextView tv1 = view.findViewById(R.id.TVpts1);
@@ -84,7 +84,7 @@ public class point_redemption extends Fragment {
                         popup.setContentView(R.layout.fragment_voucherlv1_popup);
                         popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         popup.show();
-                        tv.setText(Integer.toString(pointscollected));
+                        tv.setText(Integer.toString(pointscollected)); //display point balance
 
                     }else {
                         String message = "Not enough points";
