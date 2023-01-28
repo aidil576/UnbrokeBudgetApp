@@ -49,10 +49,13 @@
         android:id="@+id/imageView7"
         android:layout_width="229dp"
         android:layout_height="108dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="5dp"
         android:src="@drawable/round_corner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout6"
+        app:layout_constraintEnd_toStartOf="@+id/IVAirBaloon"
+        app:layout_constraintStart_toEndOf="@+id/BtnBack_vid"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView

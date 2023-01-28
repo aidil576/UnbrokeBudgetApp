@@ -87,7 +87,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String passwordString = ETPass.getText().toString().trim();
                 String userName = ETUsername.getText().toString().trim();
                 String phoneNum = ETMobileNum.getText().toString().trim();
-                int points = 0;
+                int points = 5;
 
                 if (TextUtils.isEmpty(userName)){
                     ETUsername.setError("Username is required");

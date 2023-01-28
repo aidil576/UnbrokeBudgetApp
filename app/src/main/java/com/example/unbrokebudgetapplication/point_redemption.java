@@ -1,6 +1,7 @@
 package com.example.unbrokebudgetapplication;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -11,11 +12,13 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.Navigation;
 
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -82,10 +85,12 @@ public class point_redemption extends Fragment {
                         popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         popup.show();
                         tv.setText(Integer.toString(pointscollected));
+
                     }else {
                         String message = "Not enough points";
                         toast(message);
                     }
+
                 });
                 ImageView IV2 = view.findViewById(R.id.IVpoints2);
                 IV2.setOnClickListener(view1 -> {
@@ -104,7 +109,6 @@ public class point_redemption extends Fragment {
                         popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         popup.show();
                         tv.setText(Integer.toString(pointscollected));
-
                     }else {
                         String message = "Not enough points";
                         toast(message);
@@ -198,10 +202,11 @@ public class point_redemption extends Fragment {
                         popup.show();
                         tv.setText(Integer.toString(pointscollected));
                     }else {
-                        String message = "Not enough coin";
+                        String message = "Not enough points";
                         toast(message);
                     }
                 });
+
             }
         });
 
